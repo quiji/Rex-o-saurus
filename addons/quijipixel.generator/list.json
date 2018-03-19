@@ -95,32 +95,8 @@
           "ping_pong": false,
           "frames": [
             {
-              "id": 14,
-              "time": 100,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 15,
-              "time": 100,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 16,
-              "time": 120,
-              "react": 1,
-              "param": ""
-            },
-            {
-              "id": 17,
-              "time": 100,
-              "react": 0,
-              "param": ""
-            },
-            {
               "id": 18,
-              "time": 0,
+              "time": 100,
               "react": 0,
               "param": ""
             },
@@ -162,6 +138,30 @@
             },
             {
               "id": 25,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 16,
+              "time": 120,
+              "react": 1,
+              "param": ""
+            },
+            {
+              "id": 17,
               "time": 100,
               "react": 0,
               "param": ""
