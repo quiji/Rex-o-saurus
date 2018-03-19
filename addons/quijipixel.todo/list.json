@@ -23,11 +23,9 @@
         "minute": 13,
         "second": 20
       }
-    }
-  },
-  "pending": {
-    "task.0": {
-      "task": "Design game mechanics.",
+    },
+    "task.3": {
+      "task": "Implement first running and Idle.",
       "type": "Task",
       "creation_date": {
         "year": 2018,
@@ -35,9 +33,19 @@
         "day": 19,
         "weekday": 1,
         "dst": false,
-        "hour": 2,
-        "minute": 35,
-        "second": 48
+        "hour": 12,
+        "minute": 18,
+        "second": 53
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 3,
+        "second": 12
       }
     },
     "task.1": {
@@ -52,10 +60,20 @@
         "hour": 2,
         "minute": 36,
         "second": 1
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 3,
+        "second": 16
       }
     },
-    "task.3": {
-      "task": "Implement first running and Idle.",
+    "task.0": {
+      "task": "Design game mechanics.",
       "type": "Task",
       "creation_date": {
         "year": 2018,
@@ -63,18 +81,60 @@
         "day": 19,
         "weekday": 1,
         "dst": false,
-        "hour": 12,
-        "minute": 18,
-        "second": 53
+        "hour": 2,
+        "minute": 35,
+        "second": 48
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 3,
+        "second": 18
+      }
+    }
+  },
+  "pending": {
+    "task.4": {
+      "task": "Make Jump and fall animations.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 3,
+        "second": 29
+      }
+    },
+    "task.5": {
+      "task": "Implement Jump and falling.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 13,
+        "minute": 3,
+        "second": 37
       }
     }
   },
   "comp_order": [
-    "task.2"
+    "task.2",
+    "task.3",
+    "task.1",
+    "task.0"
   ],
   "pend_order": [
-    "task.0",
-    "task.1",
-    "task.3"
+    "task.4",
+    "task.5"
   ]
 }
