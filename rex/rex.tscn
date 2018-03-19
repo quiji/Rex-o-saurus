@@ -3,7 +3,7 @@
 [ext_resource path="res://rex/rex.gd" type="Script" id=1]
 [ext_resource path="res://rex/gen_rex.tscn" type="PackedScene" id=2]
 
-[node name="rex" type="KinematicBody2D" index="0"]
+[node name="rex" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1

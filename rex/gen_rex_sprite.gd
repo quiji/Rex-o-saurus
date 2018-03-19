@@ -16,6 +16,12 @@ func run():
 func start_jump():
 	play("StartJump")
 
+func jump_peak():
+	play("JumpPeak")
+
+func land():
+	play("Land")
+
 func react(action):
 	match action:
 		STEP_REACTION:
@@ -34,3 +40,8 @@ func on_animation_finished(anim):
 		"StartJump":
 			play("Jump")
 			get_parent().jump()
+		"JumpPeak":
+			play("Fall")
+		"Land":
+			play("Idle")
+

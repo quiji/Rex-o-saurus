@@ -119,6 +119,30 @@
         "minute": 8,
         "second": 21
       }
+    },
+    "task.6": {
+      "task": "Jump loop animation doens't play",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 15,
+        "minute": 29,
+        "second": 42
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 15,
+        "minute": 29,
+        "second": 43
+      }
     }
   },
   "pending": {
@@ -142,7 +166,8 @@
     "task.3",
     "task.1",
     "task.0",
-    "task.4"
+    "task.4",
+    "task.6"
   ],
   "pend_order": [
     "task.5"
