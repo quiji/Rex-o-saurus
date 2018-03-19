@@ -8,6 +8,11 @@
 
 config_version=3
 
+[Project]
+
+patch=0
+minor=1
+
 [application]
 
 config/name="Rex-o-saurus"
@@ -25,7 +30,7 @@ window/size/height=720
 
 [editor_plugins]
 
-enabled=PoolStringArray( "quijipixel.notes", "quijipixel.todo" )
+enabled=PoolStringArray( "quijipixel.generator", "quijipixel.notes", "quijipixel.todo" )
 
 [rendering]
 
