@@ -143,6 +143,30 @@
         "minute": 29,
         "second": 43
       }
+    },
+    "task.7": {
+      "task": "Fall animation is always played.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 15,
+        "minute": 41,
+        "second": 42
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 6,
+        "second": 15
+      }
     }
   },
   "pending": {
@@ -167,7 +191,8 @@
     "task.1",
     "task.0",
     "task.4",
-    "task.6"
+    "task.6",
+    "task.7"
   ],
   "pend_order": [
     "task.5"

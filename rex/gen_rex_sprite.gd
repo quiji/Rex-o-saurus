@@ -22,6 +22,9 @@ func jump_peak():
 func land():
 	play("Land")
 
+func fall():
+	play("Fall")
+
 func react(action):
 	match action:
 		STEP_REACTION:

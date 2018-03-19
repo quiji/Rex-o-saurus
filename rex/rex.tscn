@@ -3,7 +3,7 @@
 [ext_resource path="res://rex/rex.gd" type="Script" id=1]
 [ext_resource path="res://rex/gen_rex.tscn" type="PackedScene" id=2]
 
-[node name="rex" type="KinematicBody2D"]
+[node name="rex" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -21,8 +21,17 @@ position = Vector2( -1, -38 )
 build_mode = 0
 polygon = PoolVector2Array( -6, 5, 18, 4, 21, -37, -16, -39 )
 
-[node name="ground_ray" type="RayCast2D" parent="." index="2"]
+[node name="ground_ray_a" type="RayCast2D" parent="." index="2"]
 
+position = Vector2( -10, 1 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 6 )
+collision_mask = 1
+
+[node name="ground_ray_b" type="RayCast2D" parent="." index="3"]
+
+position = Vector2( 20, 1 )
 enabled = true
 exclude_parent = true
 cast_to = Vector2( 0, 6 )
