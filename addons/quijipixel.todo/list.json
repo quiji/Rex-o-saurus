@@ -1,5 +1,29 @@
 {
   "completed": {
+    "task.2": {
+      "task": "Design Player sprites.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 3,
+        "minute": 9,
+        "second": 25
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 13,
+        "second": 20
+      }
+    }
   },
   "pending": {
     "task.0": {
@@ -29,12 +53,28 @@
         "minute": 36,
         "second": 1
       }
+    },
+    "task.3": {
+      "task": "Implement first running and Idle.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 18,
+        "second": 53
+      }
     }
   },
   "comp_order": [
+    "task.2"
   ],
   "pend_order": [
     "task.0",
-    "task.1"
+    "task.1",
+    "task.3"
   ]
 }
