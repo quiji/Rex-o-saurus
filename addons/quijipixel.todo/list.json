@@ -167,9 +167,7 @@
         "minute": 6,
         "second": 15
       }
-    }
-  },
-  "pending": {
+    },
     "task.5": {
       "task": "Implement Jump and falling.",
       "type": "Task",
@@ -182,6 +180,32 @@
         "hour": 13,
         "minute": 3,
         "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 6,
+        "second": 49
+      }
+    }
+  },
+  "pending": {
+    "task.8": {
+      "task": "Tweak and improve movement and jumping mechanics.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 6,
+        "second": 48
       }
     }
   },
@@ -192,9 +216,10 @@
     "task.0",
     "task.4",
     "task.6",
-    "task.7"
+    "task.7",
+    "task.5"
   ],
   "pend_order": [
-    "task.5"
+    "task.8"
   ]
 }
