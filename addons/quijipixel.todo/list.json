@@ -95,9 +95,7 @@
         "minute": 3,
         "second": 18
       }
-    }
-  },
-  "pending": {
+    },
     "task.4": {
       "task": "Make Jump and fall animations.",
       "type": "Task",
@@ -110,8 +108,20 @@
         "hour": 13,
         "minute": 3,
         "second": 29
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 14,
+        "minute": 8,
+        "second": 21
       }
-    },
+    }
+  },
+  "pending": {
     "task.5": {
       "task": "Implement Jump and falling.",
       "type": "Task",
@@ -131,10 +141,10 @@
     "task.2",
     "task.3",
     "task.1",
-    "task.0"
+    "task.0",
+    "task.4"
   ],
   "pend_order": [
-    "task.4",
     "task.5"
   ]
 }
