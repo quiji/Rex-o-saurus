@@ -167,6 +167,108 @@
               "param": ""
             }
           ]
+        },
+        "StartJump": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 26,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 27,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 28,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Jump": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 29,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "JumpPeak": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 30,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 31,
+              "time": 130,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 32,
+              "time": 180,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 33,
+              "time": 200,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Fall": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 34,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Land": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 28,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 27,
+              "time": 200,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 26,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
         }
       },
       "target_dir": "res://rex/",

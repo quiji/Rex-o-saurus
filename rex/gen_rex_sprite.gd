@@ -5,15 +5,25 @@ enum ReactTypes {NO_REACTION, STEP_REACTION}
 var current_anim = ''
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	$anim_player.connect("animation_finished", self, "on_animation_finished")
 
 func idle():
 	play("Idle")
 
 func run():
 	play("Run")
+
+func start_jump():
+	play("StartJump")
+
+func jump_peak():
+	play("JumpPeak")
+
+func land():
+	play("Land")
+
+func fall():
+	play("Fall")
 
 func react(action):
 	match action:
@@ -27,3 +37,14 @@ func play(anim):
 
 func flip(left=true):
 	$sprite.flip_h = left
+	
+func on_animation_finished(anim):
+	match anim:
+		"StartJump":
+			play("Jump")
+			get_parent().jump()
+		"JumpPeak":
+			play("Fall")
+		"Land":
+			play("Idle")
+

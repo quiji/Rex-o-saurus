@@ -1,43 +1,51 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://rex/rex.tscn" type="PackedScene" id=1]
+[ext_resource path="res://platforms/platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://rex/rex.tscn" type="PackedScene" id=2]
 
 [node name="game" type="Node2D"]
 
-[node name="floor" type="StaticBody2D" parent="." index="0"]
+[node name="platform" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 191.5, 262 )
+scale = Vector2( 5.29688, 1 )
+
+[node name="platform2" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 801, 540 )
+scale = Vector2( 12.5938, 1 )
+
+[node name="platform3" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 908, 431 )
+
+[node name="platform4" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 1058, 335 )
+
+[node name="platform5" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 1192, 215 )
+
+[node name="platform6" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( 1044, 115 )
+
+[node name="platform7" parent="." index="6" instance=ExtResource( 1 )]
+
+position = Vector2( 856, 113 )
+
+[node name="platform8" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( 678, 15 )
+
+[node name="platform9" parent="." index="8" instance=ExtResource( 1 )]
+
+position = Vector2( 502, -75 )
+
+[node name="rex" parent="." index="9" instance=ExtResource( 2 )]
 
 editor/display_folded = true
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="floor" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 3, 258, 660, 258, 661, 288, -1, 288 )
-
-[node name="Polygon2D" type="Polygon2D" parent="floor" index="1"]
-
-polygon = PoolVector2Array( 1, 257, 659, 259, 661, 290, -2, 288 )
-uv = PoolVector2Array(  )
-color = Color( 0.118253, 0.102722, 0.386719, 1 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
-antialiased = false
-texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
-texture_rotation_degrees = 0.0
-invert_enable = false
-invert_border = 100.0
-
-[node name="rex" parent="." index="1" instance=ExtResource( 1 )]
-
 position = Vector2( 139, 225 )
 
 [node name="Camera2D" type="Camera2D" parent="rex" index="2"]
@@ -58,13 +66,13 @@ smoothing_enabled = false
 smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.0
-drag_margin_top = 0.0
-drag_margin_right = 0.0
-drag_margin_bottom = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin" ]
+editor_draw_drag_margin = true
+_sections_unfolded = [ "Drag Margin", "Editor" ]
 
 
