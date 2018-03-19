@@ -20,6 +20,7 @@ var fall_gravity_scalar = 0.0
 var velocity = Vector2()
 var run_velocity = 0
 
+
 var on_ground = false
 var running = false
 
@@ -27,7 +28,7 @@ var direction = 1
 
 var step_delta = 0
 var step_duration = 0.620 * 0.5
-
+var jump_delta = 0
 
 func _ready():
 	$sprite.idle()
@@ -44,6 +45,10 @@ func _physics_process(delta):
 	
 	if not on_ground:
 		velocity.y += -fall_gravity_scalar * delta
+		
+		
+		if jump_delta > time_to_peak_of_jump - 0.320:
+			jump_delta -= delta
 	
 	if step_delta > 0:
 		var step_t = 1 - step_delta / step_duration
@@ -67,6 +72,9 @@ func _physics_process(delta):
 func add_step_impulse():
 	step_delta = step_duration
 
+func jump():
+	velocity.y = -jump_initial_velocity_scalar
+	jump_delta = time_to_peak_of_jump
 
 func take_input(delta):
 	var left_jp = Input.is_action_just_pressed("ui_left")
@@ -75,6 +83,9 @@ func take_input(delta):
 	var right_jp = Input.is_action_just_pressed("ui_right")
 	var right_p = Input.is_action_pressed("ui_right")
 	var right_jr = Input.is_action_just_released("ui_right")
+	var jump_jp = Input.is_action_just_pressed("jump")
+	var jump_jr = Input.is_action_just_pressed("jump")
+	
 
 	if left_p:
 		$sprite.flip(true)
@@ -95,3 +106,5 @@ func take_input(delta):
 			step_delta = 0
 		
 	
+	if jump_jp and on_ground:
+		$sprite.start_jump()
