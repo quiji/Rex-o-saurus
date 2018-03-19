@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 
 ######## Const Stats #########
-var max_run_velocity = 250 #150.0
+var max_run_velocity = 180.0
 var midair_move_velocity = 120#60.0
-var max_x_distance_a_jump = 115.0
-var max_x_distance_b_jump = 125.0
+var max_x_distance_a_jump = 120.0
+var max_x_distance_b_jump = 180.0
 var jump_peak_height = 150
 
 
@@ -34,7 +34,7 @@ var step_delta = 0
 var step_duration = 0.620 * 0.7
 var jump_delta = 0
 var ground_loose_delta = 0
-var ground_loose_duration = 0.2
+var ground_loose_duration = 0.4
 var current_gravity = 0
 
 
@@ -73,14 +73,14 @@ func _physics_process(delta):
 			current_gravity = fall_gravity_scalar
 	
 		velocity.x = midair_velocity * direction
-	else:
+	elif running:
 		if step_delta > 0:
 			var step_t = 1 - step_delta / step_duration
 			step_delta -= delta
 			run_velocity = lerp(run_velocity, max_run_velocity, step_t * step_t * step_t)
 			velocity.x = run_velocity * direction
 		else:
-			velocity.x += -velocity.x * 0.15
+			velocity.x += -velocity.x * 0.05
 			if abs(velocity.x) < 5:
 				velocity.x = 0
 
@@ -88,7 +88,7 @@ func _physics_process(delta):
 	
 	move_and_slide(velocity, Vector2(0, -1))
 	
-	if $ground_ray_a.is_colliding() or  $ground_ray_b.is_colliding():
+	if is_valid_ground_cast():
 		if not on_ground:
 			$sprite.land()
 			running = false
@@ -112,8 +112,17 @@ func _physics_process(delta):
 	
 	Console.add_log("current_gravity", current_gravity)
 
+func is_valid_ground_cast():
+	var valid = false
+	if $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.98:
+		valid = true
+	elif $ground_ray_b.is_colliding() and $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)) > 0.98:
+		valid = true
+	return valid
+	
 func add_step_impulse():
-	step_delta = step_duration
+	if running:
+		step_delta = step_duration
 
 func jump():
 	midair_velocity = run_velocity
@@ -136,6 +145,8 @@ func take_input(delta):
 
 	if jump_jp and is_on_ground():
 		jumping = true
+		running = false
+		velocity.x = 0
 		$sprite.start_jump()
 		current_gravity = lowest_gravity_scalar
 	
@@ -150,10 +161,10 @@ func take_input(delta):
 		$sprite.flip(false)
 		direction = 1
 	
-	if (left_p or right_p) and is_on_ground() and not running and not jumping:
+	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing():
 		$sprite.run()
 		running = true
-		velocity.x = max_run_velocity  * direction
+		velocity.x = max_run_velocity * 0.65  * direction
 	elif (left_jr or right_jr) and is_on_ground():
 		$sprite.idle()
 		running = false

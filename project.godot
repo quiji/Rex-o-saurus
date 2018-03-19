@@ -10,8 +10,8 @@ config_version=3
 
 [Project]
 
-patch=2
-minor=6
+patch=3
+minor=7
 
 [application]
 

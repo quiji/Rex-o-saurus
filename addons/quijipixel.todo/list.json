@@ -191,9 +191,31 @@
         "minute": 6,
         "second": 49
       }
-    }
-  },
-  "pending": {
+    },
+    "task.9": {
+      "task": "Dino gets stucked in the middle of platform because of the raycasts.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 20,
+        "second": 29
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 21,
+        "second": 36
+      }
+    },
     "task.8": {
       "task": "Tweak and improve movement and jumping mechanics.",
       "type": "Task",
@@ -206,8 +228,20 @@
         "hour": 16,
         "minute": 6,
         "second": 48
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 28,
+        "second": 46
       }
     }
+  },
+  "pending": {
   },
   "comp_order": [
     "task.2",
@@ -217,9 +251,10 @@
     "task.4",
     "task.6",
     "task.7",
-    "task.5"
+    "task.5",
+    "task.9",
+    "task.8"
   ],
   "pend_order": [
-    "task.8"
   ]
 }
