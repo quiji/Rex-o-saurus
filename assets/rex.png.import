@@ -7,10 +7,10 @@ path="res://.import/rex.png-c2c2f784f31e30b7413345a2a3b50489.stex"
 [deps]
 
 source_file="res://assets/rex.png"
-source_md5="947c8f68c90d40b60a05cf1120a6b667"
+source_md5="779db50127d3cccc7b83028944778bde"
 
 dest_files=[ "res://.import/rex.png-c2c2f784f31e30b7413345a2a3b50489.stex" ]
-dest_md5="5f56313c289e3617101bcc3d1299bea3"
+dest_md5="e0edb85aaeabf4ac832c88d7a330c3dc"
 
 [params]
 

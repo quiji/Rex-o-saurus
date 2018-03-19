@@ -239,9 +239,47 @@
         "minute": 28,
         "second": 46
       }
+    },
+    "task.11": {
+      "task": "Create tail whip animation!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 34,
+        "second": 45
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 50,
+        "second": 16
+      }
     }
   },
   "pending": {
+    "task.10": {
+      "task": "Create roar animation",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 34,
+        "second": 33
+      }
+    }
   },
   "comp_order": [
     "task.2",
@@ -253,8 +291,10 @@
     "task.7",
     "task.5",
     "task.9",
-    "task.8"
+    "task.8",
+    "task.11"
   ],
   "pend_order": [
+    "task.10"
   ]
 }

@@ -3,7 +3,7 @@
     "SpriteAnim2D.30": {
       "name": "Rex",
       "spritesheet": "res://assets/rex.png",
-      "sprite_height": 110,
+      "sprite_height": 100,
       "sprite_width": 140,
       "animations": {
         "Idle": {
@@ -265,6 +265,78 @@
             {
               "id": 26,
               "time": 50,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Whip": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 35,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 36,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 37,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 38,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 39,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 40,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 41,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 42,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 43,
+              "time": 105,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 44,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 45,
+              "time": 80,
               "react": 0,
               "param": ""
             }
