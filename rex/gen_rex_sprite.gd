@@ -22,6 +22,9 @@ func jump_peak():
 func land():
 	play("Land")
 
+func is_landing():
+	return current_anim == "Land"
+
 func fall():
 	play("Fall")
 

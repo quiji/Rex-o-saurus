@@ -174,19 +174,19 @@
           "frames": [
             {
               "id": 26,
-              "time": 90,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 27,
               "time": 80,
               "react": 0,
               "param": ""
             },
             {
-              "id": 28,
+              "id": 27,
               "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 28,
+              "time": 30,
               "react": 0,
               "param": ""
             }
@@ -252,19 +252,19 @@
           "frames": [
             {
               "id": 28,
-              "time": 300,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 27,
               "time": 200,
               "react": 0,
               "param": ""
             },
             {
-              "id": 26,
+              "id": 27,
               "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 26,
+              "time": 50,
               "react": 0,
               "param": ""
             }
