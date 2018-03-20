@@ -341,48 +341,6 @@
               "param": ""
             }
           ]
-        },
-        "AirWhip": {
-          "loop": false,
-          "ping_pong": false,
-          "frames": [
-            {
-              "id": 46,
-              "time": 60,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 47,
-              "time": 50,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 48,
-              "time": 50,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 49,
-              "time": 35,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 50,
-              "time": 30,
-              "react": 0,
-              "param": ""
-            },
-            {
-              "id": 51,
-              "time": 60,
-              "react": 0,
-              "param": ""
-            }
-          ]
         }
       },
       "target_dir": "res://rex/",

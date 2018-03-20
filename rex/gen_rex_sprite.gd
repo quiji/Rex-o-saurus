@@ -27,7 +27,8 @@ func is_whipping():
 	return current_anim == "Whip"
 
 func land():
-	play("Land")
+	if current_anim != "Whip":
+		play("Land")
 
 func is_landing():
 	return current_anim == "Land"

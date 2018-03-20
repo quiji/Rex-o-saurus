@@ -335,6 +335,30 @@
         "minute": 28,
         "second": 37
       }
+    },
+    "task.25": {
+      "task": "Whipping is interrupted by landing or jumping animations.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 57,
+        "second": 24
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 59,
+        "second": 42
+      }
     }
   },
   "pending": {
@@ -507,7 +531,8 @@
     "task.11",
     "task.12",
     "task.15",
-    "task.16"
+    "task.16",
+    "task.25"
   ],
   "pend_order": [
     "task.10",

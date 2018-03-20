@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 ######## Const Stats #########
 var max_run_velocity = 180.0
-var midair_move_velocity = 120#60.0
+var midair_move_velocity = 140#60.0
 var max_x_distance_a_jump = 120.0
 var max_x_distance_b_jump = 180.0
 var jump_peak_height = 150
