@@ -477,6 +477,20 @@
         "minute": 31,
         "second": 37
       }
+    },
+    "task.24": {
+      "task": "Amazing game sounds for roaring, steps and other stuff.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 32,
+        "second": 13
+      }
     }
   },
   "comp_order": [
@@ -505,6 +519,7 @@
     "task.20",
     "task.21",
     "task.22",
-    "task.23"
+    "task.23",
+    "task.24"
   ]
 }
