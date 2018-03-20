@@ -141,9 +141,13 @@ func take_input(delta):
 	var right_jr = Input.is_action_just_released("ui_right")
 	var jump_jp = Input.is_action_just_pressed("jump")
 	var jump_jr = Input.is_action_just_released("jump")
+	var whip_jp = Input.is_action_just_pressed("whip")
 	
+	if whip_jp and is_on_ground() and not jumping:
+		$sprite.whip()
 
-	if jump_jp and is_on_ground():
+
+	if jump_jp and is_on_ground() and not $sprite.is_whipping():
 		jumping = true
 		running = false
 		velocity.x = 0
@@ -161,7 +165,7 @@ func take_input(delta):
 		$sprite.flip(false)
 		direction = 1
 	
-	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing():
+	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing() and not $sprite.is_whipping():
 		$sprite.run()
 		running = true
 		velocity.x = max_run_velocity * 0.65  * direction

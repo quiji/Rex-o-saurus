@@ -263,6 +263,54 @@
         "minute": 50,
         "second": 16
       }
+    },
+    "task.12": {
+      "task": "Implement whip mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 51,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 13,
+        "second": 54
+      }
+    },
+    "task.15": {
+      "task": "Whip on air? Feels like it's missing.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 57,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 13,
+        "second": 57
+      }
     }
   },
   "pending": {
@@ -279,6 +327,48 @@
         "minute": 34,
         "second": 33
       }
+    },
+    "task.13": {
+      "task": "Implement roar mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 51,
+        "second": 13
+      }
+    },
+    "task.14": {
+      "task": "When falling, head might get stuck in platform.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 56,
+        "second": 50
+      }
+    },
+    "task.16": {
+      "task": "Implement air whip mechanic",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 14,
+        "second": 7
+      }
     }
   },
   "comp_order": [
@@ -292,9 +382,14 @@
     "task.5",
     "task.9",
     "task.8",
-    "task.11"
+    "task.11",
+    "task.12",
+    "task.15"
   ],
   "pend_order": [
-    "task.10"
+    "task.10",
+    "task.13",
+    "task.14",
+    "task.16"
   ]
 }

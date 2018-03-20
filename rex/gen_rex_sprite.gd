@@ -19,6 +19,12 @@ func start_jump():
 func jump_peak():
 	play("JumpPeak")
 
+func whip():
+	play("Whip")
+
+func is_whipping():
+	return current_anim == "Whip"
+
 func land():
 	play("Land")
 
@@ -50,4 +56,7 @@ func on_animation_finished(anim):
 			play("Fall")
 		"Land":
 			play("Idle")
+		"Whip":
+			play("Idle")
+
 
