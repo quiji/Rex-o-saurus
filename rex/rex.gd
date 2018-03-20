@@ -143,7 +143,7 @@ func take_input(delta):
 	var jump_jr = Input.is_action_just_released("jump")
 	var whip_jp = Input.is_action_just_pressed("whip")
 	
-	if whip_jp and is_on_ground() and not jumping:
+	if whip_jp:
 		$sprite.whip()
 
 
