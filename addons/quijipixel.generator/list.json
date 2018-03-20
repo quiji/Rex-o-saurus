@@ -341,6 +341,120 @@
               "param": ""
             }
           ]
+        },
+        "Roar": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 46,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 47,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 48,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 49,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 50,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 51,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 52,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 53,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 54,
+              "time": 150,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 55,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 56,
+              "time": 400,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 57,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 58,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 59,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 60,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 61,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 62,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 63,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            }
+          ]
         }
       },
       "target_dir": "res://rex/",
