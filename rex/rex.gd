@@ -4,7 +4,7 @@ extends KinematicBody2D
 ######## Const Stats #########
 var max_run_velocity = 180.0
 var midair_move_velocity = 140#60.0
-var max_x_distance_a_jump = 120.0
+var max_x_distance_a_jump = 100.0
 var max_x_distance_b_jump = 180.0
 var jump_peak_height = 150
 
@@ -86,7 +86,7 @@ func _physics_process(delta):
 
 	take_input(delta)
 	
-	move_and_slide(velocity, Vector2(0, -1))
+	move_and_slide(velocity, Vector2(0, -1), 1)
 	
 	if is_valid_ground_cast():
 		if not on_ground:
@@ -142,9 +142,14 @@ func take_input(delta):
 	var jump_jp = Input.is_action_just_pressed("jump")
 	var jump_jr = Input.is_action_just_released("jump")
 	var whip_jp = Input.is_action_just_pressed("whip")
+	var roar_jp = Input.is_action_just_pressed("roar")
 	
 	if whip_jp:
 		$sprite.whip()
+
+	if roar_jp and is_on_ground() and not $sprite.is_whipping() and not jumping:
+		$sprite.roar()
+
 
 
 	if jump_jp and is_on_ground() and not $sprite.is_whipping():

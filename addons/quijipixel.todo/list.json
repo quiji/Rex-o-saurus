@@ -359,9 +359,7 @@
         "minute": 59,
         "second": 42
       }
-    }
-  },
-  "pending": {
+    },
     "task.10": {
       "task": "Create roar animation",
       "type": "Task",
@@ -374,6 +372,16 @@
         "hour": 16,
         "minute": 34,
         "second": 33
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 32
       }
     },
     "task.13": {
@@ -388,20 +396,16 @@
         "hour": 20,
         "minute": 51,
         "second": 13
-      }
-    },
-    "task.14": {
-      "task": "When falling, head might get stuck in platform.",
-      "type": "Bug",
-      "creation_date": {
+      },
+      "completion_date": {
         "year": 2018,
         "month": 3,
-        "day": 19,
-        "weekday": 1,
+        "day": 20,
+        "weekday": 2,
         "dst": false,
-        "hour": 20,
-        "minute": 56,
-        "second": 50
+        "hour": 18,
+        "minute": 10,
+        "second": 33
       }
     },
     "task.17": {
@@ -416,6 +420,32 @@
         "hour": 9,
         "minute": 28,
         "second": 51
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 37
+      }
+    }
+  },
+  "pending": {
+    "task.14": {
+      "task": "When falling, head might get stuck in platform.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 56,
+        "second": 50
       }
     },
     "task.18": {
@@ -515,6 +545,20 @@
         "minute": 32,
         "second": 13
       }
+    },
+    "task.26": {
+      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 23
+      }
     }
   },
   "comp_order": [
@@ -532,19 +576,20 @@
     "task.12",
     "task.15",
     "task.16",
-    "task.25"
-  ],
-  "pend_order": [
+    "task.25",
     "task.10",
     "task.13",
+    "task.17"
+  ],
+  "pend_order": [
     "task.14",
-    "task.17",
     "task.18",
     "task.19",
     "task.20",
     "task.21",
     "task.22",
     "task.23",
-    "task.24"
+    "task.24",
+    "task.26"
   ]
 }

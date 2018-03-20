@@ -26,6 +26,9 @@ func whip():
 func is_whipping():
 	return current_anim == "Whip"
 
+func roar():
+	play("Roar")
+
 func land():
 	if current_anim != "Whip":
 		play("Land")
@@ -63,5 +66,8 @@ func on_animation_finished(anim):
 				play("Idle")
 			else:
 				play("Fall")
+		"Roar":
+			play("Idle")
+
 
 
