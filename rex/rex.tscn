@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://rex/rex.gd" type="Script" id=1]
 [ext_resource path="res://rex/gen_rex.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/steps.wav" type="AudioStream" id=4]
 [ext_resource path="res://assets/land.wav" type="AudioStream" id=5]
 [ext_resource path="res://assets/light_land.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/whip.wav" type="AudioStream" id=7]
 
 [sub_resource type="AudioStreamRandomPitch" id=1]
 
@@ -21,6 +22,11 @@ random_pitch = 1.05
 
 audio_stream = ExtResource( 6 )
 random_pitch = 1.12
+
+[sub_resource type="AudioStreamRandomPitch" id=4]
+
+audio_stream = ExtResource( 7 )
+random_pitch = 1.2
 
 [node name="rex" type="KinematicBody2D" index="0"]
 
@@ -95,5 +101,15 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "SoundFX"
 area_mask = 0
+
+[node name="whip_player" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = SubResource( 4 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SoundFX"
+area_mask = 1
 
 

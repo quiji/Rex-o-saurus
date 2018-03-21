@@ -157,6 +157,7 @@ func take_input(delta):
 	
 	if whip_jp:
 		$sprite.whip()
+		$whip_player.play(0)
 
 	if roar_jp and is_on_ground() and not $sprite.is_whipping() and not jumping:
 		$sprite.roar()

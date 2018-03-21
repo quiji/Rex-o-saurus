@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Dishwasher-SoundBible.com-1917190099.wav-19eb008d753f421f4c9d70ef09b4b598.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/whip/whip/Dishwasher-SoundBible.com-1917190099.wav"
+source_md5="2d8d496461828f6a64818db29ccf27c0"
+
+dest_files=[ "res://.import/Dishwasher-SoundBible.com-1917190099.wav-19eb008d753f421f4c9d70ef09b4b598.sample" ]
+dest_md5="bf72621468983bb23daaa60b8023bafe"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

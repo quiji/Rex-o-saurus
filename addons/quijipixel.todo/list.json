@@ -503,6 +503,30 @@
         "minute": 23,
         "second": 43
       }
+    },
+    "task.30": {
+      "task": "SFX for whip move.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 53
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 40,
+        "second": 37
+      }
     }
   },
   "pending": {
@@ -631,20 +655,6 @@
         "minute": 0,
         "second": 34
       }
-    },
-    "task.30": {
-      "task": "SFX for whip move.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 21,
-        "weekday": 3,
-        "dst": false,
-        "hour": 11,
-        "minute": 23,
-        "second": 53
-      }
     }
   },
   "comp_order": [
@@ -668,7 +678,8 @@
     "task.17",
     "task.28",
     "task.29",
-    "task.24"
+    "task.24",
+    "task.30"
   ],
   "pend_order": [
     "task.14",
@@ -679,7 +690,6 @@
     "task.22",
     "task.23",
     "task.26",
-    "task.27",
-    "task.30"
+    "task.27"
   ]
 }
