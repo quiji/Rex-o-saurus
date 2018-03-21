@@ -527,6 +527,54 @@
         "minute": 40,
         "second": 37
       }
+    },
+    "task.27": {
+      "task": "Create CameraCrew and implement screen shake.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 21,
+        "minute": 0,
+        "second": 34
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 19,
+        "minute": 45,
+        "second": 27
+      }
+    },
+    "task.20": {
+      "task": "Camera trembling for steps, jumps, and other stuff. Add levels of intensity.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 30,
+        "second": 51
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 19,
+        "minute": 45,
+        "second": 39
+      }
     }
   },
   "pending": {
@@ -570,20 +618,6 @@
         "hour": 9,
         "minute": 30,
         "second": 19
-      }
-    },
-    "task.20": {
-      "task": "Camera trembling for steps, jumps, and other stuff. Add levels of intensity.",
-      "type": "Feature",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 30,
-        "second": 51
       }
     },
     "task.21": {
@@ -641,20 +675,6 @@
         "minute": 10,
         "second": 23
       }
-    },
-    "task.27": {
-      "task": "Create CameraCrew and implement screen shake.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 21,
-        "minute": 0,
-        "second": 34
-      }
     }
   },
   "comp_order": [
@@ -679,17 +699,17 @@
     "task.28",
     "task.29",
     "task.24",
-    "task.30"
+    "task.30",
+    "task.27",
+    "task.20"
   ],
   "pend_order": [
     "task.14",
     "task.18",
     "task.19",
-    "task.20",
     "task.21",
     "task.22",
     "task.23",
-    "task.26",
-    "task.27"
+    "task.26"
   ]
 }
