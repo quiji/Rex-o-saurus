@@ -33,8 +33,13 @@ func land():
 	if current_anim != "Whip":
 		play("Land")
 
+func hard_land():
+	if current_anim != "Whip":
+		play("HardLand")
+
+
 func is_landing():
-	return current_anim == "Land"
+	return current_anim == "Land" or current_anim == "HardLand"
 
 func fall():
 	play("Fall")
@@ -62,6 +67,8 @@ func on_animation_finished(anim):
 		"JumpPeak":
 			play("Fall")
 		"Land":
+			play("Idle")
+		"HardLand":
 			play("Idle")
 		"Whip":
 			if get_parent().is_on_ground():

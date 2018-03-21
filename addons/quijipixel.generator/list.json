@@ -126,7 +126,7 @@
             },
             {
               "id": 23,
-              "time": 100,
+              "time": 180,
               "react": 0,
               "param": ""
             },
@@ -162,7 +162,7 @@
             },
             {
               "id": 17,
-              "time": 100,
+              "time": 180,
               "react": 0,
               "param": ""
             }
@@ -451,6 +451,30 @@
             {
               "id": 63,
               "time": 45,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "HardLand": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 28,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 27,
+              "time": 150,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 26,
+              "time": 20,
               "react": 0,
               "param": ""
             }

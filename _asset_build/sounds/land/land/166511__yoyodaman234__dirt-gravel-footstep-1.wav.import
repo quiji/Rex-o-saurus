@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/166511__yoyodaman234__dirt-gravel-footstep-1.wav-f72a6e4fcd7ec4d046f9f5f5c4302fc4.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/land/land/166511__yoyodaman234__dirt-gravel-footstep-1.wav"
+source_md5="af9493ead749be6f8d30281d9dad8daf"
+
+dest_files=[ "res://.import/166511__yoyodaman234__dirt-gravel-footstep-1.wav-f72a6e4fcd7ec4d046f9f5f5c4302fc4.sample" ]
+dest_md5="3f9c1d98b650d26c891046bf7338bac6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

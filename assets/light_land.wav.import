@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/light_land.wav-876b02e536ae2f1a1cc301621c05db8a.sample"
+
+[deps]
+
+source_file="res://assets/light_land.wav"
+source_md5="c8b205f770f7c64daf5dace3bf84ecbe"
+
+dest_files=[ "res://.import/light_land.wav-876b02e536ae2f1a1cc301621c05db8a.sample" ]
+dest_md5="854bbb657faeab46bd3434c58e5a1968"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -431,6 +431,78 @@
         "minute": 10,
         "second": 37
       }
+    },
+    "task.28": {
+      "task": "Add sfx to movements.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 10,
+        "minute": 35,
+        "second": 19
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 20,
+        "second": 6
+      }
+    },
+    "task.29": {
+      "task": "Add HardLand Anim",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 20,
+        "second": 14
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 36
+      }
+    },
+    "task.24": {
+      "task": "Amazing game sounds for roaring, steps and other stuff.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 32,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 43
+      }
     }
   },
   "pending": {
@@ -532,20 +604,6 @@
         "second": 37
       }
     },
-    "task.24": {
-      "task": "Amazing game sounds for roaring, steps and other stuff.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 32,
-        "second": 13
-      }
-    },
     "task.26": {
       "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
       "type": "Bug",
@@ -573,6 +631,20 @@
         "minute": 0,
         "second": 34
       }
+    },
+    "task.30": {
+      "task": "SFX for whip move.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 53
+      }
     }
   },
   "comp_order": [
@@ -593,7 +665,10 @@
     "task.25",
     "task.10",
     "task.13",
-    "task.17"
+    "task.17",
+    "task.28",
+    "task.29",
+    "task.24"
   ],
   "pend_order": [
     "task.14",
@@ -603,8 +678,8 @@
     "task.21",
     "task.22",
     "task.23",
-    "task.24",
     "task.26",
-    "task.27"
+    "task.27",
+    "task.30"
   ]
 }

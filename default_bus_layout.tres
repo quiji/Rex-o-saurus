@@ -1,4 +1,35 @@
-[gd_resource type="AudioBusLayout" format=2]
+[gd_resource type="AudioBusLayout" load_steps=2 format=2]
+
+[sub_resource type="AudioEffectChorus" id=1]
+
+resource_name = "Chorus"
+voice_count = 4
+dry = 1.0
+wet = 0.5
+voice/1/delay_ms = 15.0
+voice/1/rate_hz = 0.8
+voice/1/depth_ms = 2.0
+voice/1/level_db = 0.0
+voice/1/cutoff_hz = 8000.0
+voice/1/pan = -0.5
+voice/2/delay_ms = 20.0
+voice/2/rate_hz = 1.2
+voice/2/depth_ms = 3.0
+voice/2/level_db = 0.0
+voice/2/cutoff_hz = 8000.0
+voice/2/pan = 0.5
+voice/3/delay_ms = 12.0
+voice/3/rate_hz = 1.0
+voice/3/depth_ms = 0.0
+voice/3/level_db = 0.0
+voice/3/cutoff_hz = 16000.0
+voice/3/pan = 0.0
+voice/4/delay_ms = 12.0
+voice/4/rate_hz = 1.0
+voice/4/depth_ms = 0.0
+voice/4/level_db = 0.0
+voice/4/cutoff_hz = 16000.0
+voice/4/pan = 0.0
 
 [resource]
 
@@ -14,4 +45,12 @@ bus/1/mute = false
 bus/1/bypass_fx = false
 bus/1/volume_db = 0.0
 bus/1/send = "Master"
+bus/2/name = "RexRoar"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = "SoundFX"
+bus/2/effect/0/effect = SubResource( 1 )
+bus/2/effect/0/enabled = true
 

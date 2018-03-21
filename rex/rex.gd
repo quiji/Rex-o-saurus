@@ -90,7 +90,13 @@ func _physics_process(delta):
 	
 	if is_valid_ground_cast():
 		if not on_ground:
-			$sprite.land()
+			if velocity.y > 300:
+				$land_player.play(0)
+				$sprite.hard_land()
+			else:
+				$lightland_player.play(0)
+				$sprite.land()
+
 			running = false
 			jumping = false
 			velocity.y = 0
@@ -122,11 +128,12 @@ func is_valid_ground_cast():
 	
 func roar():
 	$roar_player.play(0)
-	Console.count("roars")
+
 	
 func add_step_impulse():
 	if running:
 		step_delta = step_duration
+		$step_player.play(0)
 
 func jump():
 	midair_velocity = run_velocity
