@@ -4,7 +4,7 @@ extends WindowDialog
 var _id = null
 var gen = null
 
-enum ReactTypes {REACT_NO, REACT_STEP, REACT_SWIMSTROKE, REACT_ENDSWIMSTROKE}
+enum ReactTypes {REACT_NO, REACT_STEP, REACT_ROAR, REACT_ENDSWIMSTROKE}
 
 onready var debug = $panel/margins/container/debug
 
@@ -370,8 +370,8 @@ func create_preview_animation(key):
 					react_call = ""
 					if gen.animations[key].frames[i].react == REACT_STEP:
 						react_call = "react(Step)"
-					elif gen.animations[key].frames[i].react == REACT_SWIMSTROKE:
-						react_call = "react(SwimStroke)"
+					elif gen.animations[key].frames[i].react == REACT_ROAR:
+						react_call = "react(Roar)"
 					elif gen.animations[key].frames[i].react == REACT_ENDSWIMSTROKE:
 						react_call = "react(EndSwimStroke)"
 
@@ -392,8 +392,8 @@ func create_preview_animation(key):
 					react_call = ""
 					if gen.animations[key].frames[i].react == REACT_STEP:
 						react_call = "react(Step)"
-					elif gen.animations[key].frames[i].react == REACT_SWIMSTROKE:
-						react_call = "react(SwimStroke)"
+					elif gen.animations[key].frames[i].react == REACT_ROAR:
+						react_call = "react(Roar)"
 					elif gen.animations[key].frames[i].react == REACT_ENDSWIMSTROKE:
 						react_call = "react(EndSwimStroke)"
 

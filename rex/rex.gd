@@ -120,6 +120,10 @@ func is_valid_ground_cast():
 		valid = true
 	return valid
 	
+func roar():
+	$roar_player.play(0)
+	Console.count("roars")
+	
 func add_step_impulse():
 	if running:
 		step_delta = step_duration

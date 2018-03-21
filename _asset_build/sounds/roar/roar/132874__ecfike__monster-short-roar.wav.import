@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/132874__ecfike__monster-short-roar.wav-7e1272e6e1bf8c38a5a9d8319cb7fc2e.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/roar/roar/132874__ecfike__monster-short-roar.wav"
+source_md5="d86f255e508fc20ab14d12efcfb38295"
+
+dest_files=[ "res://.import/132874__ecfike__monster-short-roar.wav-7e1272e6e1bf8c38a5a9d8319cb7fc2e.sample" ]
+dest_md5="570a758c4f0a33a76d812b6f01870e75"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

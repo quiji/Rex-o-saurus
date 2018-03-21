@@ -391,12 +391,12 @@
             {
               "id": 53,
               "time": 60,
-              "react": 0,
+              "react": 2,
               "param": ""
             },
             {
               "id": 54,
-              "time": 150,
+              "time": 200,
               "react": 0,
               "param": ""
             },
@@ -414,7 +414,7 @@
             },
             {
               "id": 57,
-              "time": 300,
+              "time": 400,
               "react": 0,
               "param": ""
             },

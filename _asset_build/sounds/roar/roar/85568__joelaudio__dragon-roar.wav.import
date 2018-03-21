@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/85568__joelaudio__dragon-roar.wav-6c79f783822a99f254520ec0531f84be.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/roar/roar/85568__joelaudio__dragon-roar.wav"
+source_md5="6d1a5f1f567c9e71b2a50f9095a218c7"
+
+dest_files=[ "res://.import/85568__joelaudio__dragon-roar.wav-6c79f783822a99f254520ec0531f84be.sample" ]
+dest_md5="483d87a2890c3fe1460937a2beee12ff"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

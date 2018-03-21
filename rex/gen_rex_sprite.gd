@@ -1,6 +1,6 @@
 extends Node2D
 
-enum ReactTypes {NO_REACTION, STEP_REACTION}
+enum ReactTypes {NO_REACTION, STEP_REACTION, ROAR_REACTION}
 
 var current_anim = ''
 
@@ -43,6 +43,8 @@ func react(action):
 	match action:
 		STEP_REACTION:
 			get_parent().add_step_impulse()
+		ROAR_REACTION:
+			get_parent().roar()
 	
 func play(anim):
 	if current_anim != anim:
