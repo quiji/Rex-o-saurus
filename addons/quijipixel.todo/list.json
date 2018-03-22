@@ -623,9 +623,7 @@
         "minute": 40,
         "second": 22
       }
-    }
-  },
-  "pending": {
+    },
     "task.14": {
       "task": "When falling, head might get stuck in platform.",
       "type": "Bug",
@@ -638,8 +636,20 @@
         "hour": 20,
         "minute": 56,
         "second": 50
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 56,
+        "second": 46
       }
-    },
+    }
+  },
+  "pending": {
     "task.18": {
       "task": "Consider equipment features with hats that have interesting animations but no real in game impact.",
       "type": "Remainder",
@@ -751,6 +761,20 @@
         "minute": 40,
         "second": 37
       }
+    },
+    "task.35": {
+      "task": "Consider level mechanic, that does nothing actually.",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 58,
+        "second": 43
+      }
     }
   },
   "comp_order": [
@@ -779,10 +803,10 @@
     "task.27",
     "task.20",
     "task.31",
-    "task.26"
+    "task.26",
+    "task.14"
   ],
   "pend_order": [
-    "task.14",
     "task.18",
     "task.19",
     "task.21",
@@ -790,6 +814,7 @@
     "task.23",
     "task.32",
     "task.33",
-    "task.34"
+    "task.34",
+    "task.35"
   ]
 }
