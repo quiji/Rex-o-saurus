@@ -599,6 +599,30 @@
         "minute": 36,
         "second": 56
       }
+    },
+    "task.26": {
+      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 23
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 40,
+        "second": 22
+      }
     }
   },
   "pending": {
@@ -686,20 +710,6 @@
         "second": 37
       }
     },
-    "task.26": {
-      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
-      "type": "Bug",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 18,
-        "minute": 10,
-        "second": 23
-      }
-    },
     "task.32": {
       "task": "Create Hard Land sound with biiig boooooom!",
       "type": "Task",
@@ -726,6 +736,20 @@
         "hour": 6,
         "minute": 37,
         "second": 26
+      }
+    },
+    "task.34": {
+      "task": "When going down a slop, the player micro falls.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 40,
+        "second": 37
       }
     }
   },
@@ -754,7 +778,8 @@
     "task.30",
     "task.27",
     "task.20",
-    "task.31"
+    "task.31",
+    "task.26"
   ],
   "pend_order": [
     "task.14",
@@ -763,8 +788,8 @@
     "task.21",
     "task.22",
     "task.23",
-    "task.26",
     "task.32",
-    "task.33"
+    "task.33",
+    "task.34"
   ]
 }
