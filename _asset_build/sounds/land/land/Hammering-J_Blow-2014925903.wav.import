@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hammering-J_Blow-2014925903.wav-f966ace2acc2f49bd716f9c53c3c8ecb.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/land/land/Hammering-J_Blow-2014925903.wav"
+source_md5="77bf8e6b42fc3222ed76d565d8347741"
+
+dest_files=[ "res://.import/Hammering-J_Blow-2014925903.wav-f966ace2acc2f49bd716f9c53c3c8ecb.sample" ]
+dest_md5="15936bf0570481d453ec16abba576de2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

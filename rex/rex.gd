@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 ######## Const Stats #########
 var max_run_velocity = 180.0
-var midair_move_velocity = 120#60.0
-var max_x_distance_a_jump = 120.0
+var midair_move_velocity = 140#60.0
+var max_x_distance_a_jump = 100.0
 var max_x_distance_b_jump = 180.0
 var jump_peak_height = 150
 
@@ -86,11 +86,27 @@ func _physics_process(delta):
 
 	take_input(delta)
 	
-	move_and_slide(velocity, Vector2(0, -1))
+	move_and_slide(velocity, Vector2(0, -1), 1)
 	
 	if is_valid_ground_cast():
 		if not on_ground:
-			$sprite.land()
+			if velocity.y < 230:
+				$lighterland_player.play(0)
+				$sprite.land()
+				$camera_crew.shake(2, 2, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+			elif velocity.y < 350:
+				$lightland_player.play(0)
+				$sprite.hard_land()
+				$camera_crew.shake(2, 4, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+			elif velocity.y < 550:
+				$land_player.play(0)
+				$sprite.hard_land()
+				$camera_crew.shake(1, 10, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+			else:
+				$land_player.play(0)
+				$sprite.hard_land()
+				$camera_crew.shake(0.8, 15, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+
 			running = false
 			jumping = false
 			velocity.y = 0
@@ -120,9 +136,16 @@ func is_valid_ground_cast():
 		valid = true
 	return valid
 	
+func roar():
+	$roar_player.play(0)
+	$camera_crew.shake(1.3, 10, $camera_crew.ALL_DIRECTIONS, $camera_crew.ARCH)
+
+	
 func add_step_impulse():
 	if running:
 		step_delta = step_duration
+		$step_player.play(0)
+		$camera_crew.shake(0.5, 2.5, $camera_crew.X_AXIS, $camera_crew.STRONG_TO_LOW)
 
 func jump():
 	midair_velocity = run_velocity
@@ -141,9 +164,19 @@ func take_input(delta):
 	var right_jr = Input.is_action_just_released("ui_right")
 	var jump_jp = Input.is_action_just_pressed("jump")
 	var jump_jr = Input.is_action_just_released("jump")
+	var whip_jp = Input.is_action_just_pressed("whip")
+	var roar_jp = Input.is_action_just_pressed("roar")
 	
+	if whip_jp:
+		$sprite.whip()
+		$whip_player.play(0)
 
-	if jump_jp and is_on_ground():
+	if roar_jp and is_on_ground() and not $sprite.is_whipping() and not jumping:
+		$sprite.roar()
+
+
+
+	if jump_jp and is_on_ground() and not $sprite.is_whipping():
 		jumping = true
 		running = false
 		velocity.x = 0
@@ -161,7 +194,7 @@ func take_input(delta):
 		$sprite.flip(false)
 		direction = 1
 	
-	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing():
+	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing() and not $sprite.is_whipping():
 		$sprite.run()
 		running = true
 		velocity.x = max_run_velocity * 0.65  * direction

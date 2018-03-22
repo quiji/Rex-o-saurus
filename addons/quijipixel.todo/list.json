@@ -239,9 +239,495 @@
         "minute": 28,
         "second": 46
       }
+    },
+    "task.11": {
+      "task": "Create tail whip animation!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 34,
+        "second": 45
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 50,
+        "second": 16
+      }
+    },
+    "task.12": {
+      "task": "Implement whip mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 51,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 13,
+        "second": 54
+      }
+    },
+    "task.15": {
+      "task": "Whip on air? Feels like it's missing.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 57,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 13,
+        "second": 57
+      }
+    },
+    "task.16": {
+      "task": "Implement air whip mechanic",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 14,
+        "second": 7
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 28,
+        "second": 37
+      }
+    },
+    "task.25": {
+      "task": "Whipping is interrupted by landing or jumping animations.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 57,
+        "second": 24
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 59,
+        "second": 42
+      }
+    },
+    "task.10": {
+      "task": "Create roar animation",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 16,
+        "minute": 34,
+        "second": 33
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 32
+      }
+    },
+    "task.13": {
+      "task": "Implement roar mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 51,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 33
+      }
+    },
+    "task.17": {
+      "task": "Remove old airwhip spinning animations.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 28,
+        "second": 51
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 37
+      }
+    },
+    "task.28": {
+      "task": "Add sfx to movements.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 10,
+        "minute": 35,
+        "second": 19
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 20,
+        "second": 6
+      }
+    },
+    "task.29": {
+      "task": "Add HardLand Anim",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 20,
+        "second": 14
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 36
+      }
+    },
+    "task.24": {
+      "task": "Amazing game sounds for roaring, steps and other stuff.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 32,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 43
+      }
+    },
+    "task.30": {
+      "task": "SFX for whip move.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 23,
+        "second": 53
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 11,
+        "minute": 40,
+        "second": 37
+      }
+    },
+    "task.27": {
+      "task": "Create CameraCrew and implement screen shake.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 21,
+        "minute": 0,
+        "second": 34
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 19,
+        "minute": 45,
+        "second": 27
+      }
+    },
+    "task.20": {
+      "task": "Camera trembling for steps, jumps, and other stuff. Add levels of intensity.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 30,
+        "second": 51
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 21,
+        "weekday": 3,
+        "dst": false,
+        "hour": 19,
+        "minute": 45,
+        "second": 39
+      }
+    },
+    "task.31": {
+      "task": "Remake the landing sounds and create different land levels.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 31,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 36,
+        "second": 56
+      }
     }
   },
   "pending": {
+    "task.14": {
+      "task": "When falling, head might get stuck in platform.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 19,
+        "weekday": 1,
+        "dst": false,
+        "hour": 20,
+        "minute": 56,
+        "second": 50
+      }
+    },
+    "task.18": {
+      "task": "Consider equipment features with hats that have interesting animations but no real in game impact.",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 29,
+        "second": 21
+      }
+    },
+    "task.19": {
+      "task": "Consider creating loot system where you get weapons with incredible names, amazing stats and rad looks but you cannot use because of short arms.",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 30,
+        "second": 19
+      }
+    },
+    "task.21": {
+      "task": "Small enemies (probably humans of 8x8) that look different and attack with different weapons.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 15
+      }
+    },
+    "task.22": {
+      "task": "NPCs, that say nonsense.... or something like that.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 28
+      }
+    },
+    "task.23": {
+      "task": "RAAAADDD Funky music!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 37
+      }
+    },
+    "task.26": {
+      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 23
+      }
+    },
+    "task.32": {
+      "task": "Create Hard Land sound with biiig boooooom!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 12
+      }
+    },
+    "task.33": {
+      "task": "Improve whip sound.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 26
+      }
+    }
   },
   "comp_order": [
     "task.2",
@@ -253,8 +739,32 @@
     "task.7",
     "task.5",
     "task.9",
-    "task.8"
+    "task.8",
+    "task.11",
+    "task.12",
+    "task.15",
+    "task.16",
+    "task.25",
+    "task.10",
+    "task.13",
+    "task.17",
+    "task.28",
+    "task.29",
+    "task.24",
+    "task.30",
+    "task.27",
+    "task.20",
+    "task.31"
   ],
   "pend_order": [
+    "task.14",
+    "task.18",
+    "task.19",
+    "task.21",
+    "task.22",
+    "task.23",
+    "task.26",
+    "task.32",
+    "task.33"
   ]
 }

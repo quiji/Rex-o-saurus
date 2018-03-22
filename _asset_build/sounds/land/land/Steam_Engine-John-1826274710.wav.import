@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Steam_Engine-John-1826274710.wav-fd3de409eb46ae5bb5e4fb1c02a9d2c6.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/land/land/Steam_Engine-John-1826274710.wav"
+source_md5="ba8b2eed82643d6adcaa9a90799208dd"
+
+dest_files=[ "res://.import/Steam_Engine-John-1826274710.wav-fd3de409eb46ae5bb5e4fb1c02a9d2c6.sample" ]
+dest_md5="e727c1b1ca5a27eb0c19f4ee0f14bb9e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

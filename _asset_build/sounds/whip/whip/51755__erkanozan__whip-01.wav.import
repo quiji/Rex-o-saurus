@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/51755__erkanozan__whip-01.wav-d9b27f337906613cc21e11787237eb22.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/whip/whip/51755__erkanozan__whip-01.wav"
+source_md5="f98c06616f93f211b9e80de9b58d2f76"
+
+dest_files=[ "res://.import/51755__erkanozan__whip-01.wav-d9b27f337906613cc21e11787237eb22.sample" ]
+dest_md5="aeba1b27363122fac9f12223841a1522"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

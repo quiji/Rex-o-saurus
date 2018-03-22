@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Video_Game_Splash-Ploor-699235037.wav-1c2e9cf7f20437cf604d5a493308afb8.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/land/land/Video_Game_Splash-Ploor-699235037.wav"
+source_md5="b827e85f2c98c6b26b37a0fee1b2c069"
+
+dest_files=[ "res://.import/Video_Game_Splash-Ploor-699235037.wav-1c2e9cf7f20437cf604d5a493308afb8.sample" ]
+dest_md5="d0a91c5a356f62138d320523dcc683bf"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

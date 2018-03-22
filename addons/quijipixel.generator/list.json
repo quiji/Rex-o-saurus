@@ -3,7 +3,7 @@
     "SpriteAnim2D.30": {
       "name": "Rex",
       "spritesheet": "res://assets/rex.png",
-      "sprite_height": 110,
+      "sprite_height": 100,
       "sprite_width": 140,
       "animations": {
         "Idle": {
@@ -126,7 +126,7 @@
             },
             {
               "id": 23,
-              "time": 100,
+              "time": 180,
               "react": 0,
               "param": ""
             },
@@ -162,7 +162,7 @@
             },
             {
               "id": 17,
-              "time": 100,
+              "time": 180,
               "react": 0,
               "param": ""
             }
@@ -265,6 +265,216 @@
             {
               "id": 26,
               "time": 50,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Whip": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 35,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 36,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 37,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 38,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 39,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 40,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 41,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 42,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 43,
+              "time": 105,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 44,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 45,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Roar": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 46,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 47,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 48,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 49,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 50,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 51,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 52,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 53,
+              "time": 60,
+              "react": 2,
+              "param": ""
+            },
+            {
+              "id": 54,
+              "time": 200,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 55,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 56,
+              "time": 400,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 57,
+              "time": 400,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 58,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 59,
+              "time": 70,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 60,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 61,
+              "time": 55,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 62,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 63,
+              "time": 45,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "HardLand": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 28,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 27,
+              "time": 150,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 26,
+              "time": 20,
               "react": 0,
               "param": ""
             }

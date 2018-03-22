@@ -33,3 +33,6 @@ git push origin branch_name
 after PR succesfully merged, delete branch
 git branch -d branch_name
 
+
+Roar: 1480 milli seconds should the sound last
+
