@@ -90,22 +90,18 @@ func _physics_process(delta):
 	
 	if is_valid_ground_cast():
 		if not on_ground:
-			if velocity.y < 200:
-				$lightland_player.play(0)
+			if velocity.y < 230:
+				$lighterland_player.play(0)
 				$sprite.land()
 				$camera_crew.shake(2, 2, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
-			elif velocity.y < 300:
-				$land_player.play(0)
+			elif velocity.y < 350:
+				$lightland_player.play(0)
 				$sprite.hard_land()
 				$camera_crew.shake(2, 4, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
-			elif velocity.y < 400:
-				$land_player.play(0)
-				$sprite.hard_land()
-				$camera_crew.shake(1.5, 8, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			elif velocity.y < 550:
 				$land_player.play(0)
 				$sprite.hard_land()
-				$camera_crew.shake(1, 12, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				$camera_crew.shake(1, 10, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			else:
 				$land_player.play(0)
 				$sprite.hard_land()

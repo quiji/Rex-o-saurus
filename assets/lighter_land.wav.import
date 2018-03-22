@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lighter_land.wav-8b0c2e1322781f433de97af4634dbff2.sample"
+
+[deps]
+
+source_file="res://assets/lighter_land.wav"
+source_md5="afddb6e1a0883473c565895e7cb17e18"
+
+dest_files=[ "res://.import/lighter_land.wav-8b0c2e1322781f433de97af4634dbff2.sample" ]
+dest_md5="b2205e1b5627e58cf66b23c1782d9ba3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -575,6 +575,30 @@
         "minute": 45,
         "second": 39
       }
+    },
+    "task.31": {
+      "task": "Remake the landing sounds and create different land levels.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 31,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 36,
+        "second": 56
+      }
     }
   },
   "pending": {
@@ -675,6 +699,34 @@
         "minute": 10,
         "second": 23
       }
+    },
+    "task.32": {
+      "task": "Create Hard Land sound with biiig boooooom!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 12
+      }
+    },
+    "task.33": {
+      "task": "Improve whip sound.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 26
+      }
     }
   },
   "comp_order": [
@@ -701,7 +753,8 @@
     "task.24",
     "task.30",
     "task.27",
-    "task.20"
+    "task.20",
+    "task.31"
   ],
   "pend_order": [
     "task.14",
@@ -710,6 +763,8 @@
     "task.21",
     "task.22",
     "task.23",
-    "task.26"
+    "task.26",
+    "task.32",
+    "task.33"
   ]
 }

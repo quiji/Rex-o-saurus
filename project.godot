@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=4
-minor=20
+minor=21
 
 [application]
 
