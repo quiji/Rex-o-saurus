@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://platforms/platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://rex/rex.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemies/soldier_a.tscn" type="PackedScene" id=3]
 
 [node name="game" type="Node2D"]
 
 [node name="ground" type="Node2D" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="floor" type="StaticBody2D" parent="ground" index="0"]
 
@@ -19,14 +18,9 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="collision" type="CollisionPolygon2D" parent="ground/floor" index="0"]
+[node name="Polygon2D" type="Polygon2D" parent="ground/floor" index="0"]
 
-build_mode = 0
-polygon = PoolVector2Array( 5, 260, 533, 260, 533, 366, 33, 366, -35, 620, 1265, 620, 1552, 496, 1411, 208, 1687, 210, 1675, 692, -187, 696, -187, 696, -189, -10, 65, -16, -75, 104, -77, 242 )
-
-[node name="Polygon2D" type="Polygon2D" parent="ground/floor" index="1"]
-
-polygon = PoolVector2Array( -195, -14, 71, -20, -73, 114, -69, 234, 1, 256, 537, 256, 537, 374, 39, 374, -27, 616, 1263, 616, 1545, 498, 1407, 202, 1701, 202, 1689, 696, -249, 694 )
+polygon = PoolVector2Array( -195, -14, 71, -20, -73, 114, -69, 234, 1, 256, 537, 256, 537, 374, 39, 374, -27, 616, 1263, 616, 1270, 706, -249, 694 )
 uv = PoolVector2Array(  )
 color = Color( 0.0765076, 0.425781, 0.163826, 1 )
 vertex_colors = PoolColorArray(  )
@@ -38,6 +32,41 @@ texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
 invert_enable = false
 invert_border = 100.0
+
+[node name="collision" type="CollisionPolygon2D" parent="ground/floor" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 5, 260, 533, 260, 533, 366, 33, 366, -35, 620, 1265, 620, 1266, 690, -187, 696, -187, 696, -189, -10, 65, -16, -75, 104, -77, 242 )
+
+[node name="floor2" type="StaticBody2D" parent="ground" index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Polygon2D" type="Polygon2D" parent="ground/floor2" index="0"]
+
+polygon = PoolVector2Array( 1263, 616, 1545, 498, 1407, 202, 1701, 202, 1689, 696, 1262, 698 )
+uv = PoolVector2Array(  )
+color = Color( 0.0765076, 0.425781, 0.163826, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="collision" type="CollisionPolygon2D" parent="ground/floor2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1265, 620, 1552, 496, 1411, 208, 1687, 210, 1675, 692, 1358, 810, 1262, 698 )
 
 [node name="platforms" type="Node2D" parent="." index="1"]
 
@@ -78,5 +107,9 @@ position = Vector2( 502, -75 )
 [node name="rex" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 139, 225 )
+
+[node name="soldier_a" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 256, 220 )
 
 

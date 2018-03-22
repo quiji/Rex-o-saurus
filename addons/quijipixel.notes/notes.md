@@ -37,10 +37,18 @@ git branch -d branch_name
 Roar: 1480 milli seconds should the sound last
 
 Mechanics rules:
-- The roar scares the enemies
+- The roar scares the enemies leaving them stun for a little while
 - The roar destroys the on-air projectiles
 - Enemies throw projectiles
 - Big strong enemies may hit you
 - Projectiles range from knives to bombs
 - There are armed enemies, with machine guns
+- Roar has to charge? so they don't go on a roaring rampage
+- Tail whip whacks them
+- Falling hard stun enemies too
+
+Bosses:
+- Tank army?
+- Evil rat king and rat army?
+- Evil ninja clan?
 

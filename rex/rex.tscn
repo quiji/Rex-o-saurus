@@ -40,10 +40,10 @@ random_pitch = 1.04
 audio_stream = ExtResource( 8 )
 random_pitch = 1.04
 
-[node name="rex" type="KinematicBody2D"]
+[node name="rex" type="KinematicBody2D" index="0"]
 
 input_pickable = false
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
@@ -51,28 +51,30 @@ _sections_unfolded = [ "Collision", "collision" ]
 
 [node name="sprite" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( -1, -38 )
+position = Vector2( -1, -40 )
 
 [node name="collision" type="CollisionPolygon2D" parent="." index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( -8, 0, -4, 3, 16, 2, 18, -2, 9, -7, 18, -13, 14, -32, 14, -47, 36, -49, 44, -68, 11, -67, -9, -38, -19, -24, -32, -13, -12, -6, -7, -4 )
+polygon = PoolVector2Array( -16, 2, 16, 2, 18, -2, 17, -7, 18, -13, 14, -32, 9, -41, -1, -45, -9, -41, -19, -24, -20, -15, -18, -7 )
 
 [node name="ground_ray_a" type="RayCast2D" parent="." index="2"]
 
-position = Vector2( -10, 1 )
+position = Vector2( -14, -3 )
 enabled = true
 exclude_parent = true
-cast_to = Vector2( 0, 6 )
+cast_to = Vector2( -1, 7 )
 collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="ground_ray_b" type="RayCast2D" parent="." index="3"]
 
-position = Vector2( 20, 1 )
+position = Vector2( 14, -3 )
 enabled = true
 exclude_parent = true
-cast_to = Vector2( 0, 6 )
+cast_to = Vector2( 2, 7 )
 collision_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="roar_player" type="AudioStreamPlayer2D" parent="." index="4"]
 

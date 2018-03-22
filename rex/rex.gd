@@ -49,9 +49,6 @@ func _ready():
 	highgest_gravity_scalar = lowest_gravity_scalar * 6
 	current_gravity = fall_gravity_scalar
 	
-	Console.add_log("highgest_gravity_scalar", highgest_gravity_scalar)
-	Console.add_log("lowest_gravity_scalar", lowest_gravity_scalar)
-	Console.add_log("fall_gravity_scalar", fall_gravity_scalar)
 
 func _physics_process(delta):
 	
@@ -126,14 +123,21 @@ func _physics_process(delta):
 	elif ground_loose_delta > 0:
 		ground_loose_delta -= delta
 	
-	Console.add_log("current_gravity", current_gravity)
 
 func is_valid_ground_cast():
 	var valid = false
-	if $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.98:
+	var ray_a = $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.4
+	var ray_b = $ground_ray_b.is_colliding() and $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)) > 0.4
+	if ray_a or ray_b :
 		valid = true
-	elif $ground_ray_b.is_colliding() and $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)) > 0.98:
-		valid = true
+	Console.add_log("ray_a", ray_a)
+	Console.add_log("ray_b", ray_b)
+	if $ground_ray_a.is_colliding():
+		Console.add_log("normal_a", $ground_ray_a.get_collision_normal())
+		Console.add_log("dot_a", $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)))
+	if $ground_ray_b.is_colliding():
+		Console.add_log("normal_b", $ground_ray_b.get_collision_normal())
+		Console.add_log("dot_b", $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)))
 	return valid
 	
 func roar():
