@@ -36,3 +36,11 @@ git branch -d branch_name
 
 Roar: 1480 milli seconds should the sound last
 
+Mechanics rules:
+- The roar scares the enemies
+- The roar destroys the on-air projectiles
+- Enemies throw projectiles
+- Big strong enemies may hit you
+- Projectiles range from knives to bombs
+- There are armed enemies, with machine guns
+
