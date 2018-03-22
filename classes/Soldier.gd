@@ -30,6 +30,7 @@ var step_delta = 0
 var step_duration = 0.540 * 0.7
 var jump_delta = 0
 
+var current_normal = null
 
 
 func _ready():
@@ -74,7 +75,13 @@ func _physics_process(delta):
 
 	take_input(delta)
 	
-	move_and_slide(velocity, Vector2(0, -1), 1)
+	
+	var frame_velocity = velocity	
+	if on_ground and not jumping:
+		frame_velocity = velocity.slide(current_normal)
+
+	move_and_slide(frame_velocity, Vector2(0, -1), 1)
+
 	
 	if is_valid_ground_cast():
 		if not on_ground:
@@ -95,9 +102,13 @@ func _physics_process(delta):
 	
 
 func is_valid_ground_cast():
-	var valid = false
-	if $ground_ray.is_colliding() and $ground_ray.get_collision_normal().dot(Vector2(0, -1)) > 0.4:
-		valid = true
+	var valid = $ground_ray.is_colliding() and $ground_ray.get_collision_normal().dot(Vector2(0, -1)) > 0.4
+
+	if $ground_ray.is_colliding():
+		current_normal = $ground_ray.get_collision_normal()
+	else:
+		current_normal = Vector2(0, -1)
+		
 	return valid
 	
 

@@ -647,6 +647,30 @@
         "minute": 56,
         "second": 46
       }
+    },
+    "task.34": {
+      "task": "When going down a slop, the player micro falls.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 40,
+        "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 14,
+        "second": 2
+      }
     }
   },
   "pending": {
@@ -748,20 +772,6 @@
         "second": 26
       }
     },
-    "task.34": {
-      "task": "When going down a slop, the player micro falls.",
-      "type": "Bug",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 9,
-        "minute": 40,
-        "second": 37
-      }
-    },
     "task.35": {
       "task": "Consider level mechanic, that does nothing actually.",
       "type": "Remainder",
@@ -804,7 +814,8 @@
     "task.20",
     "task.31",
     "task.26",
-    "task.14"
+    "task.14",
+    "task.34"
   ],
   "pend_order": [
     "task.18",
@@ -814,7 +825,6 @@
     "task.23",
     "task.32",
     "task.33",
-    "task.34",
     "task.35"
   ]
 }

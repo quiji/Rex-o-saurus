@@ -37,6 +37,7 @@ var ground_loose_delta = 0
 var ground_loose_duration = 0.4
 var current_gravity = 0
 
+var current_normal = null
 
 func _ready():
 	$sprite.idle()
@@ -83,7 +84,12 @@ func _physics_process(delta):
 
 	take_input(delta)
 	
-	move_and_slide(velocity, Vector2(0, -1), 1)
+	var frame_velocity = velocity
+	
+	if on_ground and not jumping:
+		frame_velocity = velocity.slide(current_normal)
+
+	move_and_slide(frame_velocity, Vector2(0, -1), 1)
 	
 	if is_valid_ground_cast():
 		if not on_ground:
@@ -125,20 +131,25 @@ func _physics_process(delta):
 	
 
 func is_valid_ground_cast():
-	var valid = false
 	var ray_a = $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.4
 	var ray_b = $ground_ray_b.is_colliding() and $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)) > 0.4
-	if ray_a or ray_b :
-		valid = true
-	Console.add_log("ray_a", ray_a)
-	Console.add_log("ray_b", ray_b)
+	
+	var normal_a = Vector2(0, -1)
+	var normal_b = Vector2(0, -1)
+
 	if $ground_ray_a.is_colliding():
-		Console.add_log("normal_a", $ground_ray_a.get_collision_normal())
-		Console.add_log("dot_a", $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)))
+		normal_a = $ground_ray_a.get_collision_normal()
+
 	if $ground_ray_b.is_colliding():
-		Console.add_log("normal_b", $ground_ray_b.get_collision_normal())
-		Console.add_log("dot_b", $ground_ray_b.get_collision_normal().dot(Vector2(0, -1)))
-	return valid
+		normal_b = $ground_ray_b.get_collision_normal()
+
+	if normal_a.dot(Vector2(0, -1)) < normal_b.dot(Vector2(0, -1)):
+		current_normal = normal_a
+	else:
+		current_normal = normal_b 
+
+	
+	return ray_a or ray_b
 	
 func roar():
 	$roar_player.play(0)
