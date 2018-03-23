@@ -106,7 +106,7 @@ func _physics_process(delta):
 				$sprite.hard_land()
 				$camera_crew.shake(1, 10, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			else:
-				$land_player.play(0)
+				$hardland_player.play(0)
 				$sprite.hard_land()
 				$camera_crew.shake(0.8, 15, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Flashbang-Kibblesbob-899170896.wav-0836d8852df4a87b121c085c679d61b9.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/land/land/Flashbang-Kibblesbob-899170896.wav"
+source_md5="7626b2c7b8fc19bf6bdd2a06d8c913e0"
+
+dest_files=[ "res://.import/Flashbang-Kibblesbob-899170896.wav-0836d8852df4a87b121c085c679d61b9.sample" ]
+dest_md5="cc0a233c079a22e7d36a1f7656ec53f8"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

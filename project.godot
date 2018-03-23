@@ -10,8 +10,8 @@ config_version=3
 
 [Project]
 
-patch=7
-minor=21
+patch=8
+minor=22
 
 [application]
 
@@ -53,6 +53,16 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+wav={
+"compress/mode": 0,
+"edit/loop": false,
+"edit/normalize": true,
+"edit/trim": false,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
 }
 
 [input]

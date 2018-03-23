@@ -671,6 +671,54 @@
         "minute": 14,
         "second": 2
       }
+    },
+    "task.32": {
+      "task": "Create Hard Land sound with biiig boooooom!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 12
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 7,
+        "minute": 38,
+        "second": 22
+      }
+    },
+    "task.39": {
+      "task": "Sounds end abruptly and have a bip at the end",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 7,
+        "minute": 38,
+        "second": 49
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 4,
+        "second": 1
+      }
     }
   },
   "pending": {
@@ -744,20 +792,6 @@
         "second": 37
       }
     },
-    "task.32": {
-      "task": "Create Hard Land sound with biiig boooooom!",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 6,
-        "minute": 37,
-        "second": 12
-      }
-    },
     "task.33": {
       "task": "Improve whip sound.",
       "type": "Task",
@@ -784,6 +818,48 @@
         "hour": 9,
         "minute": 58,
         "second": 43
+      }
+    },
+    "task.36": {
+      "task": "Implement shooting with rifle",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 14,
+        "second": 58
+      }
+    },
+    "task.37": {
+      "task": "Implement shooting with machine gun",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 7
+      }
+    },
+    "task.38": {
+      "task": "Implement shooting with dual guns.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 16
       }
     }
   },
@@ -815,7 +891,9 @@
     "task.31",
     "task.26",
     "task.14",
-    "task.34"
+    "task.34",
+    "task.32",
+    "task.39"
   ],
   "pend_order": [
     "task.18",
@@ -823,8 +901,10 @@
     "task.21",
     "task.22",
     "task.23",
-    "task.32",
     "task.33",
-    "task.35"
+    "task.35",
+    "task.36",
+    "task.37",
+    "task.38"
   ]
 }

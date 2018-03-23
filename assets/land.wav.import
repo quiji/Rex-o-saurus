@@ -7,10 +7,10 @@ path="res://.import/land.wav-31b6c4ebeb94b9c5c565228d103fcb01.sample"
 [deps]
 
 source_file="res://assets/land.wav"
-source_md5="0f2b338726cd7a8b88ae2309d1137d47"
+source_md5="8009a39c7401ffa4b9d32e5efbf42b9f"
 
 dest_files=[ "res://.import/land.wav-31b6c4ebeb94b9c5c565228d103fcb01.sample" ]
-dest_md5="81bcf9340110c42be22065d0394b59c8"
+dest_md5="324d35f01de82798e79864e410a24e9b"
 
 [params]
 
@@ -18,7 +18,7 @@ force/8_bit=false
 force/mono=false
 force/max_rate=false
 force/max_rate_hz=44100
-edit/trim=true
+edit/trim=false
 edit/normalize=true
 edit/loop=false
 compress/mode=0
