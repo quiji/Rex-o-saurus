@@ -743,6 +743,30 @@
         "minute": 14,
         "second": 55
       }
+    },
+    "task.41": {
+      "task": "Implement throws.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 33,
+        "second": 18
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 4,
+        "second": 36
+      }
     }
   },
   "pending": {
@@ -886,20 +910,6 @@
         "second": 16
       }
     },
-    "task.41": {
-      "task": "Implement throws.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 23,
-        "weekday": 5,
-        "dst": false,
-        "hour": 8,
-        "minute": 33,
-        "second": 18
-      }
-    },
     "task.42": {
       "task": "Improve game sounds, add a 8bit sound and remove excesive reverb.",
       "type": "Task",
@@ -912,6 +922,34 @@
         "hour": 20,
         "minute": 52,
         "second": 5
+      }
+    },
+    "task.43": {
+      "task": "Create Granade soldier. (different sprite for eye recognition)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 4,
+        "second": 56
+      }
+    },
+    "task.44": {
+      "task": "Add scared mechanic, blow all current bullets.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 5,
+        "second": 28
       }
     }
   },
@@ -946,7 +984,8 @@
     "task.34",
     "task.32",
     "task.39",
-    "task.40"
+    "task.40",
+    "task.41"
   ],
   "pend_order": [
     "task.18",
@@ -959,7 +998,8 @@
     "task.36",
     "task.37",
     "task.38",
-    "task.41",
-    "task.42"
+    "task.42",
+    "task.43",
+    "task.44"
   ]
 }

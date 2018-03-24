@@ -28,6 +28,8 @@ var falling = false
 var running = false
 var jumping = false
 
+var bullet_dispel_on = false
+
 var direction = 1
 
 var step_delta = 0
@@ -49,7 +51,8 @@ func _ready():
 	lowest_gravity_scalar = -2*jump_peak_height* (max_run_velocity*max_run_velocity) / (max_x_distance_a_jump*max_x_distance_a_jump)
 	highgest_gravity_scalar = lowest_gravity_scalar * 6
 	current_gravity = fall_gravity_scalar
-	
+
+	$damage_area.connect("area_entered", self, "on_bullet_hit")
 
 func _physics_process(delta):
 	
@@ -129,6 +132,8 @@ func _physics_process(delta):
 	elif ground_loose_delta > 0:
 		ground_loose_delta -= delta
 	
+	if bullet_dispel_on:
+		get_tree().call_group("bullets", "dismiss")
 
 func is_valid_ground_cast():
 	var ray_a = $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.4
@@ -154,8 +159,10 @@ func is_valid_ground_cast():
 func roar():
 	$roar_player.play(0)
 	$camera_crew.shake(1.3, 10, $camera_crew.ALL_DIRECTIONS, $camera_crew.ARCH)
+	bullet_dispel_on = true
+	get_tree().call_group("soldiers", "roar_scared")
 
-	
+
 func add_step_impulse():
 	if running:
 		step_delta = step_duration
@@ -169,6 +176,10 @@ func jump():
 
 func is_on_ground():
 	return on_ground and ground_loose_delta > 0
+
+func on_bullet_hit(bullet):
+	Console.count("Hurt!")
+	bullet.dismiss()
 
 func take_input(delta):
 	var left_jp = Input.is_action_just_pressed("ui_left")
@@ -205,9 +216,13 @@ func take_input(delta):
 	if left_p:
 		$sprite.flip(true)
 		direction = -1
+		$damage_area/collision_left.disabled = false
+		$damage_area/collision_right.disabled = true
 	elif right_p:
 		$sprite.flip(false)
 		direction = 1
+		$damage_area/collision_left.disabled = true
+		$damage_area/collision_right.disabled = false
 	
 	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing() and not $sprite.is_whipping():
 		$sprite.run()

@@ -12,7 +12,7 @@ height = 6.0
 [node name="soldier_a" type="KinematicBody2D"]
 
 input_pickable = false
-collision_layer = 2
+collision_layer = 0
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )

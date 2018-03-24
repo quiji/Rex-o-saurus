@@ -77,6 +77,7 @@ func on_animation_finished(anim):
 				play("Fall")
 		"Roar":
 			play("Idle")
+			get_parent().bullet_dispel_on = false
 
 
 

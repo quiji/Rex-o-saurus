@@ -4,7 +4,7 @@
 [ext_resource path="res://rex/rex.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemies/soldier_a.tscn" type="PackedScene" id=3]
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 [node name="ground" type="Node2D" parent="." index="0"]
 
@@ -113,5 +113,13 @@ position = Vector2( 139, 225 )
 [node name="soldier_a" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 256, 220 )
+
+[node name="soldier_a2" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 284, 220 )
+
+[node name="soldier_a3" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 336, 216 )
 
 

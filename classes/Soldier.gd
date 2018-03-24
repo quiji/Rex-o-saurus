@@ -1,5 +1,10 @@
 extends KinematicBody2D
 
+var Knife = preload("res://bullets/knife.tscn")
+
+const DISTANCE_TO_ATTACK = 140
+const DISTANCE_TO_RUN  = 120
+
 ######## Const Stats #########
 var max_run_velocity = 75.0
 var midair_move_velocity = 20
@@ -32,16 +37,22 @@ var jump_delta = 0
 
 var current_normal = null
 
-var throw_point = Vector2(7, -10)
+var throw_point = Vector2(10, -16)
+var distance_to_attack
+var distance_to_run 
 
 func _ready():
+	add_to_group("soldiers")
 	
 	$sprite.idle()
 	time_to_peak_of_jump = max_x_distance_a_jump / max_run_velocity
 	jump_initial_velocity_scalar = 2*jump_peak_height / time_to_peak_of_jump
 
 	gravity_scalar = -2*jump_peak_height* (max_run_velocity*max_run_velocity) / (max_x_distance_b_jump*max_x_distance_b_jump)
-	
+
+	distance_to_attack = DISTANCE_TO_ATTACK * DISTANCE_TO_ATTACK * rand_range(0.8, 1.2)
+	distance_to_run = DISTANCE_TO_RUN * DISTANCE_TO_RUN * rand_range(0.8, 1.2)
+
 
 func _physics_process(delta):
 
@@ -134,6 +145,12 @@ func run():
 
 func throw():
 	$sprite.idle()
+	var new_knife = Knife.instance()
+	var throw_offset = throw_point
+	throw_offset.x *= direction
+	new_knife.position = position + throw_offset
+	new_knife.throw(direction)
+	get_parent().add_child(new_knife)
 
 func look_right(is_right=true):
 	if is_right:
@@ -147,8 +164,6 @@ func take_input(delta):
 	#direction = -1
 	#$sprite.flip(true)
 	
-	var distance_to_attack = 150 * 150
-	var distance_to_run = 120 * 120
 	var rex_distance = $"../rex".position - position
 	var rex_distance_squared = rex_distance.length_squared()
 	var rex_direction = rex_distance.normalized()
