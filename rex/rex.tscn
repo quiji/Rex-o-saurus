@@ -46,7 +46,7 @@ random_pitch = 1.04
 audio_stream = ExtResource( 9 )
 random_pitch = 1.04
 
-[node name="rex" type="KinematicBody2D" index="0"]
+[node name="rex" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 0
@@ -61,7 +61,6 @@ position = Vector2( -1, -41 )
 
 [node name="collision" type="CollisionPolygon2D" parent="." index="1"]
 
-visible = false
 build_mode = 0
 polygon = PoolVector2Array( -16, 2, 16, 2, 18, -2, 17, -7, 18, -13, 14, -32, 9, -41, -1, -45, -9, -41, -19, -24, -20, -15, -18, -7 )
 

@@ -4,6 +4,7 @@ enum ShakeDirectionTypes {X_AXIS, Y_AXIS, ALL_DIRECTIONS}
 enum ShakeMovementTypes {ARCH, STRONG_TO_LOW}
 
 var DIRECTIONS = [Vector2(0, -1), Vector2(1, -1).normalized(), Vector2(1, 0), Vector2(1, 1).normalized(), Vector2(0, 1), Vector2(-1, 1).normalized(), Vector2(-1, 0), Vector2(-1, -1).normalized()]
+const LOOK_DISTANCE = 130
 
 var shake_delta = 0
 var shake_duration = 0
@@ -58,6 +59,16 @@ func _generate_new_target(t):
 		return direction * lerp(0, amplitude, Smoothstep.arch(t, 4)) * rand_range(0.8, 1)
 	else:
 		return direction * lerp(0, amplitude, Smoothstep.flip(Smoothstep.stop4(t))) * rand_range(0.8, 1)
+
+func look_left():
+	$tween.stop(self)
+	$tween.interpolate_property(self, "position", position, Vector2(-1, -0.5) * LOOK_DISTANCE, 0.8, Tween.TRANS_CUBIC, Tween.EASE_OUT)
+	$tween.start()
+	
+func look_right():
+	$tween.stop(self)
+	$tween.interpolate_property(self, "position", position, Vector2(1, -0.5) * LOOK_DISTANCE, 0.8, Tween.TRANS_CUBIC, Tween.EASE_OUT)
+	$tween.start()
 
 
 var movement_t = 0

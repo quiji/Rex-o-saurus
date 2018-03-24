@@ -815,6 +815,54 @@
         "minute": 57,
         "second": 38
       }
+    },
+    "task.33": {
+      "task": "Improve whip sound.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 26
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 12,
+        "second": 53
+      }
+    },
+    "task.47": {
+      "task": "Implement stomp mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 13,
+        "second": 26
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 41,
+        "second": 3
+      }
     }
   },
   "pending": {
@@ -886,20 +934,6 @@
         "hour": 9,
         "minute": 31,
         "second": 37
-      }
-    },
-    "task.33": {
-      "task": "Improve whip sound.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 6,
-        "minute": 37,
-        "second": 26
       }
     },
     "task.35": {
@@ -985,6 +1019,20 @@
         "minute": 4,
         "second": 56
       }
+    },
+    "task.46": {
+      "task": "Implement Whip mechanic",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 13,
+        "second": 13
+      }
     }
   },
   "comp_order": [
@@ -1021,7 +1069,9 @@
     "task.40",
     "task.41",
     "task.44",
-    "task.45"
+    "task.45",
+    "task.33",
+    "task.47"
   ],
   "pend_order": [
     "task.18",
@@ -1029,12 +1079,12 @@
     "task.21",
     "task.22",
     "task.23",
-    "task.33",
     "task.35",
     "task.36",
     "task.37",
     "task.38",
     "task.42",
-    "task.43"
+    "task.43",
+    "task.46"
   ]
 }

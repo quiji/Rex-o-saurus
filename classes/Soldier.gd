@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var Knife = preload("res://bullets/knife.tscn")
 
+const DISTANCE_TO_SPOT = 250
 const DISTANCE_TO_ATTACK = 140
 const DISTANCE_TO_RUN  = 120
 
@@ -37,10 +38,10 @@ var jumping = false
 
 var direction = 1
 
-const TREMBLE_DURATION = 1.5
+const TREMBLE_DURATION = 1.25
 var tremble_delta = null
 
-const ESCAPE_DURATION = 4.0
+const ESCAPE_DURATION = 5.0
 var escape_delta = null
 
 
@@ -53,6 +54,7 @@ var current_normal = null
 var throw_point = Vector2(10, -16)
 var distance_to_attack
 var distance_to_run 
+var distance_to_spot
 
 func _ready():
 	add_to_group("soldiers")
@@ -65,6 +67,7 @@ func _ready():
 
 	distance_to_attack = DISTANCE_TO_ATTACK * DISTANCE_TO_ATTACK * rand_range(0.8, 1.2)
 	distance_to_run = DISTANCE_TO_RUN * DISTANCE_TO_RUN * rand_range(0.8, 1.2)
+	distance_to_spot = DISTANCE_TO_SPOT * DISTANCE_TO_SPOT * rand_range(0.8, 1.2)
 
 
 func _physics_process(delta):
@@ -158,6 +161,10 @@ func run():
 
 func roar_scared():
 	ai_transit_to(SCARED, true)
+
+func stomped():
+	$sprite.stomped()
+	set_physics_process(false)
 
 
 func throw():
@@ -279,10 +286,7 @@ func take_input(delta):
 				ai_transit_to(IDLE, true)
 
 		IDLE:
-			if rex_distance_squared > distance_to_attack:
+			$sprite.idle()
+			if rex_distance_squared < distance_to_spot:
 				ai_transit_to(RUN_TO_ATTACK_DISTANCE)
-			elif rex_distance_squared > distance_to_run:
-				ai_transit_to(ATTACK)
-			else:
-				ai_transit_to(RUN_AWAY, true)
 

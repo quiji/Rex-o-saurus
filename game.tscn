@@ -4,7 +4,7 @@
 [ext_resource path="res://enemies/soldier_a.tscn" type="PackedScene" id=2]
 [ext_resource path="res://rex/rex.tscn" type="PackedScene" id=3]
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 [node name="ground" type="Node2D" parent="." index="0"]
 

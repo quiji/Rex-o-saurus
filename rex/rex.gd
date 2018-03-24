@@ -40,6 +40,7 @@ var ground_loose_duration = 0.4
 var current_gravity = 0
 
 var current_normal = null
+var stomp_area
 
 func _ready():
 	$sprite.idle()
@@ -53,6 +54,9 @@ func _ready():
 	current_gravity = fall_gravity_scalar
 
 	$damage_area.connect("area_entered", self, "on_bullet_hit")
+
+	stomp_area = shape_owner_get_shape(0, 0)
+
 
 func _physics_process(delta):
 	
@@ -113,6 +117,8 @@ func _physics_process(delta):
 				$sprite.hard_land()
 				$camera_crew.shake(0.8, 15, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 
+			check_stomp_collision()
+
 			running = false
 			jumping = false
 			velocity.y = 0
@@ -155,6 +161,21 @@ func is_valid_ground_cast():
 
 	
 	return ray_a or ray_b
+	
+func check_stomp_collision():
+	var space_rid = get_world_2d().space
+	var space_state = Physics2DServer.space_get_direct_state(space_rid)
+	
+	var query = Physics2DShapeQueryParameters.new()
+	query.collision_layer = 4 # third bit
+	query.margin = 0.08
+	query.set_shape(stomp_area)
+	query.transform = transform
+	
+	var result = space_state.intersect_shape(query)
+	while result.size() > 0:
+		result[0].collider.stomped()
+		result.pop_front()
 	
 func roar():
 	$roar_player.play(0)
@@ -221,7 +242,9 @@ func take_input(delta):
 		direction = -1
 		$damage_area/collision_left.disabled = false
 		$damage_area/collision_right.disabled = true
+		$camera_crew.look_left()
 	elif right_p:
+		$camera_crew.look_right()
 		$sprite.flip(false)
 		direction = 1
 		$damage_area/collision_left.disabled = true

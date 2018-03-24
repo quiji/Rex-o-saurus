@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=8
-minor=26
+minor=28
 
 [application]
 
@@ -80,6 +80,7 @@ toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_
 
 2d_physics/layer_1="Platforms"
 2d_physics/layer_2="BulletDamage"
+2d_physics/layer_3="StompDamage"
 
 [rendering]
 

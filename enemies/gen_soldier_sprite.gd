@@ -28,6 +28,9 @@ func scared():
 func is_scared():
 	return current_anim == "Scared" or current_anim == "Tremble"
 
+func stomped():
+	play("Stomped")
+
 func react(action):
 	match action:
 		STEP_REACTION:
