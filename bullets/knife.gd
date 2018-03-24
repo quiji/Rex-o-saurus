@@ -17,11 +17,18 @@ func _ready():
 func on_body_entered(body):
 	
 	if body.get_class() == "StaticBody2D":
-		dismiss()
+
+		rotation = PI * 0.2657 * direction
+
+		dismiss(false)
 	
 
-func dismiss():
-	queue_free()
+func dismiss(diagonal=true):
+	if diagonal:
+		rotation = -PI * 0.1057 * direction
+
+	set_physics_process(false)
+	$sprite.dismiss()
 
 func throw(new_direction):
 	direction = new_direction

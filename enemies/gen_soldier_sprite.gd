@@ -47,3 +47,4 @@ func on_animation_finished(anim):
 			get_parent().throw()
 		"Scared":
 			play("Tremble")
+			get_parent().ai_transit_to(get_parent().TREMBLE, true)

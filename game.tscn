@@ -1,14 +1,12 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://platforms/platform.tscn" type="PackedScene" id=1]
-[ext_resource path="res://rex/rex.tscn" type="PackedScene" id=2]
-[ext_resource path="res://enemies/soldier_a.tscn" type="PackedScene" id=3]
+[ext_resource path="res://enemies/soldier_a.tscn" type="PackedScene" id=2]
+[ext_resource path="res://rex/rex.tscn" type="PackedScene" id=3]
 
 [node name="game" type="Node2D" index="0"]
 
 [node name="ground" type="Node2D" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="floor" type="StaticBody2D" parent="ground" index="0"]
 
@@ -22,7 +20,7 @@ bounce = 0.0
 
 [node name="Polygon2D" type="Polygon2D" parent="ground/floor" index="0"]
 
-polygon = PoolVector2Array( -195, -14, 71, -20, -73, 114, -69, 234, 1, 256, 537, 256, 537, 374, 39, 374, -27, 616, 1263, 616, 1270, 706, -249, 694 )
+polygon = PoolVector2Array( -195, -14, 71, -20, -73, 114, -69, 234, 1, 256, 1559, 356, 537, 374, 39, 374, -27, 616, 1263, 616, 1270, 706, -249, 694 )
 uv = PoolVector2Array(  )
 color = Color( 0.0765076, 0.425781, 0.163826, 1 )
 vertex_colors = PoolColorArray(  )
@@ -38,7 +36,7 @@ invert_border = 100.0
 [node name="collision" type="CollisionPolygon2D" parent="ground/floor" index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( 5, 260, 533, 260, 533, 366, 33, 366, -35, 620, 1265, 620, 1266, 690, -187, 696, -187, 696, -189, -10, 65, -16, -75, 104, -77, 242 )
+polygon = PoolVector2Array( 5, 260, 1527, 360, 533, 366, 33, 366, -35, 620, 1265, 620, 1266, 690, -187, 696, -187, 696, -189, -10, 65, -16, -75, 104, -77, 242 )
 
 [node name="floor2" type="StaticBody2D" parent="ground" index="1"]
 
@@ -72,54 +70,24 @@ polygon = PoolVector2Array( 1265, 620, 1552, 496, 1411, 208, 1687, 210, 1675, 69
 
 [node name="platforms" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
-
-[node name="platform3" parent="platforms" index="0" instance=ExtResource( 1 )]
-
-position = Vector2( 908, 431 )
-
-[node name="platform10" parent="platforms" index="1" instance=ExtResource( 1 )]
-
-position = Vector2( 760, 505 )
-
-[node name="platform4" parent="platforms" index="2" instance=ExtResource( 1 )]
-
-position = Vector2( 1058, 335 )
-
-[node name="platform5" parent="platforms" index="3" instance=ExtResource( 1 )]
-
-position = Vector2( 1192, 215 )
-
-[node name="platform6" parent="platforms" index="4" instance=ExtResource( 1 )]
-
-position = Vector2( 1044, 115 )
-
-[node name="platform7" parent="platforms" index="5" instance=ExtResource( 1 )]
-
-position = Vector2( 856, 113 )
-
-[node name="platform8" parent="platforms" index="6" instance=ExtResource( 1 )]
-
-position = Vector2( 678, 15 )
-
-[node name="platform9" parent="platforms" index="7" instance=ExtResource( 1 )]
+[node name="platform9" parent="platforms" index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 502, -75 )
 
-[node name="rex" parent="." index="2" instance=ExtResource( 2 )]
-
-position = Vector2( 139, 225 )
-
-[node name="soldier_a" parent="." index="3" instance=ExtResource( 3 )]
+[node name="soldier_a" parent="." index="2" instance=ExtResource( 2 )]
 
 position = Vector2( 256, 220 )
 
-[node name="soldier_a2" parent="." index="4" instance=ExtResource( 3 )]
+[node name="soldier_a2" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 284, 220 )
 
-[node name="soldier_a3" parent="." index="5" instance=ExtResource( 3 )]
+[node name="soldier_a3" parent="." index="4" instance=ExtResource( 2 )]
 
 position = Vector2( 336, 216 )
+
+[node name="rex" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 139, 225 )
 
 

@@ -23,6 +23,12 @@ var run_velocity = 0
 var midair_velocity = 0
 var prev_y_velocity = 0
 
+######## AI States #########
+enum AIStates {IDLE, RUN_TO_ATTACK_DISTANCE, ATTACK, RUN_AWAY, SCARED, TREMBLE, ESCAPE, IDLE}
+const TRANSITION_DURATION = 0.8
+var ai_state = IDLE
+var ai_transition = null
+var transition_delta = 0
 
 var on_ground = false
 var falling = false
@@ -30,6 +36,13 @@ var running = false
 var jumping = false
 
 var direction = 1
+
+const TREMBLE_DURATION = 1.5
+var tremble_delta = null
+
+const ESCAPE_DURATION = 4.0
+var escape_delta = null
+
 
 var step_delta = 0
 var step_duration = 0.540 * 0.7
@@ -144,7 +157,7 @@ func run():
 	$sprite.run()
 
 func roar_scared():
-	$sprite.scared()
+	ai_transit_to(SCARED, true)
 
 
 func throw():
@@ -152,7 +165,7 @@ func throw():
 	var new_knife = Knife.instance()
 	var throw_offset = throw_point
 	throw_offset.x *= direction
-	new_knife.position = position + throw_offset
+	new_knife.position = position + throw_offset + Vector2(rand_range(-2, 2), rand_range(-2, 2))
 	new_knife.throw(direction)
 	get_parent().add_child(new_knife)
 
@@ -164,37 +177,112 @@ func look_right(is_right=true):
 		direction = -1
 		$sprite.flip(true)
 
+func ai_transit_to(new_state, no_transition = false):
+	ai_transition = new_state
+	if no_transition:
+		transition_delta = 0
+	else:
+		transition_delta = TRANSITION_DURATION * rand_range(0.8, 1.3)
+
+
 func take_input(delta):
-	#direction = -1
-	#$sprite.flip(true)
-	
-	if $sprite.is_scared():
-		return
-	
 	var rex_distance = $"../rex".position - position
 	var rex_distance_squared = rex_distance.length_squared()
 	var rex_direction = rex_distance.normalized()
+
 	
+	if ai_transition != null and transition_delta > 0:
+		if $sprite.is_throwing():
+			return
 
-	if rex_distance_squared > distance_to_attack and not $sprite.is_throwing():
-		# If too far, run to throw distance
-		look_right(rex_distance.x > 0)
+		if rex_distance_squared < distance_to_run:
+			ai_transit_to(RUN_AWAY, true)
 
-		if not running:
-			run()
-			
-	elif rex_distance_squared > distance_to_run:
-		# If on range, attack
-		look_right(rex_distance.x > 0)
+		transition_delta -= delta
+		return 
+	elif ai_transition != null:
+		ai_state = ai_transition
+		ai_transition = null
 		
-		running = false
-		velocity.x = 0
-		$sprite.throw()
-	else:
-		# If too close, run away
-		look_right(rex_distance.x < 0)
+		
 
-		if not running:
-			run()
+	
+	match ai_state:
+		RUN_TO_ATTACK_DISTANCE:
+			if $sprite.is_throwing():
+				return
+			
+			look_right(rex_distance.x > 0)
+	
+			if not running:
+				run()
+			
+			if rex_distance_squared > distance_to_attack:
+				return
+			elif rex_distance_squared > distance_to_run:
+				ai_transit_to(ATTACK, true)
+			else:
+				ai_transit_to(RUN_AWAY, true)
+		ATTACK: 
 
-	#$sprite.flip(true)
+			# If on range, attack
+			look_right(rex_distance.x > 0)
+			
+			running = false
+			velocity.x = 0
+			$sprite.throw()
+
+			if rex_distance_squared > distance_to_attack:
+				ai_transit_to(RUN_TO_ATTACK_DISTANCE)
+			elif rex_distance_squared > distance_to_run:
+				ai_transit_to(ATTACK)
+			else:
+				ai_transit_to(RUN_AWAY, true)
+		RUN_AWAY: 
+			# If too close, run away
+			look_right(rex_distance.x < 0)
+	
+			if not running:
+				run()
+				
+			if rex_distance_squared > distance_to_attack:
+				ai_transit_to(RUN_TO_ATTACK_DISTANCE)
+			elif rex_distance_squared > distance_to_run:
+				ai_transit_to(ATTACK)
+			else:
+				ai_transit_to(RUN_AWAY, true)
+
+		SCARED:
+			$sprite.scared()
+			running = false
+			velocity.x = 0
+		TREMBLE:
+			if tremble_delta == null:
+				tremble_delta = TREMBLE_DURATION * rand_range(0.8, 1.3)
+			elif tremble_delta > 0:
+				tremble_delta -= delta
+			else:
+				tremble_delta = null
+				ai_transit_to(ESCAPE, true)
+		ESCAPE:
+			look_right(rex_distance.x < 0)
+	
+			if not running:
+				run()
+
+			if escape_delta == null:
+				escape_delta = ESCAPE_DURATION * rand_range(0.8, 1.3)
+			elif escape_delta > 0:
+				escape_delta -= delta
+			else:
+				escape_delta = null
+				ai_transit_to(IDLE, true)
+
+		IDLE:
+			if rex_distance_squared > distance_to_attack:
+				ai_transit_to(RUN_TO_ATTACK_DISTANCE)
+			elif rex_distance_squared > distance_to_run:
+				ai_transit_to(ATTACK)
+			else:
+				ai_transit_to(RUN_AWAY, true)
+

@@ -791,6 +791,30 @@
         "minute": 52,
         "second": 26
       }
+    },
+    "task.45": {
+      "task": "Add delay to enemy AI.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 23,
+        "second": 12
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 57,
+        "second": 38
+      }
     }
   },
   "pending": {
@@ -961,20 +985,6 @@
         "minute": 4,
         "second": 56
       }
-    },
-    "task.45": {
-      "task": "Add delay to enemy AI.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 24,
-        "weekday": 6,
-        "dst": false,
-        "hour": 12,
-        "minute": 23,
-        "second": 12
-      }
     }
   },
   "comp_order": [
@@ -1010,7 +1020,8 @@
     "task.39",
     "task.40",
     "task.41",
-    "task.44"
+    "task.44",
+    "task.45"
   ],
   "pend_order": [
     "task.18",
@@ -1024,7 +1035,6 @@
     "task.37",
     "task.38",
     "task.42",
-    "task.43",
-    "task.45"
+    "task.43"
   ]
 }
