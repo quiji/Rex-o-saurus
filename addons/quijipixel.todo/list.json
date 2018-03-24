@@ -767,6 +767,30 @@
         "minute": 4,
         "second": 36
       }
+    },
+    "task.44": {
+      "task": "Add scared mechanic, blow all current bullets.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 5,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 52,
+        "second": 26
+      }
     }
   },
   "pending": {
@@ -938,8 +962,8 @@
         "second": 56
       }
     },
-    "task.44": {
-      "task": "Add scared mechanic, blow all current bullets.",
+    "task.45": {
+      "task": "Add delay to enemy AI.",
       "type": "Task",
       "creation_date": {
         "year": 2018,
@@ -948,8 +972,8 @@
         "weekday": 6,
         "dst": false,
         "hour": 12,
-        "minute": 5,
-        "second": 28
+        "minute": 23,
+        "second": 12
       }
     }
   },
@@ -985,7 +1009,8 @@
     "task.32",
     "task.39",
     "task.40",
-    "task.41"
+    "task.41",
+    "task.44"
   ],
   "pend_order": [
     "task.18",
@@ -1000,6 +1025,6 @@
     "task.38",
     "task.42",
     "task.43",
-    "task.44"
+    "task.45"
   ]
 }

@@ -143,6 +143,10 @@ func run():
 	velocity.x = max_run_velocity * 0.65  * direction
 	$sprite.run()
 
+func roar_scared():
+	$sprite.scared()
+
+
 func throw():
 	$sprite.idle()
 	var new_knife = Knife.instance()
@@ -163,6 +167,9 @@ func look_right(is_right=true):
 func take_input(delta):
 	#direction = -1
 	#$sprite.flip(true)
+	
+	if $sprite.is_scared():
+		return
 	
 	var rex_distance = $"../rex".position - position
 	var rex_distance_squared = rex_distance.length_squared()

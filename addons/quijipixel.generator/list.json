@@ -633,6 +633,78 @@
               "param": ""
             }
           ]
+        },
+        "Scared": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 21,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 22,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 23,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 24,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 25,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 26,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 27,
+              "time": 75,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Tremble": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 27,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 28,
+              "time": 90,
+              "react": 0,
+              "param": ""
+            }
+          ]
         }
       },
       "target_dir": "res://enemies",
@@ -693,6 +765,60 @@
             {
               "id": 8,
               "time": 90,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Dismiss": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 9,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 13,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 14,
+              "time": 60,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 15,
+              "time": 50,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 16,
+              "time": 50,
               "react": 0,
               "param": ""
             }

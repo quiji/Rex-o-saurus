@@ -22,6 +22,12 @@ func throw():
 func is_throwing():
 	return current_anim == "Throw"
 
+func scared():
+	play("Scared")
+
+func is_scared():
+	return current_anim == "Scared" or current_anim == "Tremble"
+
 func react(action):
 	match action:
 		STEP_REACTION:
@@ -39,24 +45,5 @@ func on_animation_finished(anim):
 	match anim:
 		"Throw":
 			get_parent().throw()
-	"""
-	match anim:
-		"StartJump":
-			play("Jump")
-			get_parent().jump()
-		"JumpPeak":
-			play("Fall")
-		"Land":
-			play("Idle")
-		"HardLand":
-			play("Idle")
-		"Whip":
-			if get_parent().is_on_ground():
-				play("Idle")
-			else:
-				play("Fall")
-		"Roar":
-			play("Idle")
-	"""
-
-
+		"Scared":
+			play("Tremble")

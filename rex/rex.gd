@@ -193,6 +193,9 @@ func take_input(delta):
 	var whip_jp = Input.is_action_just_pressed("whip")
 	var roar_jp = Input.is_action_just_pressed("roar")
 	
+	if bullet_dispel_on:
+		return
+	
 	if whip_jp:
 		$sprite.whip()
 		$whip_player.play(0)
