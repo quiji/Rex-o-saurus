@@ -32,6 +32,7 @@ var jump_delta = 0
 
 var current_normal = null
 
+var throw_point = Vector2(7, -10)
 
 func _ready():
 	
@@ -96,7 +97,7 @@ func _physics_process(delta):
 		if not jumping and not falling:
 			falling = true
 			midair_velocity = run_velocity
-			#$sprite.fall()
+			$sprite.fall()
 		on_ground = false
 	
 	
@@ -131,10 +132,47 @@ func run():
 	velocity.x = max_run_velocity * 0.65  * direction
 	$sprite.run()
 
+func throw():
+	$sprite.idle()
+
+func look_right(is_right=true):
+	if is_right:
+		direction = 1
+		$sprite.flip(false)
+	else:
+		direction = -1
+		$sprite.flip(true)
 
 func take_input(delta):
 	#direction = -1
 	#$sprite.flip(true)
-	if not running:
-		run()
+	
+	var distance_to_attack = 150 * 150
+	var distance_to_run = 120 * 120
+	var rex_distance = $"../rex".position - position
+	var rex_distance_squared = rex_distance.length_squared()
+	var rex_direction = rex_distance.normalized()
+	
+
+	if rex_distance_squared > distance_to_attack and not $sprite.is_throwing():
+		# If too far, run to throw distance
+		look_right(rex_distance.x > 0)
+
+		if not running:
+			run()
+			
+	elif rex_distance_squared > distance_to_run:
+		# If on range, attack
+		look_right(rex_distance.x > 0)
+		
+		running = false
+		velocity.x = 0
+		$sprite.throw()
+	else:
+		# If too close, run away
+		look_right(rex_distance.x < 0)
+
+		if not running:
+			run()
+
 	#$sprite.flip(true)

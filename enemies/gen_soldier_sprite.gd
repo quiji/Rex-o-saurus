@@ -13,6 +13,15 @@ func idle():
 func run():
 	play("Run")
 
+func fall():
+	play("Fall")
+
+func throw():
+	play("Throw")
+
+func is_throwing():
+	return current_anim == "Throw"
+
 func react(action):
 	match action:
 		STEP_REACTION:
@@ -27,7 +36,9 @@ func flip(left=true):
 	$sprite.flip_h = left
 	
 func on_animation_finished(anim):
-	pass
+	match anim:
+		"Throw":
+			get_parent().throw()
 	"""
 	match anim:
 		"StartJump":
