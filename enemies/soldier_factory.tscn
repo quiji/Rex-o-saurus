@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://enemies/soldier_factory.gd" type="Script" id=1]
+
+[node name="soldier_factory" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array( -139, -88, 177, -88, 177, 120, -127, 120 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -135, -80, 169, -80, 169, 120, -123, 120 )
+
+[node name="spawn" type="Position2D" parent="." index="2"]
+
+position = Vector2( 188, 120 )
+
+[node name="timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 8.0
+one_shot = false
+autostart = true
+
+

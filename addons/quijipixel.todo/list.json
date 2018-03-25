@@ -1033,6 +1033,20 @@
         "minute": 13,
         "second": 13
       }
+    },
+    "task.48": {
+      "task": "Parachute soldiers??",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 21,
+        "minute": 10,
+        "second": 34
+      }
     }
   },
   "comp_order": [
@@ -1085,6 +1099,7 @@
     "task.38",
     "task.42",
     "task.43",
-    "task.46"
+    "task.46",
+    "task.48"
   ]
 }
