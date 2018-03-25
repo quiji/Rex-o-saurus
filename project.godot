@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=8
-minor=28
+minor=29
 
 [application]
 
@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Resolution="*res://classes/Resolution.gd"
 Smoothstep="*res://classes/Smoothstep.gd"
+Console="*res://addons/quijipixel.console/Console.tscn"
 
 [display]
 
@@ -72,12 +73,15 @@ whip=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
  ]
 roar=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
+toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
+ ]
 
 [layer_names]
 
 2d_physics/layer_1="Platforms"
 2d_physics/layer_2="BulletDamage"
 2d_physics/layer_3="StompDamage"
+2d_physics/layer_4="WhipDamage"
 
 [rendering]
 

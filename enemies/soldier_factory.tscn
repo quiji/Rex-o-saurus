@@ -2,7 +2,7 @@
 
 [ext_resource path="res://enemies/soldier_factory.gd" type="Script" id=1]
 
-[node name="soldier_factory" type="KinematicBody2D" index="0"]
+[node name="soldier_factory" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -37,7 +37,7 @@ position = Vector2( 188, 120 )
 [node name="timer" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 8.0
+wait_time = 5.0
 one_shot = false
 autostart = true
 

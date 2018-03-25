@@ -4,8 +4,8 @@ extends KinematicBody2D
 ######## Const Stats #########
 var max_run_velocity = 180.0
 var midair_move_velocity = 140#60.0
-var max_x_distance_a_jump = 100.0
-var max_x_distance_b_jump = 180.0
+var max_x_distance_a_jump = 160.0
+var max_x_distance_b_jump = 120.0
 var jump_peak_height = 150
 
 
@@ -41,6 +41,8 @@ var current_gravity = 0
 
 var current_normal = null
 var stomp_area
+var whip_area_left
+var whip_area_right
 
 func _ready():
 	$sprite.idle()
@@ -55,7 +57,9 @@ func _ready():
 
 	$damage_area.connect("area_entered", self, "on_bullet_hit")
 
-	stomp_area = shape_owner_get_shape(0, 0)
+	stomp_area = $stomp_area/collision.shape
+	whip_area_right = $tail_whip_area_right.shape_owner_get_shape(0, 0)
+	whip_area_left = $tail_whip_area_left.shape_owner_get_shape(0, 0)
 
 
 func _physics_process(delta):
@@ -177,6 +181,26 @@ func check_stomp_collision():
 		result[0].collider.stomped()
 		result.pop_front()
 	
+func check_whip_collision():
+	var space_rid = get_world_2d().space
+	var space_state = Physics2DServer.space_get_direct_state(space_rid)
+	
+	var query = Physics2DShapeQueryParameters.new()
+	query.collision_layer = 4 # third bit
+	query.margin = 0.08
+	if direction > 0:
+		query.set_shape(whip_area_right)
+	else:
+		query.set_shape(whip_area_left)
+	query.transform = transform
+	
+	var result = space_state.intersect_shape(query)
+	while result.size() > 0:
+		result[0].collider.stomped()
+		result.pop_front()
+		
+
+	
 func roar():
 	$roar_player.play(0)
 	$camera_crew.shake(1.3, 10, $camera_crew.ALL_DIRECTIONS, $camera_crew.ARCH)
@@ -221,6 +245,7 @@ func take_input(delta):
 		$sprite.whip()
 		$whip_player.play(0)
 
+
 	if roar_jp and is_on_ground() and not $sprite.is_whipping() and not jumping:
 		$sprite.roar()
 
@@ -255,7 +280,8 @@ func take_input(delta):
 		running = true
 		velocity.x = max_run_velocity * 0.65  * direction
 	elif (left_jr or right_jr) and is_on_ground():
-		$sprite.idle()
+		if not $sprite.is_whipping():
+			$sprite.idle()
 		running = false
 		run_velocity = 0
 		velocity.x = 0

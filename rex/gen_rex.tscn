@@ -47,7 +47,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 0.45 ),
 "transitions": PoolRealArray( 0, 0, 0 ),
 "update": 0,
-"values": [ 27, 26, 25 ]
+"values": [ 27.0, 26.0, 25.0 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -288,7 +288,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.08, 0.14, 0.195, 0.245, 0.29, 0.34, 0.395, 0.465, 0.57, 0.64 ),
 "transitions": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
 "update": 0,
-"values": [ 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0 ]
+"values": [ 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40, 41, 42, 43, 44 ]
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -297,9 +297,24 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"values": [  ]
+"times": PoolRealArray( 0.34, 0.395, 0.465, 0.57, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ 3 ],
+"method": "react"
+}, {
+"args": [ 3 ],
+"method": "react"
+}, {
+"args": [ 3 ],
+"method": "react"
+}, {
+"args": [ 3 ],
+"method": "react"
+}, {
+"args": [ 3 ],
+"method": "react"
+} ]
 }
 
 [node name="rex" type="Node2D"]

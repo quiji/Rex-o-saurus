@@ -863,6 +863,30 @@
         "minute": 41,
         "second": 3
       }
+    },
+    "task.46": {
+      "task": "Implement Whip mechanic",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 13,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 18,
+        "minute": 7,
+        "second": 58
+      }
     }
   },
   "pending": {
@@ -1020,20 +1044,6 @@
         "second": 56
       }
     },
-    "task.46": {
-      "task": "Implement Whip mechanic",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 24,
-        "weekday": 6,
-        "dst": false,
-        "hour": 19,
-        "minute": 13,
-        "second": 13
-      }
-    },
     "task.48": {
       "task": "Parachute soldiers??",
       "type": "Remainder",
@@ -1085,7 +1095,8 @@
     "task.44",
     "task.45",
     "task.33",
-    "task.47"
+    "task.47",
+    "task.46"
   ],
   "pend_order": [
     "task.18",
@@ -1099,7 +1110,6 @@
     "task.38",
     "task.42",
     "task.43",
-    "task.46",
     "task.48"
   ]
 }

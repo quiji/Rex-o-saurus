@@ -69,6 +69,10 @@ func _ready():
 	distance_to_run = DISTANCE_TO_RUN * DISTANCE_TO_RUN * rand_range(0.8, 1.2)
 	distance_to_spot = DISTANCE_TO_SPOT * DISTANCE_TO_SPOT * rand_range(0.8, 1.2)
 
+	$timer.connect("timeout", self, "on_timeout")
+
+func on_timeout():
+	queue_free()
 
 func _physics_process(delta):
 
@@ -165,7 +169,7 @@ func roar_scared():
 func stomped():
 	$sprite.stomped()
 	set_physics_process(false)
-
+	$timer.start()
 
 func throw():
 	$sprite.idle()

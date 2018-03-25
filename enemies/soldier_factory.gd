@@ -9,7 +9,10 @@ func _ready():
 
 
 func on_timeout():
-	var soldier = SoldierA.instance()
-	soldier.position = position + $spawn.position
-	get_parent().add_child(soldier)
-	soldier.ai_transit_to(soldier.RUN_TO_ATTACK_DISTANCE)
+	var i = 10
+	while i > 0:
+		var soldier = SoldierA.instance()
+		soldier.position = position + $spawn.position
+		get_parent().add_child(soldier)
+		soldier.ai_transit_to(soldier.RUN_TO_ATTACK_DISTANCE)
+		i -= 1
