@@ -887,6 +887,30 @@
         "minute": 7,
         "second": 58
       }
+    },
+    "task.49": {
+      "task": "Implement soldiers blown away by tailwhip.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 18,
+        "minute": 9,
+        "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 14,
+        "second": 56
+      }
     }
   },
   "pending": {
@@ -1096,7 +1120,8 @@
     "task.45",
     "task.33",
     "task.47",
-    "task.46"
+    "task.46",
+    "task.49"
   ],
   "pend_order": [
     "task.18",

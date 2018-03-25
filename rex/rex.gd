@@ -196,7 +196,7 @@ func check_whip_collision():
 	
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
-		result[0].collider.stomped()
+		result[0].collider.whipped(direction)
 		result.pop_front()
 		
 

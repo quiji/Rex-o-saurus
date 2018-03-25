@@ -7,10 +7,10 @@ path="res://.import/solider_a.png-b3f7f024204d0603e8e69fdb82e1f72f.stex"
 [deps]
 
 source_file="res://assets/solider_a.png"
-source_md5="be0a8e3acc8ece64f0007de73b80e472"
+source_md5="95a0ad0b3d58d03c0e45e1478748641c"
 
 dest_files=[ "res://.import/solider_a.png-b3f7f024204d0603e8e69fdb82e1f72f.stex" ]
-dest_md5="4564ca908c87ffcfe2dbdf1b9e33c29a"
+dest_md5="ac74c55404e3356004b89123466b48f5"
 
 [params]
 

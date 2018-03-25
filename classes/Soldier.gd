@@ -56,6 +56,8 @@ var distance_to_attack
 var distance_to_run 
 var distance_to_spot
 
+var whipped = false
+
 func _ready():
 	add_to_group("soldiers")
 	
@@ -65,9 +67,11 @@ func _ready():
 
 	gravity_scalar = -2*jump_peak_height* (max_run_velocity*max_run_velocity) / (max_x_distance_b_jump*max_x_distance_b_jump)
 
-	distance_to_attack = DISTANCE_TO_ATTACK * DISTANCE_TO_ATTACK * rand_range(0.8, 1.2)
-	distance_to_run = DISTANCE_TO_RUN * DISTANCE_TO_RUN * rand_range(0.8, 1.2)
-	distance_to_spot = DISTANCE_TO_SPOT * DISTANCE_TO_SPOT * rand_range(0.8, 1.2)
+	distance_to_attack = DISTANCE_TO_ATTACK * DISTANCE_TO_ATTACK * rand_range(0.7, 1.5)
+	distance_to_run = DISTANCE_TO_RUN * DISTANCE_TO_RUN * rand_range(0.7, 1.5)
+	distance_to_spot = DISTANCE_TO_SPOT * DISTANCE_TO_SPOT * rand_range(0.7, 1.5)
+
+	max_run_velocity = max_run_velocity * rand_range(0.3, 2)
 
 	$timer.connect("timeout", self, "on_timeout")
 
@@ -76,6 +80,16 @@ func on_timeout():
 
 func _physics_process(delta):
 
+	if whipped:
+		prev_y_velocity = velocity.y
+		velocity.y += -gravity_scalar * delta
+
+		move_and_slide(velocity, Vector2(0, -1), 1)
+		
+		if get_slide_count() > 0:
+			$sprite.explode()
+			set_physics_process(false)
+		return
 	if not on_ground:
 		prev_y_velocity = velocity.y
 		velocity.y += -gravity_scalar * delta
@@ -108,7 +122,7 @@ func _physics_process(delta):
 	take_input(delta)
 	
 	
-	var frame_velocity = velocity	
+	var frame_velocity = velocity
 	if on_ground and not jumping:
 		frame_velocity = velocity.slide(current_normal)
 
@@ -170,6 +184,16 @@ func stomped():
 	$sprite.stomped()
 	set_physics_process(false)
 	$timer.start()
+
+func whipped(whip_direction):
+	if not $timer.is_stopped():
+		return
+	$sprite.whipped()
+	velocity = Vector2(whip_direction, -1) * 300 * rand_range(0.8, 1.2)
+	whipped = true
+	jumping = true
+	falling = false
+
 
 func throw():
 	$sprite.idle()

@@ -31,6 +31,12 @@ func is_scared():
 func stomped():
 	play("Stomped")
 
+func explode():
+	play("Explode")
+
+func whipped():
+	play("Whipped")
+
 func react(action):
 	match action:
 		STEP_REACTION:
@@ -51,3 +57,6 @@ func on_animation_finished(anim):
 		"Scared":
 			play("Tremble")
 			get_parent().ai_transit_to(get_parent().TREMBLE, true)
+		"Explode":
+			get_parent().on_timeout()
+
