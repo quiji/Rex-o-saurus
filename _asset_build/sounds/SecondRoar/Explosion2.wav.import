@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosion2.wav-7d2ba2df202fe78e4ba5277952413700.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/SecondRoar/Explosion2.wav"
+source_md5="d7bcb86ec5b728a5570a4496c0f18541"
+
+dest_files=[ "res://.import/Explosion2.wav-7d2ba2df202fe78e4ba5277952413700.sample" ]
+dest_md5="8a376c15c3e6fd14e2e5fadc3736e233"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

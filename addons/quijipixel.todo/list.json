@@ -1081,6 +1081,34 @@
         "minute": 10,
         "second": 34
       }
+    },
+    "task.50": {
+      "task": "Radio soldier that calls air support that drops para shutters.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 28,
+        "second": 55
+      }
+    },
+    "task.51": {
+      "task": "The factories should be parachuted??",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 29,
+        "second": 6
+      }
     }
   },
   "comp_order": [
@@ -1135,6 +1163,8 @@
     "task.38",
     "task.42",
     "task.43",
-    "task.48"
+    "task.48",
+    "task.50",
+    "task.51"
   ]
 }

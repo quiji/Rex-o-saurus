@@ -12,7 +12,7 @@ script = ExtResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="." index="0"]
 
-polygon = PoolVector2Array( -139, -88, 177, -88, 177, 120, -127, 120 )
+polygon = PoolVector2Array( -89, 4, 175, 3, 177, 120, -93, 122 )
 uv = PoolVector2Array(  )
 color = Color( 1, 1, 1, 1 )
 vertex_colors = PoolColorArray(  )
@@ -28,7 +28,7 @@ invert_border = 100.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
 build_mode = 0
-polygon = PoolVector2Array( -135, -80, 169, -80, 169, 120, -123, 120 )
+polygon = PoolVector2Array( -87, 7, 173, 7, 175, 118, -89, 120 )
 
 [node name="spawn" type="Position2D" parent="." index="2"]
 

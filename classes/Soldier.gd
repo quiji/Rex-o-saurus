@@ -84,9 +84,9 @@ func _physics_process(delta):
 		prev_y_velocity = velocity.y
 		velocity.y += -gravity_scalar * delta
 
-		move_and_slide(velocity, Vector2(0, -1), 1)
+		var collided = move_and_collide(velocity * delta)
 		
-		if get_slide_count() > 0:
+		if collided != null:
 			$sprite.explode()
 			set_physics_process(false)
 		return

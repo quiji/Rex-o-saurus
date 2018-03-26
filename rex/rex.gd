@@ -107,19 +107,19 @@ func _physics_process(delta):
 			if velocity.y < 230:
 				$lighterland_player.play(0)
 				$sprite.land()
-				$camera_crew.shake(2, 2, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				$camera_crew.shake(2, 1, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			elif velocity.y < 350:
 				$lightland_player.play(0)
 				$sprite.hard_land()
-				$camera_crew.shake(2, 4, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				$camera_crew.shake(2, 2, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			elif velocity.y < 550:
 				$land_player.play(0)
 				$sprite.hard_land()
-				$camera_crew.shake(1, 10, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				$camera_crew.shake(1, 5, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 			else:
 				$hardland_player.play(0)
 				$sprite.hard_land()
-				$camera_crew.shake(0.8, 15, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				$camera_crew.shake(0.8, 8, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
 
 			check_stomp_collision()
 

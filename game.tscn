@@ -5,9 +5,11 @@
 [ext_resource path="res://rex/rex.tscn" type="PackedScene" id=3]
 [ext_resource path="res://enemies/soldier_factory.tscn" type="PackedScene" id=4]
 
-[node name="game" type="Node2D"]
+[node name="game" type="Node2D" index="0"]
 
-[node name="ground" type="Node2D" parent="." index="0"]
+[node name="background" type="Node2D" parent="." index="0"]
+
+[node name="ground" type="Node2D" parent="." index="1"]
 
 editor/display_folded = true
 
@@ -71,7 +73,9 @@ invert_border = 100.0
 build_mode = 0
 polygon = PoolVector2Array( 1265, 620, 1552, 496, 1411, 208, 1687, 210, 1675, 692, 1358, 810, 1262, 698 )
 
-[node name="platforms" type="Node2D" parent="." index="1"]
+[node name="platforms" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="platform9" parent="platforms" index="0" instance=ExtResource( 1 )]
 
@@ -97,23 +101,23 @@ position = Vector2( 434, -127 )
 
 position = Vector2( 250, -225 )
 
-[node name="soldier_a" parent="." index="2" instance=ExtResource( 2 )]
+[node name="soldier_a" parent="." index="3" instance=ExtResource( 2 )]
 
 position = Vector2( 256, 220 )
 
-[node name="soldier_a2" parent="." index="3" instance=ExtResource( 2 )]
+[node name="soldier_a2" parent="." index="4" instance=ExtResource( 2 )]
 
 position = Vector2( 284, 220 )
 
-[node name="soldier_a3" parent="." index="4" instance=ExtResource( 2 )]
+[node name="soldier_a3" parent="." index="5" instance=ExtResource( 2 )]
 
 position = Vector2( 336, 216 )
 
-[node name="rex" parent="." index="5" instance=ExtResource( 3 )]
+[node name="rex" parent="." index="6" instance=ExtResource( 3 )]
 
 position = Vector2( 139, 225 )
 
-[node name="soldier_factory" parent="." index="6" instance=ExtResource( 4 )]
+[node name="soldier_factory" parent="." index="7" instance=ExtResource( 4 )]
 
 position = Vector2( -200, -136 )
 

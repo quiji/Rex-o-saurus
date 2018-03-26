@@ -7,10 +7,10 @@ path="res://.import/whip.wav-632f08d6c0708aa37f76762fc16b7005.sample"
 [deps]
 
 source_file="res://assets/whip.wav"
-source_md5="460a51854af9498cf32fbc6c7e6481cb"
+source_md5="8580ad4dcadef779deaaf9902f9a17a6"
 
 dest_files=[ "res://.import/whip.wav-632f08d6c0708aa37f76762fc16b7005.sample" ]
-dest_md5="6f662c3f077ac26fda837d6f5cb4ae49"
+dest_md5="f95ade1ef0da9a76a5d07debcb512a13"
 
 [params]
 

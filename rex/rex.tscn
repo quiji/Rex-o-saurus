@@ -125,6 +125,8 @@ shape = SubResource( 9 )
 
 [node name="tail_whip_area_right" type="Area2D" parent="." index="5"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( 0, -29 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -144,6 +146,8 @@ polygon = PoolVector2Array( -10, 32, 50, 32, 68, 5, 70, -30, 55, -50, 6, -52, -2
 
 [node name="tail_whip_area_left" type="Area2D" parent="." index="6"]
 
+editor/display_folded = true
+visible = false
 position = Vector2( 0, -29 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.stex"
+path="res://.import/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.stex"
 
 [deps]
 
-source_file="res://assets/knife.png"
-source_md5="4fb330e6b96fdeed8eee4f8df22754e9"
+source_file="res://assets/background.png"
+source_md5="8c66e76324a32f080fe5e0ac42c3acce"
 
-dest_files=[ "res://.import/knife.png-fe86871d33c75ce9d4eb4f1452dfa3c9.stex" ]
-dest_md5="48b076a4ea99fee942e223fbbe7dacd6"
+dest_files=[ "res://.import/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.stex" ]
+dest_md5="2c5bcd76257306fde3d9782261e6eada"
 
 [params]
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/53759__pepingrillin__rujido-3.wav-f1e73bc5fa69a19e1d5b229f197ef8ff.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/SecondRoar/53759__pepingrillin__rujido-3.wav"
+source_md5="b49e13a20acfe8aa3e39abd903428a07"
+
+dest_files=[ "res://.import/53759__pepingrillin__rujido-3.wav-f1e73bc5fa69a19e1d5b229f197ef8ff.sample" ]
+dest_md5="011e415a2f48ef873dcd87403999b1b2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0
