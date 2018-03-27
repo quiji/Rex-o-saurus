@@ -10,8 +10,8 @@ config_version=3
 
 [Project]
 
-patch=4
-minor=21
+patch=8
+minor=33
 
 [application]
 
@@ -22,7 +22,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Resolution="*res://classes/Resolution.gd"
-Console="*res://addons/quijipixel.console/Console.tscn"
 Smoothstep="*res://classes/Smoothstep.gd"
 
 [display]
@@ -34,13 +33,42 @@ window/size/height=720
 
 enabled=PoolStringArray( "quijipixel.console", "quijipixel.generator", "quijipixel.notes", "quijipixel.todo" )
 
+[importer_defaults]
+
+texture={
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+wav={
+"compress/mode": 0,
+"edit/loop": false,
+"edit/normalize": true,
+"edit/trim": false,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
+}
+
 [input]
 
 jump=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"unicode":0,"echo":false,"script":null)
  ]
 whip=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"unicode":0,"echo":false,"script":null)
- ]
-toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
  ]
 roar=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
@@ -48,7 +76,12 @@ roar=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 [layer_names]
 
 2d_physics/layer_1="Platforms"
+2d_physics/layer_2="BulletDamage"
+2d_physics/layer_3="StompDamage"
+2d_physics/layer_4="WhipDamage"
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0.443137, 0.678431, 0.639216, 1 )
 environment/default_environment="res://default_env.tres"

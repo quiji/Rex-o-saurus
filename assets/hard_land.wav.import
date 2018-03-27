@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hard_land.wav-45030331d4c18373c7b6198bc19d5c75.sample"
+
+[deps]
+
+source_file="res://assets/hard_land.wav"
+source_md5="90ebc04fc09e2f9ec737654b27e5bfaf"
+
+dest_files=[ "res://.import/hard_land.wav-45030331d4c18373c7b6198bc19d5c75.sample" ]
+dest_md5="bc2763d436bf3531fdced3563f192ba6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

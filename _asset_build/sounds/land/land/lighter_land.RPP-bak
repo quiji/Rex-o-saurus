@@ -1,4 +1,4 @@
-<REAPER_PROJECT 0.1 "5.77/OSX64" 1521672569
+<REAPER_PROJECT 0.1 "5.77/OSX64" 1521672782
   RIPPLE 0
   GROUPOVERRIDE 0 0 0
   AUTOXFADE 1
@@ -27,7 +27,7 @@
   >
   <APPLYFX_CFG
   >
-  RENDER_FILE "/Users/mac2012/GDev/Projects/Rex-o-saurus/assets/light_land.wav"
+  RENDER_FILE "/Users/mac2012/GDev/Projects/Rex-o-saurus/assets/lighter_land.wav"
   RENDER_FMT 0 2 44100
   RENDER_1X 0
   RENDER_RANGE 1 0 0 18 1000

@@ -599,9 +599,31 @@
         "minute": 36,
         "second": 56
       }
-    }
-  },
-  "pending": {
+    },
+    "task.26": {
+      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 18,
+        "minute": 10,
+        "second": 23
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 40,
+        "second": 22
+      }
+    },
     "task.14": {
       "task": "When falling, head might get stuck in platform.",
       "type": "Bug",
@@ -614,8 +636,356 @@
         "hour": 20,
         "minute": 56,
         "second": 50
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 56,
+        "second": 46
       }
     },
+    "task.34": {
+      "task": "When going down a slop, the player micro falls.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 9,
+        "minute": 40,
+        "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 14,
+        "second": 2
+      }
+    },
+    "task.32": {
+      "task": "Create Hard Land sound with biiig boooooom!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 12
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 7,
+        "minute": 38,
+        "second": 22
+      }
+    },
+    "task.39": {
+      "task": "Sounds end abruptly and have a bip at the end",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 7,
+        "minute": 38,
+        "second": 49
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 4,
+        "second": 1
+      }
+    },
+    "task.40": {
+      "task": "Add falling anim.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 14,
+        "second": 53
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 14,
+        "second": 55
+      }
+    },
+    "task.41": {
+      "task": "Implement throws.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 33,
+        "second": 18
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 4,
+        "second": 36
+      }
+    },
+    "task.44": {
+      "task": "Add scared mechanic, blow all current bullets.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 5,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 16,
+        "minute": 52,
+        "second": 26
+      }
+    },
+    "task.45": {
+      "task": "Add delay to enemy AI.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 23,
+        "second": 12
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 57,
+        "second": 38
+      }
+    },
+    "task.33": {
+      "task": "Improve whip sound.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 6,
+        "minute": 37,
+        "second": 26
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 12,
+        "second": 53
+      }
+    },
+    "task.47": {
+      "task": "Implement stomp mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 13,
+        "second": 26
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 41,
+        "second": 3
+      }
+    },
+    "task.46": {
+      "task": "Implement Whip mechanic",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 19,
+        "minute": 13,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 18,
+        "minute": 7,
+        "second": 58
+      }
+    },
+    "task.49": {
+      "task": "Implement soldiers blown away by tailwhip.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 18,
+        "minute": 9,
+        "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 14,
+        "second": 56
+      }
+    },
+    "task.51": {
+      "task": "The factories should be parachuted??",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 29,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 41,
+        "second": 6
+      }
+    },
+    "task.52": {
+      "task": "Implement castle destruction by whip or stomp. Add brick particles and final explosion.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 41,
+        "second": 43
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 59,
+        "second": 51
+      }
+    },
+    "task.21": {
+      "task": "Small enemies (probably humans of 8x8) that look different and attack with different weapons.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 15
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 22,
+        "minute": 0,
+        "second": 5
+      }
+    }
+  },
+  "pending": {
     "task.18": {
       "task": "Consider equipment features with hats that have interesting animations but no real in game impact.",
       "type": "Remainder",
@@ -642,20 +1012,6 @@
         "hour": 9,
         "minute": 30,
         "second": 19
-      }
-    },
-    "task.21": {
-      "task": "Small enemies (probably humans of 8x8) that look different and attack with different weapons.",
-      "type": "Feature",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 31,
-        "second": 15
       }
     },
     "task.22": {
@@ -686,46 +1042,116 @@
         "second": 37
       }
     },
-    "task.26": {
-      "task": "Cannot move up on slopes because raycast casts the normal as unusable. This is inteded for platforms, but not for the ground.",
-      "type": "Bug",
+    "task.35": {
+      "task": "Consider level mechanic, that does nothing actually.",
+      "type": "Remainder",
       "creation_date": {
         "year": 2018,
         "month": 3,
-        "day": 20,
-        "weekday": 2,
+        "day": 22,
+        "weekday": 4,
         "dst": false,
-        "hour": 18,
+        "hour": 9,
+        "minute": 58,
+        "second": 43
+      }
+    },
+    "task.36": {
+      "task": "Implement shooting with rifle",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 14,
+        "second": 58
+      }
+    },
+    "task.37": {
+      "task": "Implement shooting with machine gun",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 7
+      }
+    },
+    "task.38": {
+      "task": "Implement shooting with dual guns.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 16
+      }
+    },
+    "task.42": {
+      "task": "Improve game sounds, add a 8bit sound and remove excesive reverb.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 20,
+        "minute": 52,
+        "second": 5
+      }
+    },
+    "task.43": {
+      "task": "Create Granade soldier. (different sprite for eye recognition)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 4,
+        "second": 56
+      }
+    },
+    "task.48": {
+      "task": "Parachute soldiers??",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 21,
         "minute": 10,
-        "second": 23
+        "second": 34
       }
     },
-    "task.32": {
-      "task": "Create Hard Land sound with biiig boooooom!",
+    "task.50": {
+      "task": "Radio soldier that calls air support that drops para shutters.",
       "type": "Task",
       "creation_date": {
         "year": 2018,
         "month": 3,
-        "day": 22,
-        "weekday": 4,
+        "day": 25,
+        "weekday": 0,
         "dst": false,
-        "hour": 6,
-        "minute": 37,
-        "second": 12
-      }
-    },
-    "task.33": {
-      "task": "Improve whip sound.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 6,
-        "minute": 37,
-        "second": 26
+        "hour": 19,
+        "minute": 28,
+        "second": 55
       }
     }
   },
@@ -754,17 +1180,36 @@
     "task.30",
     "task.27",
     "task.20",
-    "task.31"
+    "task.31",
+    "task.26",
+    "task.14",
+    "task.34",
+    "task.32",
+    "task.39",
+    "task.40",
+    "task.41",
+    "task.44",
+    "task.45",
+    "task.33",
+    "task.47",
+    "task.46",
+    "task.49",
+    "task.51",
+    "task.52",
+    "task.21"
   ],
   "pend_order": [
-    "task.14",
     "task.18",
     "task.19",
-    "task.21",
     "task.22",
     "task.23",
-    "task.26",
-    "task.32",
-    "task.33"
+    "task.35",
+    "task.36",
+    "task.37",
+    "task.38",
+    "task.42",
+    "task.43",
+    "task.48",
+    "task.50"
   ]
 }

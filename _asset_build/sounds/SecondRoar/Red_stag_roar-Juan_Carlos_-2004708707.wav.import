@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Red_stag_roar-Juan_Carlos_-2004708707.wav-5923f39926f73ef34a35e9a56c945046.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/SecondRoar/Red_stag_roar-Juan_Carlos_-2004708707.wav"
+source_md5="47a56f72b08e92bbaf815f97723cd9ad"
+
+dest_files=[ "res://.import/Red_stag_roar-Juan_Carlos_-2004708707.wav-5923f39926f73ef34a35e9a56c945046.sample" ]
+dest_md5="10c85ff4a667b9a5477ade94aea794cb"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0
