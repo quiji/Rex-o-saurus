@@ -104,6 +104,7 @@ func _physics_process(delta):
 	
 	if is_valid_ground_cast():
 		if not on_ground:
+			var strength = 0
 			if velocity.y < 230:
 				$lighterland_player.play(0)
 				$sprite.land()
@@ -112,16 +113,19 @@ func _physics_process(delta):
 				$lightland_player.play(0)
 				$sprite.hard_land()
 				$camera_crew.shake(2, 2, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				strength = 1
 			elif velocity.y < 550:
 				$land_player.play(0)
 				$sprite.hard_land()
 				$camera_crew.shake(1, 5, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				strength = 2
 			else:
 				$hardland_player.play(0)
 				$sprite.hard_land()
 				$camera_crew.shake(0.8, 8, $camera_crew.Y_AXIS, $camera_crew.STRONG_TO_LOW)
+				strength = 3
 
-			check_stomp_collision()
+			check_stomp_collision(strength)
 
 			running = false
 			jumping = false
@@ -166,7 +170,7 @@ func is_valid_ground_cast():
 	
 	return ray_a or ray_b
 	
-func check_stomp_collision():
+func check_stomp_collision(strength):
 	var space_rid = get_world_2d().space
 	var space_state = Physics2DServer.space_get_direct_state(space_rid)
 	
@@ -178,7 +182,7 @@ func check_stomp_collision():
 	
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
-		result[0].collider.stomped()
+		result[0].collider.stomped(strength)
 		result.pop_front()
 	
 func check_whip_collision():
@@ -267,9 +271,9 @@ func take_input(delta):
 		direction = -1
 		$damage_area/collision_left.disabled = false
 		$damage_area/collision_right.disabled = true
-		$camera_crew.look_left()
+
 	elif right_p:
-		$camera_crew.look_right()
+
 		$sprite.flip(false)
 		direction = 1
 		$damage_area/collision_left.disabled = true

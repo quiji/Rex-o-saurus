@@ -246,4 +246,7 @@ area_mask = 1
 
 [node name="camera_crew" parent="." index="15" instance=ExtResource( 10 )]
 
+position = Vector2( 0, -120 )
+_sections_unfolded = [ "Transform" ]
+
 

@@ -911,6 +911,78 @@
         "minute": 14,
         "second": 56
       }
+    },
+    "task.51": {
+      "task": "The factories should be parachuted??",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 29,
+        "second": 6
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 41,
+        "second": 6
+      }
+    },
+    "task.52": {
+      "task": "Implement castle destruction by whip or stomp. Add brick particles and final explosion.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 12,
+        "minute": 41,
+        "second": 43
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 21,
+        "minute": 59,
+        "second": 51
+      }
+    },
+    "task.21": {
+      "task": "Small enemies (probably humans of 8x8) that look different and attack with different weapons.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 15
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 26,
+        "weekday": 1,
+        "dst": false,
+        "hour": 22,
+        "minute": 0,
+        "second": 5
+      }
     }
   },
   "pending": {
@@ -940,20 +1012,6 @@
         "hour": 9,
         "minute": 30,
         "second": 19
-      }
-    },
-    "task.21": {
-      "task": "Small enemies (probably humans of 8x8) that look different and attack with different weapons.",
-      "type": "Feature",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 31,
-        "second": 15
       }
     },
     "task.22": {
@@ -1095,20 +1153,6 @@
         "minute": 28,
         "second": 55
       }
-    },
-    "task.51": {
-      "task": "The factories should be parachuted??",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 25,
-        "weekday": 0,
-        "dst": false,
-        "hour": 19,
-        "minute": 29,
-        "second": 6
-      }
     }
   },
   "comp_order": [
@@ -1149,12 +1193,14 @@
     "task.33",
     "task.47",
     "task.46",
-    "task.49"
+    "task.49",
+    "task.51",
+    "task.52",
+    "task.21"
   ],
   "pend_order": [
     "task.18",
     "task.19",
-    "task.21",
     "task.22",
     "task.23",
     "task.35",
@@ -1164,7 +1210,6 @@
     "task.42",
     "task.43",
     "task.48",
-    "task.50",
-    "task.51"
+    "task.50"
   ]
 }

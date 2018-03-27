@@ -1,44 +1,724 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://enemies/soldier_factory.gd" type="Script" id=1]
+[ext_resource path="res://assets/back_castle.png" type="Texture" id=2]
+[ext_resource path="res://assets/back_falling_castle.png" type="Texture" id=3]
+[ext_resource path="res://assets/castle.png" type="Texture" id=4]
+[ext_resource path="res://assets/front_castle.png" type="Texture" id=5]
+[ext_resource path="res://props/gen_whiteflag.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/brick.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "Fall"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("falling_column:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 2.1637, 1 ),
+"update": 0,
+"values": [ 0.0, 91.4428 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("falling_column:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 39, -2 ), Vector2( 39, -6.73532e-06 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("back_castle:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -3.86208 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("back_castle:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -78, 1 ), Vector2( -78, 2.5 ) ]
+}
+
+[sub_resource type="Curve" id=5]
+
+min_value = -1.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.483624, -1 ), -4.17837, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+
+flags = 4
+width = 2048
+curve = SubResource( 5 )
+
+[sub_resource type="Curve" id=7]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.494541, 0 ), -4.00725, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+
+flags = 4
+width = 2048
+curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 1.0
+gravity = Vector3( 0, 88, 0 )
+initial_velocity = 60.0
+initial_velocity_random = 0.0
+angular_velocity = 80.0
+angular_velocity_random = 0.8
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 10.0
+linear_accel_random = 0.0
+radial_accel = 5.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 75.0
+angle_random = 0.0
+scale = 0.5
+scale_random = 0.2
+scale_curve = SubResource( 8 )
+color = Color( 1, 1, 1, 1 )
+hue_variation = 1.0
+hue_variation_random = 1.0
+hue_variation_curve = SubResource( 6 )
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Angle", "Angular Velocity", "Animation", "Emission Shape", "Gravity", "Hue Variation", "Initial Velocity", "Linear Accel", "Radial Accel", "Scale", "Spread", "Tangential Accel", "Trail" ]
 
 [node name="soldier_factory" type="KinematicBody2D"]
 
 input_pickable = false
-collision_layer = 1
-collision_mask = 1
+collision_layer = 13
+collision_mask = 0
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
 
-[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+[node name="tween" type="Tween" parent="." index="0"]
 
-polygon = PoolVector2Array( -89, 4, 175, 3, 177, 120, -93, 122 )
-uv = PoolVector2Array(  )
-color = Color( 1, 1, 1, 1 )
-vertex_colors = PoolColorArray(  )
-offset = Vector2( 0, 0 )
-antialiased = false
-texture = null
-texture_offset = Vector2( 0, 0 )
-texture_scale = Vector2( 1, 1 )
-texture_rotation_degrees = 0.0
-invert_enable = false
-invert_border = 100.0
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+[node name="sprite" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+
+[node name="back_castle" type="Sprite" parent="sprite" index="0"]
+
+position = Vector2( -78, 1 )
+texture = ExtResource( 2 )
+offset = Vector2( 77, -46 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="falling_column" type="Sprite" parent="sprite" index="1"]
+
+position = Vector2( 39, -2 )
+texture = ExtResource( 3 )
+offset = Vector2( -40, -36 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="castle" type="Sprite" parent="sprite" index="2"]
+
+position = Vector2( -1, -46 )
+texture = ExtResource( 4 )
+
+[node name="front_castle" type="Sprite" parent="sprite" index="3"]
+
+position = Vector2( -1, -40 )
+texture = ExtResource( 5 )
+
+[node name="falling_tower" type="AnimationPlayer" parent="sprite" index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Fall = SubResource( 9 )
+blend_times = [  ]
+
+[node name="left_spawn" type="Position2D" parent="." index="2"]
+
+position = Vector2( -64, -4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="left_top_spawn" type="Position2D" parent="." index="3"]
+
+position = Vector2( -16, -70 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="right_spawn" type="Position2D" parent="." index="4"]
+
+position = Vector2( 86, -4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="right_top_spawn" type="Position2D" parent="." index="5"]
+
+position = Vector2( 70, -68 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision" type="CollisionPolygon2D" parent="." index="6"]
 
 build_mode = 0
-polygon = PoolVector2Array( -87, 7, 173, 7, 175, 118, -89, 120 )
+polygon = PoolVector2Array( -56, -2, -36, 1, 74, -3, 79, -31, 102, -25, 97, -58, 33, -59, -26, -56, -29, -61, -80, -63, -83, -26, -60, -26, -57, -16 )
 
-[node name="spawn" type="Position2D" parent="." index="2"]
+[node name="whiteflag" parent="." index="7" instance=ExtResource( 6 )]
 
-position = Vector2( 188, 120 )
+visible = false
+position = Vector2( -61, -17 )
 
-[node name="timer" type="Timer" parent="." index="3"]
+[node name="emitter" type="Node2D" parent="." index="8"]
 
-process_mode = 1
-wait_time = 5.0
-one_shot = false
-autostart = true
+editor/display_folded = true
+
+[node name="left_brick_top0" type="Particles2D" parent="emitter" index="0"]
+
+position = Vector2( -77, -61 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top1" type="Particles2D" parent="emitter" index="1"]
+
+position = Vector2( -46, -61 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top2" type="Particles2D" parent="emitter" index="2"]
+
+position = Vector2( -32, -41 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top3" type="Particles2D" parent="emitter" index="3"]
+
+position = Vector2( -55, -28 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top4" type="Particles2D" parent="emitter" index="4"]
+
+position = Vector2( -94, -26 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top5" type="Particles2D" parent="emitter" index="5"]
+
+position = Vector2( -103, -26 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top6" type="Particles2D" parent="emitter" index="6"]
+
+position = Vector2( -108, -43 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top7" type="Particles2D" parent="emitter" index="7"]
+
+position = Vector2( -111, -62 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top8" type="Particles2D" parent="emitter" index="8"]
+
+position = Vector2( -91, -75 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="left_brick_top9" type="Particles2D" parent="emitter" index="9"]
+
+position = Vector2( -77, -25 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.95
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top0" type="Particles2D" parent="emitter" index="10"]
+
+position = Vector2( 42, -69 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top1" type="Particles2D" parent="emitter" index="11"]
+
+position = Vector2( 19, -61 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top2" type="Particles2D" parent="emitter" index="12"]
+
+position = Vector2( 34, -42 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top3" type="Particles2D" parent="emitter" index="13"]
+
+position = Vector2( 52, -28 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top4" type="Particles2D" parent="emitter" index="14"]
+
+position = Vector2( 80, -29 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top5" type="Particles2D" parent="emitter" index="15"]
+
+position = Vector2( 91, -51 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top6" type="Particles2D" parent="emitter" index="16"]
+
+position = Vector2( 88, -76 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top7" type="Particles2D" parent="emitter" index="17"]
+
+position = Vector2( 20, -88 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top8" type="Particles2D" parent="emitter" index="18"]
+
+position = Vector2( 52, -97 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
+
+[node name="right_brick_top9" type="Particles2D" parent="emitter" index="19"]
+
+position = Vector2( 8, -68 )
+z_index = 1
+z_as_relative = false
+emitting = false
+amount = 10
+lifetime = 1.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.8
+randomness = 0.0
+fixed_fps = 30
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 300, 300 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 4 )
+texture = ExtResource( 7 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Drawing", "Process Material", "Textures", "Time", "Z Index" ]
 
 

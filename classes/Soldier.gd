@@ -4,7 +4,7 @@ var Knife = preload("res://bullets/knife.tscn")
 
 const DISTANCE_TO_SPOT = 250
 const DISTANCE_TO_ATTACK = 140
-const DISTANCE_TO_RUN  = 120
+const DISTANCE_TO_RUN  = 60
 
 ######## Const Stats #########
 var max_run_velocity = 75.0
@@ -25,7 +25,7 @@ var midair_velocity = 0
 var prev_y_velocity = 0
 
 ######## AI States #########
-enum AIStates {IDLE, RUN_TO_ATTACK_DISTANCE, ATTACK, RUN_AWAY, SCARED, TREMBLE, ESCAPE, IDLE}
+enum AIStates {IDLE, RUN_TO_ATTACK_DISTANCE, ATTACK, RUN_AWAY, SCARED, TREMBLE, ESCAPE, IDLE, OUT_LEFT, OUT_RIGHT}
 const TRANSITION_DURATION = 0.8
 var ai_state = IDLE
 var ai_transition = null
@@ -57,6 +57,8 @@ var distance_to_run
 var distance_to_spot
 
 var whipped = false
+
+var run_time_after_spawn = 1.8
 
 func _ready():
 	add_to_group("soldiers")
@@ -145,7 +147,9 @@ func _physics_process(delta):
 			$sprite.fall()
 		on_ground = false
 	
-	
+	if $castle_ray.is_colliding() and $castle_ray.get_collider().has_method("add_soldier") and can_enter_castle():
+		if $castle_ray.get_collider().add_soldier():
+			queue_free()
 
 func is_valid_ground_cast():
 	var valid = $ground_ray.is_colliding() and $ground_ray.get_collision_normal().dot(Vector2(0, -1)) > 0.4
@@ -180,7 +184,7 @@ func run():
 func roar_scared():
 	ai_transit_to(SCARED, true)
 
-func stomped():
+func stomped(strength=0):
 	$sprite.stomped()
 	set_physics_process(false)
 	$timer.start()
@@ -202,15 +206,17 @@ func throw():
 	throw_offset.x *= direction
 	new_knife.position = position + throw_offset + Vector2(rand_range(-2, 2), rand_range(-2, 2))
 	new_knife.throw(direction)
-	get_parent().add_child(new_knife)
+	$"../../bullets".add_child(new_knife)
 
 func look_right(is_right=true):
 	if is_right:
 		direction = 1
 		$sprite.flip(false)
+		$castle_ray.cast_to = Vector2(6, 0)
 	else:
 		direction = -1
 		$sprite.flip(true)
+		$castle_ray.cast_to = Vector2(-6, 0)
 
 func ai_transit_to(new_state, no_transition = false):
 	ai_transition = new_state
@@ -219,9 +225,11 @@ func ai_transit_to(new_state, no_transition = false):
 	else:
 		transition_delta = TRANSITION_DURATION * rand_range(0.8, 1.3)
 
+func can_enter_castle():
+	return ai_state == RUN_TO_ATTACK_DISTANCE or ai_state == RUN_AWAY or ai_state == ESCAPE
 
 func take_input(delta):
-	var rex_distance = $"../rex".position - position
+	var rex_distance = $"../../rex".position - position
 	var rex_distance_squared = rex_distance.length_squared()
 	var rex_direction = rex_distance.normalized()
 
@@ -243,6 +251,22 @@ func take_input(delta):
 
 	
 	match ai_state:
+		OUT_LEFT:
+			look_right(false)
+			if not running:
+				run()
+			run_time_after_spawn -= delta
+			if run_time_after_spawn <= 0:
+				ai_transit_to(IDLE, true)
+				
+		OUT_RIGHT:
+			look_right(true)
+			if not running:
+				run()
+			run_time_after_spawn -= delta
+			if run_time_after_spawn <= 0:
+				ai_transit_to(IDLE, true)
+
 		RUN_TO_ATTACK_DISTANCE:
 			if $sprite.is_throwing():
 				return

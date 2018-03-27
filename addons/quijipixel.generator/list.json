@@ -282,44 +282,44 @@
             },
             {
               "id": 36,
-              "time": 60,
+              "time": 80,
               "react": 0,
               "param": ""
             },
             {
               "id": 37,
-              "time": 55,
+              "time": 70,
               "react": 0,
               "param": ""
             },
             {
               "id": 38,
-              "time": 50,
+              "time": 70,
               "react": 0,
               "param": ""
             },
             {
               "id": 39,
-              "time": 45,
+              "time": 60,
               "react": 0,
               "param": ""
             },
             {
               "id": 40,
-              "time": 50,
+              "time": 60,
               "react": 0,
               "param": ""
             },
             {
               "id": 41,
-              "time": 55,
-              "react": 3,
+              "time": 50,
+              "react": 0,
               "param": ""
             },
             {
               "id": 42,
               "time": 70,
-              "react": 3,
+              "react": 0,
               "param": ""
             },
             {
@@ -331,13 +331,13 @@
             {
               "id": 44,
               "time": 70,
-              "react": 3,
+              "react": 0,
               "param": ""
             },
             {
               "id": 45,
-              "time": 80,
-              "react": 3,
+              "time": 120,
+              "react": 0,
               "param": ""
             }
           ]
@@ -947,7 +947,88 @@
       },
       "target_dir": "res://bullets",
       "attached_script": "res://bullets/gen_knife_sprite.gd"
+    },
+    "SpriteAnim2D.33": {
+      "name": "WhiteFlag",
+      "animations": {
+        "Flag": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "spritesheet": "res://assets/white_flag.png",
+      "sprite_width": 16,
+      "sprite_height": 16,
+      "target_dir": "res://props"
     }
   },
-  "last_id": 33
+  "last_id": 34
 }

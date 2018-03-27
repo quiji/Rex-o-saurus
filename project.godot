@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=8
-minor=30
+minor=33
 
 [application]
 
@@ -23,7 +23,6 @@ config/icon="res://icon.png"
 
 Resolution="*res://classes/Resolution.gd"
 Smoothstep="*res://classes/Smoothstep.gd"
-Console="*res://addons/quijipixel.console/Console.tscn"
 
 [display]
 
@@ -73,8 +72,6 @@ whip=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
  ]
 roar=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
-toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777244,"unicode":0,"echo":false,"script":null)
- ]
 
 [layer_names]
 
@@ -85,5 +82,6 @@ toggle_console=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_clear_color=Color( 0.443137, 0.678431, 0.639216, 1 )
 environment/default_environment="res://default_env.tres"
