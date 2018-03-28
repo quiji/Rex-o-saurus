@@ -983,6 +983,174 @@
         "minute": 0,
         "second": 5
       }
+    },
+    "task.22": {
+      "task": "NPCs, that say nonsense.... or something like that.",
+      "type": "Feature",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 28
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 36,
+        "second": 9
+      }
+    },
+    "task.48": {
+      "task": "Parachute soldiers??",
+      "type": "Remainder",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 21,
+        "minute": 10,
+        "second": 34
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 36,
+        "second": 20
+      }
+    },
+    "task.50": {
+      "task": "Radio soldier that calls air support that drops para shutters.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 25,
+        "weekday": 0,
+        "dst": false,
+        "hour": 19,
+        "minute": 28,
+        "second": 55
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 36,
+        "second": 23
+      }
+    },
+    "task.54": {
+      "task": "\"Dinamically generated\" town.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 40,
+        "second": 39
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 7,
+        "minute": 41,
+        "second": 18
+      }
+    },
+    "task.53": {
+      "task": "Global text system to dinamically change conversation patterns for different npcs.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 40,
+        "second": 26
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 8,
+        "minute": 40,
+        "second": 55
+      }
+    },
+    "task.55": {
+      "task": "Health bar gui",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 47,
+        "second": 30
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 28,
+        "second": 19
+      }
+    },
+    "task.56": {
+      "task": "Exp gui cues",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 6,
+        "minute": 47,
+        "second": 42
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 51,
+        "second": 3
+      }
     }
   },
   "pending": {
@@ -1012,20 +1180,6 @@
         "hour": 9,
         "minute": 30,
         "second": 19
-      }
-    },
-    "task.22": {
-      "task": "NPCs, that say nonsense.... or something like that.",
-      "type": "Feature",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 31,
-        "second": 28
       }
     },
     "task.23": {
@@ -1126,32 +1280,60 @@
         "second": 56
       }
     },
-    "task.48": {
-      "task": "Parachute soldiers??",
-      "type": "Remainder",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 24,
-        "weekday": 6,
-        "dst": false,
-        "hour": 21,
-        "minute": 10,
-        "second": 34
-      }
-    },
-    "task.50": {
-      "task": "Radio soldier that calls air support that drops para shutters.",
+    "task.57": {
+      "task": "Implement permadeath",
       "type": "Task",
       "creation_date": {
         "year": 2018,
         "month": 3,
-        "day": 25,
-        "weekday": 0,
+        "day": 28,
+        "weekday": 3,
         "dst": false,
-        "hour": 19,
+        "hour": 9,
         "minute": 28,
-        "second": 55
+        "second": 27
+      }
+    },
+    "task.58": {
+      "task": "Implement Win!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 28,
+        "second": 36
+      }
+    },
+    "task.59": {
+      "task": "Implement level up",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 51,
+        "second": 13
+      }
+    },
+    "task.60": {
+      "task": "Add remaining sounds.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 51,
+        "second": 27
       }
     }
   },
@@ -1196,12 +1378,18 @@
     "task.49",
     "task.51",
     "task.52",
-    "task.21"
+    "task.21",
+    "task.22",
+    "task.48",
+    "task.50",
+    "task.54",
+    "task.53",
+    "task.55",
+    "task.56"
   ],
   "pend_order": [
     "task.18",
     "task.19",
-    "task.22",
     "task.23",
     "task.35",
     "task.36",
@@ -1209,7 +1397,9 @@
     "task.38",
     "task.42",
     "task.43",
-    "task.48",
-    "task.50"
+    "task.57",
+    "task.58",
+    "task.59",
+    "task.60"
   ]
 }

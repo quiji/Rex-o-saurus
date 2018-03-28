@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 var SoldierA = preload("res://enemies/soldier_a.tscn")
 
-const MAX_HEALTH = 3000.0
+const MAX_HEALTH = 1500.0
 const MAX_TIMER = 5.0
-var total_soldiers = 200
+var total_soldiers = 100
 var health = 0.0
 var wait_time = 0.0
 var penalty = 0.0
@@ -27,13 +27,18 @@ func _ready():
 var delta_count = 0
 
 func _physics_process(delta):
-	delta_count += delta
-	if delta_count >= wait_time:
-		delta_count = 0
-		on_timeout()
+	var rex_distance = $"../../rex".position - position
 
+	
+	if rex_distance.length_squared() < 500 * 500:
+		delta_count += delta
+		if delta_count >= wait_time:
+			delta_count = 0
+			on_timeout()
+	
 
 func on_timeout():
+
 	var i = 4
 	var j = 2
 	while i > 0 and total_soldiers > 0:
@@ -72,6 +77,7 @@ func on_timeout():
 	
 
 func add_soldier():
+
 	if total_soldiers <= 0:
 		return false
 	else:
@@ -91,7 +97,7 @@ func whipped(direction):
 	$tween.interpolate_method(self, "shrink_horizontal", 0.95, 1, 0.2,Tween.TRANS_BOUNCE, Tween.EASE_IN)
 	$tween.start()
 
-	damage_structure(50)
+	return damage_structure(50)
 	
 func stomped(strength=0):
 	emit_bricks("left_brick_top")
@@ -99,7 +105,7 @@ func stomped(strength=0):
 	$tween.interpolate_method(self, "shrink_vertical", 0.95, 1, 0.2,Tween.TRANS_BOUNCE, Tween.EASE_IN)
 	$tween.start()
 
-	damage_structure(30 * (strength + 1))
+	return damage_structure(30 * (strength + 1))
 
 func damage_structure(damage):
 	health -= damage
@@ -116,7 +122,8 @@ func damage_structure(damage):
 		collision_layer = 0
 		$sprite/falling_tower.play("Fall")
 		get_tree().call_group("soldiers", "castle_destroyed")
-	
+		return true
+	return false
 	
 func shrink_vertical(t):
 	$sprite/castle.scale.y = t

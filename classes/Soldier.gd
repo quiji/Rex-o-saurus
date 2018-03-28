@@ -188,6 +188,7 @@ func stomped(strength=0):
 	$sprite.stomped()
 	set_physics_process(false)
 	$timer.start()
+	return true
 
 func castle_destroyed():
 	if $sprite.is_stomped():
@@ -202,7 +203,7 @@ func whipped(whip_direction):
 	whipped = true
 	jumping = true
 	falling = false
-
+	return true
 
 func throw():
 	$sprite.idle()

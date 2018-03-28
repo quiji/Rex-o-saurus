@@ -1,19 +1,21 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://classes/Npc.gd" type="Script" id=1]
 [ext_resource path="res://npcs/gen_npc_02.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/buttons.png" type="Texture" id=3]
 [ext_resource path="res://gui/message_box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/NPC_names.tres" type="StyleBox" id=5]
+[ext_resource path="res://assets/Qpix.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 40, 25 )
+extents = Vector2( 50, 25 )
 
 [sub_resource type="Animation" id=2]
 
 resource_name = "Appear"
-length = 1.0
+length = 0.3
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -23,8 +25,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( -4, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Name:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -32,7 +46,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=3]
 
 resource_name = "Disappear"
-length = 1.0
+length = 0.3
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -42,8 +56,20 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 2.54675, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Name:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
@@ -66,11 +92,23 @@ tracks/0/keys = {
 "values": [ Vector2( 0, -82 ), Vector2( 0, -90 ), Vector2( 0, -82 ), Vector2( 0, -36 ) ]
 }
 
-[node name="npc_02" type="Node2D" index="0"]
+[sub_resource type="DynamicFont" id=5]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[node name="npc_02" type="Node2D"]
 
 script = ExtResource( 1 )
+text_id = 0
 
 [node name="sprite" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 1, -9 )
 
 [node name="talk_area" type="Area2D" parent="." index="1"]
 
@@ -111,7 +149,7 @@ blend_times = [  ]
 
 [node name="message_box" parent="." index="4" instance=ExtResource( 4 )]
 
-position = Vector2( 7, -12 )
+position = Vector2( 10, -22 )
 
 [node name="timer" type="Timer" parent="." index="5"]
 
@@ -119,5 +157,34 @@ process_mode = 1
 wait_time = 0.5
 one_shot = true
 autostart = false
+
+[node name="Name" type="Label" parent="." index="6"]
+
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -104.0
+margin_top = 10.0
+margin_right = 104.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_styles/normal = ExtResource( 5 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.819608, 0.819608, 0.780392, 1 )
+custom_colors/font_color_shadow = Color( 0.243137, 0.247059, 0.337255, 1 )
+text = "Rosita \"The Shopkeeper\" 
+Shoppenhauer"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 

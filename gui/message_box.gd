@@ -10,6 +10,7 @@ signal finished_message
 func _ready():
 	modulate = Color("00ffffff")
 	$text.show()
+	$just_for_visuals.hide()
 	structure_box(Vector2(10, 10))
 	
 func structure_box(box_size, show_arrow=false):

@@ -60,13 +60,14 @@ tracks/1/keys = {
 "values": [  ]
 }
 
-[node name="npc_04" type="Node2D"]
+[node name="npc_04" type="Node2D" index="0"]
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 1 )
 vframes = 3
 hframes = 4
+frame = 5
 
 [node name="anim_player" type="AnimationPlayer" parent="." index="1"]
 

@@ -22,6 +22,8 @@ func on_body_entered(body):
 
 		dismiss(false)
 	
+func get_damage():
+	return 5
 
 func dismiss(diagonal=true):
 	if diagonal:

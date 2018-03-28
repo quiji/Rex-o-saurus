@@ -63,14 +63,14 @@ func _generate_new_target(t):
 var talking_offset
 var finishing_talk = false
 func talking(pos):
-	pos += Vector2(0, 50)
+	pos += Vector2(0, 15)
 	talking_offset = $camera_man.offset
-	$tween.interpolate_property($camera_man, "offset", talking_offset, pos, 1.5, Tween.TRANS_QUAD, Tween.EASE_IN)
+	$tween.interpolate_property($camera_man, "offset", talking_offset, pos, 0.8, Tween.TRANS_QUAD, Tween.EASE_IN)
 	$tween.start()
 
 func no_more_talking():
 
-	$tween.interpolate_property($camera_man, "offset", $camera_man.offset, talking_offset, 1.5, Tween.TRANS_QUAD, Tween.EASE_IN)
+	$tween.interpolate_property($camera_man, "offset", $camera_man.offset, talking_offset, 0.8, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$tween.start()
 	finishing_talk = true
 

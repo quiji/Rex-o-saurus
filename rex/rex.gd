@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+const TOP_HEALTH = 4000.0
 
 ######## Const Stats #########
 var max_run_velocity = 180.0
@@ -45,6 +46,8 @@ var stomp_area
 var whip_area_left
 var whip_area_right
 
+var health = 0.0
+
 func _ready():
 	$sprite.idle()
 	
@@ -62,6 +65,7 @@ func _ready():
 	whip_area_right = $tail_whip_area_right.shape_owner_get_shape(0, 0)
 	whip_area_left = $tail_whip_area_left.shape_owner_get_shape(0, 0)
 
+	health = TOP_HEALTH
 
 func _physics_process(delta):
 	
@@ -186,7 +190,15 @@ func check_stomp_collision(strength):
 	
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
-		result[0].collider.stomped(strength)
+		var is_dead
+		is_dead = result[0].collider.stomped(strength)
+		if result[0].collider.has_method("roar_scared"):
+			$"../gui".add_exp(2)
+		else:
+			if is_dead:
+				$"../gui".add_exp(10)
+			else:
+				$"../gui".add_exp(4)
 		result.pop_front()
 	
 func check_whip_collision():
@@ -204,7 +216,16 @@ func check_whip_collision():
 	
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
-		result[0].collider.whipped(direction)
+		var is_dead
+		is_dead = result[0].collider.whipped(direction)
+		if result[0].collider.has_method("roar_scared"):
+			$"../gui".add_exp(1)
+		else:
+			if is_dead:
+				$"../gui".add_exp(10)
+			else:
+				$"../gui".add_exp(2)
+
 		result.pop_front()
 		
 
@@ -225,6 +246,9 @@ func no_talking():
 func ended_talking_camera_movement():
 	talking = false
 
+func talk_direction():
+	return Vector2(1, 0) * direction
+
 func add_step_impulse():
 	if running:
 		step_delta = step_duration
@@ -240,8 +264,11 @@ func is_on_ground():
 	return on_ground and ground_loose_delta > 0
 
 func on_bullet_hit(bullet):
-	Console.count("Hurt!")
+	
+	health -= bullet.get_damage()
 	bullet.dismiss()
+	
+	$"../gui".update_health(health / TOP_HEALTH)
 
 func take_input(delta):
 	var left_jp = Input.is_action_just_pressed("ui_left")

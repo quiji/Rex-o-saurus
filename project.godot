@@ -11,7 +11,7 @@ config_version=3
 [Project]
 
 patch=8
-minor=33
+minor=39
 
 [application]
 
@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Glb="*res://classes/Glb.gd"
 Resolution="*res://classes/Resolution.gd"
 Smoothstep="*res://classes/Smoothstep.gd"
 

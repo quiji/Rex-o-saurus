@@ -3,9 +3,9 @@
 [ext_resource path="res://gui/message_box.gd" type="Script" id=1]
 [ext_resource path="res://assets/message_box.png" type="Texture" id=2]
 [ext_resource path="res://assets/down_arrow.png" type="Texture" id=3]
-[ext_resource path="res://assets/JinxedWizards.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Qpix.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
 resource_name = "Arrow"
 length = 2.0
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.964844, 0.710913, 0.226135, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 
 size = 16
 use_mipmaps = false
@@ -32,9 +32,8 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="message_box" type="Node2D"]
+[node name="message_box" type="Node2D" index="0"]
 
-modulate = Color( 1, 1, 1, 0 )
 z_index = 1
 z_as_relative = false
 script = ExtResource( 1 )
@@ -143,7 +142,7 @@ autoplay = "Arrow"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Arrow = SubResource( 2 )
+anims/Arrow = SubResource( 3 )
 blend_times = [  ]
 
 [node name="fixed" type="Node2D" parent="." index="2"]
@@ -181,7 +180,6 @@ _sections_unfolded = [ "Animation" ]
 
 [node name="text" type="Node2D" parent="." index="3"]
 
-editor/display_folded = true
 visible = false
 
 [node name="message" type="Label" parent="text" index="0"]
@@ -198,7 +196,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.658824, 0.701961, 0.619608, 1 )
 autowrap = true
 clip_text = true
@@ -215,5 +213,29 @@ playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
+
+[node name="just_for_visuals" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="up" type="Sprite" parent="just_for_visuals" index="0"]
+
+position = Vector2( 5, -15 )
+texture = ExtResource( 2 )
+centered = false
+vframes = 2
+hframes = 6
+frame = 4
+_sections_unfolded = [ "Animation", "Offset" ]
+
+[node name="in" type="Sprite" parent="just_for_visuals" index="1"]
+
+position = Vector2( 5, -10 )
+texture = ExtResource( 2 )
+centered = false
+vframes = 2
+hframes = 6
+frame = 8
+_sections_unfolded = [ "Animation" ]
 
 
