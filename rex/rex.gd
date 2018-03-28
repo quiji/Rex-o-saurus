@@ -28,6 +28,7 @@ var falling = false
 var running = false
 var jumping = false
 
+var talking = false
 var bullet_dispel_on = false
 
 var direction = 1
@@ -63,6 +64,9 @@ func _ready():
 
 
 func _physics_process(delta):
+	
+	if talking:
+		return
 	
 	if not on_ground:
 		prev_y_velocity = velocity.y
@@ -211,6 +215,15 @@ func roar():
 	bullet_dispel_on = true
 	get_tree().call_group("soldiers", "roar_scared")
 
+func talking(pos):
+	$camera_crew.talking(pos - global_position)
+	talking = true
+
+func no_talking():
+	$camera_crew.no_more_talking()
+
+func ended_talking_camera_movement():
+	talking = false
 
 func add_step_impulse():
 	if running:

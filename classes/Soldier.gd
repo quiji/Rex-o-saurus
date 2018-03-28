@@ -189,6 +189,11 @@ func stomped(strength=0):
 	set_physics_process(false)
 	$timer.start()
 
+func castle_destroyed():
+	if $sprite.is_stomped():
+		$timer.stop()
+		queue_free()
+
 func whipped(whip_direction):
 	if not $timer.is_stopped():
 		return

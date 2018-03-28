@@ -14,6 +14,7 @@ var amplitude = 10
 
 func _ready():
 	set_physics_process(false)
+	$tween.connect("tween_completed", self, "on_talking_end")
 
 func shake(duration, amp, shk_type, shk_mov_type):
 	set_physics_process(true)
@@ -58,6 +59,25 @@ func _generate_new_target(t):
 		return direction * lerp(0, amplitude, Smoothstep.arch(t, 4)) * rand_range(0.8, 1)
 	else:
 		return direction * lerp(0, amplitude, Smoothstep.flip(Smoothstep.stop4(t))) * rand_range(0.8, 1)
+
+var talking_offset
+var finishing_talk = false
+func talking(pos):
+	pos += Vector2(0, 50)
+	talking_offset = $camera_man.offset
+	$tween.interpolate_property($camera_man, "offset", talking_offset, pos, 1.5, Tween.TRANS_QUAD, Tween.EASE_IN)
+	$tween.start()
+
+func no_more_talking():
+
+	$tween.interpolate_property($camera_man, "offset", $camera_man.offset, talking_offset, 1.5, Tween.TRANS_QUAD, Tween.EASE_IN)
+	$tween.start()
+	finishing_talk = true
+
+func on_talking_end(object, key):
+	if finishing_talk:
+		get_parent().ended_talking_camera_movement()
+		finishing_talk = false
 
 
 var movement_t = 0

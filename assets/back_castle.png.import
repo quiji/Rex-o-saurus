@@ -7,10 +7,10 @@ path="res://.import/back_castle.png-9c887486e3d7367948392ea98537a7d0.stex"
 [deps]
 
 source_file="res://assets/back_castle.png"
-source_md5="663012d6eafb79f710bd64424c864745"
+source_md5="a8e054388217f195dd3fd8a37086809a"
 
 dest_files=[ "res://.import/back_castle.png-9c887486e3d7367948392ea98537a7d0.stex" ]
-dest_md5="456d16b2cbbe7455aeba2471154d633a"
+dest_md5="6da0b52f52b6c24dd21f9a1ef09251b5"
 
 [params]
 

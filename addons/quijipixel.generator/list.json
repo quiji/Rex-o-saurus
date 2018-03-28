@@ -1028,7 +1028,352 @@
       "sprite_width": 16,
       "sprite_height": 16,
       "target_dir": "res://props"
+    },
+    "SpriteAnim2D.34": {
+      "name": "NPC_00",
+      "spritesheet": "res://assets/npc_00.png",
+      "sprite_width": 13,
+      "sprite_height": 20,
+      "animations": {
+        "Idle": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 400,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Hello": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 8,
+              "time": 200,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 11,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 12,
+              "time": 80,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://npcs"
+    },
+    "SpriteAnim2D.35": {
+      "name": "NPC_01",
+      "spritesheet": "res://assets/npc_01.png",
+      "sprite_height": 17,
+      "sprite_width": 9,
+      "animations": {
+        "Idle": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 1000,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 600,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Hello": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://npcs"
+    },
+    "SpriteAnim2D.36": {
+      "name": "NPC_02",
+      "animations": {
+        "Idle": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 600,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 300,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Hello": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "spritesheet": "res://assets/npc_02.png",
+      "sprite_height": 18,
+      "sprite_width": 11,
+      "target_dir": "res://npcs"
+    },
+    "SpriteAnim2D.37": {
+      "name": "NPC_03",
+      "spritesheet": "res://assets/npc_03.png",
+      "sprite_height": 18,
+      "sprite_width": 9,
+      "animations": {
+        "Idle": {
+          "loop": true,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 1,
+              "time": 700,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 400,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Hello": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://npcs"
+    },
+    "SpriteAnim2D.38": {
+      "name": "NPC_04",
+      "spritesheet": "res://assets/npc_04.png",
+      "sprite_width": 40,
+      "sprite_height": 36,
+      "animations": {
+        "Idle": {
+          "loop": true,
+          "ping_pong": true,
+          "frames": [
+            {
+              "id": 1,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 2,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 3,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 4,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 5,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 6,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 7,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        },
+        "Hello": {
+          "loop": false,
+          "ping_pong": false,
+          "frames": [
+            {
+              "id": 8,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 9,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            },
+            {
+              "id": 10,
+              "time": 100,
+              "react": 0,
+              "param": ""
+            }
+          ]
+        }
+      },
+      "target_dir": "res://npcs"
     }
   },
-  "last_id": 34
+  "last_id": 39
 }

@@ -79,9 +79,10 @@ roar=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","
 2d_physics/layer_2="BulletDamage"
 2d_physics/layer_3="StompDamage"
 2d_physics/layer_4="WhipDamage"
+2d_physics/layer_5="Talkable"
 
 [rendering]
 
 quality/2d/use_pixel_snap=true
-environment/default_clear_color=Color( 0.443137, 0.678431, 0.639216, 1 )
+environment/default_clear_color=Color( 0.150604, 0.183594, 0.178096, 1 )
 environment/default_environment="res://default_env.tres"

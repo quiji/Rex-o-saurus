@@ -115,6 +115,7 @@ func damage_structure(damage):
 		$whiteflag.hide()
 		collision_layer = 0
 		$sprite/falling_tower.play("Fall")
+		get_tree().call_group("soldiers", "castle_destroyed")
 	
 	
 func shrink_vertical(t):

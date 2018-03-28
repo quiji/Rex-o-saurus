@@ -31,6 +31,9 @@ func is_scared():
 func stomped():
 	play("Stomped")
 
+func is_stomped():
+	return current_anim == "Stomped"
+
 func explode():
 	play("Explode")
 

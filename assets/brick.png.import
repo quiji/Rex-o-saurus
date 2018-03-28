@@ -7,10 +7,10 @@ path="res://.import/brick.png-2752dffcc7852625bd2ce25e2bde0c3a.stex"
 [deps]
 
 source_file="res://assets/brick.png"
-source_md5="4f059fafcca6a164c23854dc788d26ed"
+source_md5="a86f0be1e1dd3da97f1d56a3c7067f89"
 
 dest_files=[ "res://.import/brick.png-2752dffcc7852625bd2ce25e2bde0c3a.stex" ]
-dest_md5="52e4b3404e294cb5c2f094a50997314c"
+dest_md5="80417d6024439bb300031f2e318b134b"
 
 [params]
 
