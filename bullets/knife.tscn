@@ -1,12 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://bullets/knife.gd" type="Script" id=1]
 [ext_resource path="res://bullets/gen_knife.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/knife_throw.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/knife_hit.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
 radius = 6.0
+
+[sub_resource type="AudioStreamRandomPitch" id=2]
+
+audio_stream = ExtResource( 3 )
+random_pitch = 1.05
+
+[sub_resource type="AudioStreamRandomPitch" id=3]
+
+audio_stream = ExtResource( 4 )
+random_pitch = 1.1
 
 [node name="knife" type="Area2D"]
 
@@ -26,5 +38,32 @@ _sections_unfolded = [ "Collision" ]
 [node name="collision" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="ground" type="RayCast2D" parent="." index="2"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 1
+
+[node name="throw" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = SubResource( 2 )
+volume_db = -5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SoundFX"
+area_mask = 1
+
+[node name="hit" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = SubResource( 3 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "SoundFX"
+area_mask = 1
 
 

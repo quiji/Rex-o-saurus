@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://classes/Soldier.gd" type="Script" id=1]
+[ext_resource path="res://enemies/gen_soldierc.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemies/grunts.tscn" type="PackedScene" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 5.0
+height = 6.0
+
+[node name="soldier_c" type="KinematicBody2D"]
+
+input_pickable = false
+collision_layer = 12
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+weapon = 2
+people_row = 1
+
+[node name="sprite" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 0, -11 )
+
+[node name="collision" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0, -7 )
+shape = SubResource( 1 )
+
+[node name="ground_ray" type="RayCast2D" parent="." index="2"]
+
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 0, 2 )
+collision_mask = 1
+
+[node name="castle_ray" type="RayCast2D" parent="." index="3"]
+
+position = Vector2( 0, -7 )
+enabled = true
+exclude_parent = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1
+
+[node name="timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 10.0
+one_shot = false
+autostart = false
+
+[node name="grunts" parent="." index="5" instance=ExtResource( 3 )]
+
+

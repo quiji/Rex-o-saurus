@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sparks/smoke.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/house_01.png" type="Texture" id=2]
+
+[node name="house_00" type="Node2D" index="0"]
+
+[node name="smoke" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 12, -103 )
+
+[node name="sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( -2, -51 )
+texture = ExtResource( 2 )
+
+

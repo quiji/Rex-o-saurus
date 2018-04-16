@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/grunt.wav-715940fed202109b9252cd84d388c280.sample"
+
+[deps]
+
+source_file="res://assets/grunt.wav"
+source_md5="90ec45943d7f51468ace0b235e2b3b62"
+
+dest_files=[ "res://.import/grunt.wav-715940fed202109b9252cd84d388c280.sample" ]
+dest_md5="52b376dfab59eea0503a9dfe49ca8af4"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

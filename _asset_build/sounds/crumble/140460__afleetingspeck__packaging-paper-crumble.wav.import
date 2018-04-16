@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/140460__afleetingspeck__packaging-paper-crumble.wav-fdd490c401045214f630381543f64626.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/crumble/140460__afleetingspeck__packaging-paper-crumble.wav"
+source_md5="01f36b36bc97fe70ff1851e8cbd11644"
+
+dest_files=[ "res://.import/140460__afleetingspeck__packaging-paper-crumble.wav-fdd490c401045214f630381543f64626.sample" ]
+dest_md5="c7e5bc2cc06c24f1040c9d1e84cdc74f"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

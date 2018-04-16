@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bullet_hit.wav-8fcb38ffe0a70f38d3ce5814f06089cc.sample"
+
+[deps]
+
+source_file="res://assets/bullet_hit.wav"
+source_md5="f15c06b4b6d1119073449d0369b3a488"
+
+dest_files=[ "res://.import/bullet_hit.wav-8fcb38ffe0a70f38d3ce5814f06089cc.sample" ]
+dest_md5="3b444d6cc82a858c59253ec379d50d14"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

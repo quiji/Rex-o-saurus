@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Throw_Knife-Anonymous-1894795848.wav-a2e692dbf40f607b4863b40a19ee5c14.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/Throw_Knife-Anonymous-1894795848.wav"
+source_md5="550ce7efa69d95e74a444f526e9ff4a1"
+
+dest_files=[ "res://.import/Throw_Knife-Anonymous-1894795848.wav-a2e692dbf40f607b4863b40a19ee5c14.sample" ]
+dest_md5="dda19a8fa80b0bdf655cc8bb211621e3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

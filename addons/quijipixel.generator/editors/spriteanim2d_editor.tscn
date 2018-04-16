@@ -869,7 +869,7 @@ group = null
 text = "No Reaction"
 flat = false
 align = 0
-items = [ "No Reaction", null, false, 0, null, "Step", null, false, 1, null, "Roar", null, false, 2, null, "Whip", null, false, 3, null ]
+items = [ "No Reaction", null, false, 0, null, "Step", null, false, 1, null, "Roar", null, false, 2, null, "Whip", null, false, 3, null, "Shoot", null, false, 4, null ]
 selected = 0
 
 [node name="param" type="LineEdit" parent="panel/margins/container/animation_toolbar/frame_form" index="1"]
@@ -1343,7 +1343,7 @@ anchor_bottom = 0.0
 margin_left = 2.0
 margin_top = 452.0
 margin_right = 606.0
-margin_bottom = 521.0
+margin_bottom = 548.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1391,7 +1391,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="target_file_edit" type="LineEdit" parent="panel/margins/container/generator_options" index="2"]
+[node name="name_of_generator" type="Label" parent="panel/margins/container/generator_options" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = 79.0
+margin_right = 86.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Generator Name (Output name):"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="target_file_edit" type="LineEdit" parent="panel/margins/container/generator_options" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1415,7 +1436,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
 
-[node name="attach_script_edit" type="LineEdit" parent="panel/margins/container/generator_options" index="3"]
+[node name="attach_script_edit" type="LineEdit" parent="panel/margins/container/generator_options" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1439,7 +1460,7 @@ caret_blink = false
 caret_blink_speed = 0.65
 caret_position = 0
 
-[node name="dir_exist" type="Label" parent="panel/margins/container/generator_options" index="4"]
+[node name="dir_exist" type="Label" parent="panel/margins/container/generator_options" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1459,7 +1480,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="script_exist" type="Label" parent="panel/margins/container/generator_options" index="5"]
+[node name="script_exist" type="Label" parent="panel/margins/container/generator_options" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1478,6 +1499,30 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="generator_name_edit" type="LineEdit" parent="panel/margins/container/generator_options" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 215.0
+margin_top = 74.0
+margin_right = 548.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
 
 [node name="anim_player" type="AnimationPlayer" parent="." index="2"]
 

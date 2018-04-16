@@ -37,6 +37,8 @@ func hard_land():
 	if current_anim != "Whip":
 		play("HardLand")
 
+func die():
+	play("Death")
 
 func is_landing():
 	return current_anim == "Land" or current_anim == "HardLand"
@@ -81,6 +83,8 @@ func on_animation_finished(anim):
 		"Roar":
 			play("Idle")
 			get_parent().bullet_dispel_on = false
+		"Death":
+			get_parent().dead()
 
 
 

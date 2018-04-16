@@ -1,6 +1,7 @@
 extends Node2D
 
-enum ReactTypes {NO_REACTION, STEP_REACTION, ROAR_REACTION}
+enum ReactTypes {NO_REACTION, STEP_REACTION, ROAR_REACTION, WHIP_REACTION, SHOOT_REACTION}
+
 
 var current_anim = ''
 
@@ -40,10 +41,16 @@ func explode():
 func whipped():
 	play("Whipped")
 
+func shoot_straight():
+	play("ShootStraight")
+
 func react(action):
 	match action:
 		STEP_REACTION:
 			get_parent().add_step_impulse()
+		SHOOT_REACTION:
+			get_parent().shoot()
+
 	
 func play(anim):
 	if current_anim != anim:
@@ -62,4 +69,5 @@ func on_animation_finished(anim):
 			get_parent().ai_transit_to(get_parent().TREMBLE, true)
 		"Explode":
 			get_parent().on_timeout()
-
+		"ShootStraight":
+			get_parent().ai_transit_to(get_parent().IDLE)

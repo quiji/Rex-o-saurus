@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://classes/Soldier.gd" type="Script" id=1]
 [ext_resource path="res://enemies/gen_soldiera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://enemies/grunts.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -17,6 +18,8 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
+weapon = 0
+people_row = 1
 
 [node name="sprite" parent="." index="0" instance=ExtResource( 2 )]
 
@@ -48,5 +51,7 @@ enabled = true
 exclude_parent = true
 cast_to = Vector2( 6, 0 )
 collision_mask = 1
+
+[node name="grunts" parent="." index="5" instance=ExtResource( 3 )]
 
 

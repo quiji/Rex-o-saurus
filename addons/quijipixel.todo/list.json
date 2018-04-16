@@ -1151,6 +1151,606 @@
         "minute": 51,
         "second": 3
       }
+    },
+    "task.36": {
+      "task": "Implement shooting with rifle",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 14,
+        "second": 58
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 29,
+        "weekday": 4,
+        "dst": false,
+        "hour": 17,
+        "minute": 9,
+        "second": 19
+      }
+    },
+    "task.23": {
+      "task": "RAAAADDD Funky music!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 20,
+        "weekday": 2,
+        "dst": false,
+        "hour": 9,
+        "minute": 31,
+        "second": 37
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 28,
+        "second": 45
+      }
+    },
+    "task.37": {
+      "task": "Implement shooting with machine gun",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 7
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 15,
+        "minute": 28,
+        "second": 48
+      }
+    },
+    "task.61": {
+      "task": "When rex jumps and whips at the same time, after the whip, it gets stuck until player jumps.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 16,
+        "minute": 36,
+        "second": 11
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 16,
+        "minute": 54,
+        "second": 40
+      }
+    },
+    "task.62": {
+      "task": "Camera flickers when falling from very high.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 16,
+        "minute": 54,
+        "second": 36
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 32,
+        "second": 41
+      }
+    },
+    "task.63": {
+      "task": "Sometimes rex jumps with a direction when not pressing directional buttons.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 16,
+        "minute": 54,
+        "second": 56
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 42,
+        "second": 23
+      }
+    },
+    "task.60": {
+      "task": "Add remaining sounds.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 51,
+        "second": 27
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 42,
+        "second": 54
+      }
+    },
+    "task.64": {
+      "task": "Improve castle design and functionality.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 42,
+        "second": 42
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 16,
+        "minute": 12,
+        "second": 46
+      }
+    },
+    "task.42": {
+      "task": "Improve game sounds, add a 8bit sound and remove excesive reverb.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 23,
+        "weekday": 5,
+        "dst": false,
+        "hour": 20,
+        "minute": 52,
+        "second": 5
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 16,
+        "minute": 12,
+        "second": 56
+      }
+    },
+    "task.82": {
+      "task": "Improve castle particle bricks system.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 17,
+        "minute": 54,
+        "second": 57
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 6,
+        "weekday": 5,
+        "dst": false,
+        "hour": 8,
+        "minute": 9,
+        "second": 25
+      }
+    },
+    "task.80": {
+      "task": "Add castle desctruction anims and stuff.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 16,
+        "minute": 17,
+        "second": 55
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 36,
+        "second": 59
+      }
+    },
+    "task.79": {
+      "task": "Implement diagonal shooting for gun soldiers (so they don't look that dumb)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 16,
+        "minute": 13,
+        "second": 21
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 11,
+        "minute": 37,
+        "second": 23
+      }
+    },
+    "task.72": {
+      "task": "Implement dino death (with bones)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 44,
+        "second": 23
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 15,
+        "second": 11
+      }
+    },
+    "task.84": {
+      "task": "Implement respawn and screen fades",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 15,
+        "second": 39
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 20,
+        "minute": 22,
+        "second": 14
+      }
+    },
+    "task.83": {
+      "task": "Implement checkpoints for respawn",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 15,
+        "second": 27
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 9,
+        "second": 9
+      }
+    },
+    "task.65": {
+      "task": "Add Whip hit sounds.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 42,
+        "second": 51
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 9,
+        "second": 37
+      }
+    },
+    "task.57": {
+      "task": "Implement permadeath",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 28,
+        "weekday": 3,
+        "dst": false,
+        "hour": 9,
+        "minute": 28,
+        "second": 27
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 9,
+        "second": 40
+      }
+    },
+    "task.43": {
+      "task": "Create Granade soldier. (different sprite for eye recognition)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 24,
+        "weekday": 6,
+        "dst": false,
+        "hour": 12,
+        "minute": 4,
+        "second": 56
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 9,
+        "second": 47
+      }
+    },
+    "task.38": {
+      "task": "Implement shooting with dual guns.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 3,
+        "day": 22,
+        "weekday": 4,
+        "dst": false,
+        "hour": 10,
+        "minute": 15,
+        "second": 16
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 9,
+        "second": 48
+      }
+    },
+    "task.87": {
+      "task": "Implement menu!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 11,
+        "second": 13
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 22,
+        "minute": 37,
+        "second": 13
+      }
+    },
+    "task.81": {
+      "task": "Include rocks with prices: Dino bone or strange fruits or strange vegetables!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 5,
+        "weekday": 4,
+        "dst": false,
+        "hour": 16,
+        "minute": 18,
+        "second": 21
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 10,
+        "weekday": 2,
+        "dst": false,
+        "hour": 11,
+        "minute": 25,
+        "second": 54
+      }
+    },
+    "task.89": {
+      "task": "Roar that scares only soldiers on screen.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 11,
+        "weekday": 3,
+        "dst": false,
+        "hour": 23,
+        "minute": 7,
+        "second": 12
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 11,
+        "weekday": 3,
+        "dst": false,
+        "hour": 23,
+        "minute": 21,
+        "second": 45
+      }
+    },
+    "task.92": {
+      "task": "Tile the blank spaces below the floor platforms.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 0,
+        "second": 44
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 15,
+        "weekday": 0,
+        "dst": false,
+        "hour": 14,
+        "minute": 59,
+        "second": 24
+      }
+    },
+    "task.95": {
+      "task": "Put some music.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 1,
+        "second": 7
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 15,
+        "weekday": 0,
+        "dst": false,
+        "hour": 15,
+        "minute": 40,
+        "second": 54
+      }
+    },
+    "task.96": {
+      "task": "Implement ending beyond jump of faith.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 1,
+        "second": 18
+      },
+      "completion_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 15,
+        "weekday": 0,
+        "dst": false,
+        "hour": 15,
+        "minute": 41,
+        "second": 0
+      }
     }
   },
   "pending": {
@@ -1182,20 +1782,6 @@
         "second": 19
       }
     },
-    "task.23": {
-      "task": "RAAAADDD Funky music!",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 20,
-        "weekday": 2,
-        "dst": false,
-        "hour": 9,
-        "minute": 31,
-        "second": 37
-      }
-    },
     "task.35": {
       "task": "Consider level mechanic, that does nothing actually.",
       "type": "Remainder",
@@ -1208,90 +1794,6 @@
         "hour": 9,
         "minute": 58,
         "second": 43
-      }
-    },
-    "task.36": {
-      "task": "Implement shooting with rifle",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 10,
-        "minute": 14,
-        "second": 58
-      }
-    },
-    "task.37": {
-      "task": "Implement shooting with machine gun",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 10,
-        "minute": 15,
-        "second": 7
-      }
-    },
-    "task.38": {
-      "task": "Implement shooting with dual guns.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 22,
-        "weekday": 4,
-        "dst": false,
-        "hour": 10,
-        "minute": 15,
-        "second": 16
-      }
-    },
-    "task.42": {
-      "task": "Improve game sounds, add a 8bit sound and remove excesive reverb.",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 23,
-        "weekday": 5,
-        "dst": false,
-        "hour": 20,
-        "minute": 52,
-        "second": 5
-      }
-    },
-    "task.43": {
-      "task": "Create Granade soldier. (different sprite for eye recognition)",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 24,
-        "weekday": 6,
-        "dst": false,
-        "hour": 12,
-        "minute": 4,
-        "second": 56
-      }
-    },
-    "task.57": {
-      "task": "Implement permadeath",
-      "type": "Task",
-      "creation_date": {
-        "year": 2018,
-        "month": 3,
-        "day": 28,
-        "weekday": 3,
-        "dst": false,
-        "hour": 9,
-        "minute": 28,
-        "second": 27
       }
     },
     "task.58": {
@@ -1322,18 +1824,270 @@
         "second": 13
       }
     },
-    "task.60": {
-      "task": "Add remaining sounds.",
+    "task.66": {
+      "task": "Add soldier speaking sounds.",
       "type": "Task",
       "creation_date": {
         "year": 2018,
-        "month": 3,
-        "day": 28,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 43,
+        "second": 4
+      }
+    },
+    "task.67": {
+      "task": "Add people speaking sounds.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 43,
+        "second": 12
+      }
+    },
+    "task.68": {
+      "task": "Add NPC walking mechanic.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 43,
+        "second": 22
+      }
+    },
+    "task.69": {
+      "task": "Add new NPCS",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 43,
+        "second": 37
+      }
+    },
+    "task.70": {
+      "task": "Add depth to NPCS. (on ground)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 43,
+        "second": 55
+      }
+    },
+    "task.71": {
+      "task": "Add Different AIs to enemies (Staying put, or not)...",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 44,
+        "second": 11
+      }
+    },
+    "task.73": {
+      "task": "Implement bone currency",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 44,
+        "second": 28
+      }
+    },
+    "task.74": {
+      "task": "Implement Paleontologist.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 44,
+        "second": 41
+      }
+    },
+    "task.75": {
+      "task": "Implement hats!!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 44,
+        "second": 48
+      }
+    },
+    "task.76": {
+      "task": "Implement innecesary equipment (like swords.)",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 45,
+        "second": 5
+      }
+    },
+    "task.77": {
+      "task": "Improve town house quality.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 17,
+        "minute": 45,
+        "second": 19
+      }
+    },
+    "task.78": {
+      "task": "Add new cave setting for game.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 3,
+        "weekday": 2,
+        "dst": false,
+        "hour": 19,
+        "minute": 35,
+        "second": 12
+      }
+    },
+    "task.85": {
+      "task": "Implement bone item behind",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 13,
+        "minute": 15,
+        "second": 50
+      }
+    },
+    "task.86": {
+      "task": "Implement new cannon enemies!",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 8,
+        "weekday": 0,
+        "dst": false,
+        "hour": 21,
+        "minute": 10,
+        "second": 3
+      }
+    },
+    "task.88": {
+      "task": "Implement crouch mechanic for rex.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 10,
+        "weekday": 2,
+        "dst": false,
+        "hour": 10,
+        "minute": 10,
+        "second": 50
+      }
+    },
+    "task.90": {
+      "task": "Sometimes, soldiers die but stay stucked in a running animation.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 11,
         "weekday": 3,
         "dst": false,
-        "hour": 9,
-        "minute": 51,
-        "second": 27
+        "hour": 23,
+        "minute": 11,
+        "second": 22
+      }
+    },
+    "task.91": {
+      "task": "Sometimes Rex dies but gets stucked in idle animation.",
+      "type": "Bug",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 17,
+        "minute": 58,
+        "second": 50
+      }
+    },
+    "task.93": {
+      "task": "Add more nice houses.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 0,
+        "second": 52
+      }
+    },
+    "task.94": {
+      "task": "Include Rex dying sound.",
+      "type": "Task",
+      "creation_date": {
+        "year": 2018,
+        "month": 4,
+        "day": 14,
+        "weekday": 6,
+        "dst": false,
+        "hour": 18,
+        "minute": 1,
+        "second": 1
       }
     }
   },
@@ -1385,21 +2139,57 @@
     "task.54",
     "task.53",
     "task.55",
-    "task.56"
+    "task.56",
+    "task.36",
+    "task.23",
+    "task.37",
+    "task.61",
+    "task.62",
+    "task.63",
+    "task.60",
+    "task.64",
+    "task.42",
+    "task.82",
+    "task.80",
+    "task.79",
+    "task.72",
+    "task.84",
+    "task.83",
+    "task.65",
+    "task.57",
+    "task.43",
+    "task.38",
+    "task.87",
+    "task.81",
+    "task.89",
+    "task.92",
+    "task.95",
+    "task.96"
   ],
   "pend_order": [
     "task.18",
     "task.19",
-    "task.23",
     "task.35",
-    "task.36",
-    "task.37",
-    "task.38",
-    "task.42",
-    "task.43",
-    "task.57",
     "task.58",
     "task.59",
-    "task.60"
+    "task.66",
+    "task.67",
+    "task.68",
+    "task.69",
+    "task.70",
+    "task.71",
+    "task.73",
+    "task.74",
+    "task.75",
+    "task.76",
+    "task.77",
+    "task.78",
+    "task.85",
+    "task.86",
+    "task.88",
+    "task.90",
+    "task.91",
+    "task.93",
+    "task.94"
   ]
 }

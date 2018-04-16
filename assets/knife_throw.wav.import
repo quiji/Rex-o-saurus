@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/knife_throw.wav-c8224c1cd835c23c858f2b22b218ebfa.sample"
+
+[deps]
+
+source_file="res://assets/knife_throw.wav"
+source_md5="10dbba3bdbe28e9cb5b4b5d035fe0e15"
+
+dest_files=[ "res://.import/knife_throw.wav-c8224c1cd835c23c858f2b22b218ebfa.sample" ]
+dest_md5="d76ee6f6d9a1908b772a1ce47f7ededa"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

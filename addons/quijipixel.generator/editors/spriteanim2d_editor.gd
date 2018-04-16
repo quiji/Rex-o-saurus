@@ -4,7 +4,7 @@ extends WindowDialog
 var _id = null
 var gen = null
 
-enum ReactTypes {REACT_NO, REACT_STEP, REACT_ROAR, REACT_WHIP}
+enum ReactTypes {REACT_NO, REACT_STEP, REACT_ROAR, REACT_WHIP, REACT_SHOOT}
 
 onready var debug = $panel/margins/container/debug
 
@@ -43,6 +43,7 @@ onready var target_file_edit = $panel/margins/container/generator_options/target
 onready var attached_script_edit = $panel/margins/container/generator_options/attach_script_edit
 onready var dir_exist_label = $panel/margins/container/generator_options/dir_exist
 onready var script_exist_label = $panel/margins/container/generator_options/script_exist
+onready var generator_name_edit = $panel/margins/container/generator_options/generator_name_edit
 
 func _ready():
 	animation_editor.hide()
@@ -79,6 +80,8 @@ func edit_generator(id):
 	if gen.has("attached_script"):
 		attached_script_edit.text = gen.attached_script
 
+	generator_name_edit.text = gen.name
+
 
 func _on_cancel_button_pressed():
 	get_parent().load_list_from_file()
@@ -93,7 +96,9 @@ func _on_save_button_pressed():
 		gen.attached_script = attached_script_edit.text
 
 	get_parent().list.generators[_id] = gen.duplicate()
+	get_parent().list.generators[_id].name = generator_name_edit.text
 	get_parent().save_list_to_file()
+	get_parent().update_list()
 	hide()
 	
 func _on_save_gen_button_pressed():
@@ -106,8 +111,10 @@ func _on_save_gen_button_pressed():
 
 
 	get_parent().list.generators[_id] = gen.duplicate()
+	get_parent().list.generators[_id].name = generator_name_edit.text
 	get_parent().save_list_to_file()
 	get_parent().run_generator([_id])
+	get_parent().update_list()
 	hide()
 
 
@@ -374,7 +381,9 @@ func create_preview_animation(key):
 						react_call = "react(Roar)"
 					elif gen.animations[key].frames[i].react == REACT_WHIP:
 						react_call = "react(Whip)"
-
+					elif gen.animations[key].frames[i].react ==  REACT_SHOOT:
+						react_call = "react(Shoot)"
+						
 					anim_obj.track_insert_key(track_method_idx, delta, react_call, Animation.UPDATE_CONTINUOUS)
 
 				delta += gen.animations[key].frames[i].time / 1000.0
@@ -396,6 +405,8 @@ func create_preview_animation(key):
 						react_call = "react(Roar)"
 					elif gen.animations[key].frames[i].react == REACT_WHIP:
 						react_call = "react(Whip)"
+					elif gen.animations[key].frames[i].react == REACT_SHOOT:
+						react_call = "react(Shoot)"
 
 					anim_obj.track_insert_key(track_method_idx, delta, react_call, Animation.UPDATE_CONTINUOUS)
 

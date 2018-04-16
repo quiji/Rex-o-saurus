@@ -5,6 +5,8 @@ enum ShakeMovementTypes {ARCH, STRONG_TO_LOW}
 
 var DIRECTIONS = [Vector2(0, -1), Vector2(1, -1).normalized(), Vector2(1, 0), Vector2(1, 1).normalized(), Vector2(0, 1), Vector2(-1, 1).normalized(), Vector2(-1, 0), Vector2(-1, -1).normalized()]
 
+
+
 var shake_delta = 0
 var shake_duration = 0
 var movement_duration = 0
@@ -12,9 +14,10 @@ var shake_type = ALL_DIRECTIONS
 var shake_movement_type = ARCH
 var amplitude = 10
 
+onready var camera_man = $camera_man/camera
+
 func _ready():
 	set_physics_process(false)
-	$tween.connect("tween_completed", self, "on_talking_end")
 
 func shake(duration, amp, shk_type, shk_mov_type):
 	set_physics_process(true)
@@ -30,8 +33,8 @@ func shake(duration, amp, shk_type, shk_mov_type):
 	movement_t = 0
 	shake_t = 0
 	direction = null
-	start_point = $camera_man.offset
-	current = $camera_man.offset
+	start_point = camera_man.offset
+	current = camera_man.offset
 	target = _generate_new_target(0)
 
 var direction = null
@@ -60,24 +63,16 @@ func _generate_new_target(t):
 	else:
 		return direction * lerp(0, amplitude, Smoothstep.flip(Smoothstep.stop4(t))) * rand_range(0.8, 1)
 
-var talking_offset
-var finishing_talk = false
-func talking(pos):
-	pos += Vector2(0, 15)
-	talking_offset = $camera_man.offset
-	$tween.interpolate_property($camera_man, "offset", talking_offset, pos, 0.8, Tween.TRANS_QUAD, Tween.EASE_IN)
+func look_down():
+	$tween.stop_all()
+	$tween.interpolate_property(self, "position", position, Vector2(0, -10), 0.5, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$tween.start()
 
-func no_more_talking():
 
-	$tween.interpolate_property($camera_man, "offset", $camera_man.offset, talking_offset, 0.8, Tween.TRANS_QUAD, Tween.EASE_OUT)
+func look_up():
+	$tween.stop_all()
+	$tween.interpolate_property(self, "position", position, Vector2(0, -50), 0.5, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$tween.start()
-	finishing_talk = true
-
-func on_talking_end(object, key):
-	if finishing_talk:
-		get_parent().ended_talking_camera_movement()
-		finishing_talk = false
 
 
 var movement_t = 0
@@ -101,9 +96,9 @@ func _physics_process(delta):
 			movement_t = 0
 			current = target
 			target = start_point
-		$camera_man.offset = current.linear_interpolate(target, movement_t)
+		camera_man.offset = current.linear_interpolate(target, movement_t)
 		shake_t += delta / shake_duration
 		movement_t += delta / movement_duration
 	else:
-		$camera_man.offset = start_point
+		camera_man.offset = start_point
 		set_physics_process(false)

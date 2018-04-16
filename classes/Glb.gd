@@ -5,6 +5,13 @@ func _ready():
 	randomize()
 
 
+var checkpoint = Vector2()
+func get_checkpoint():
+	return checkpoint
+
+func set_checkpoint(chk):
+	checkpoint = chk
+
 var dialogues = [
 	# Rosita
 	[
@@ -96,6 +103,25 @@ var dialogues = [
 				"Well, they couldn't hire the Toad King, so here I'm. I was supposed to be a powerful, yet funny boss...",
 				"But there were some problems with development deadlines and I got moved to NPC status... what a boomer.",
 				"NPC Status?? Non Playable Character! It's boring, you say the same lines over and over again!"
+			]
+		]
+	],
+	
+	# Final NPC
+	[
+		[
+			# Option 1
+			[
+				"I'm afraid the game ends here.",
+				"There was a lot of content planned: bosses, weapons, lore... but time ran off.",
+				"As a matter of fact... this level is incomplete. From here on, you fall into infinity. ",
+				"I guess you'll have to make the jump of faith"
+			],
+			[
+				"Did you notice that you cannot die? ",
+				"It's because of the very interesting and unique 'Death mechanic'.",
+				"Bascially you cannot die.",
+				"The energy bar? It's for fun!"
 			]
 		]
 	]

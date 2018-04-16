@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/whip_crumble.wav-26fd4f4daa3ff6ede9b52672d018c779.sample"
+
+[deps]
+
+source_file="res://assets/whip_crumble.wav"
+source_md5="bd3078e8415ffd3d4c8c2e6db57f28ea"
+
+dest_files=[ "res://.import/whip_crumble.wav-26fd4f4daa3ff6ede9b52672d018c779.sample" ]
+dest_md5="0a3b32f98721da91c53d446b4df72508"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

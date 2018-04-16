@@ -7,10 +7,10 @@ path="res://.import/health_bar_energy.png-1c833cd66e7cb556440617fd8297a961.stex"
 [deps]
 
 source_file="res://assets/health_bar_energy.png"
-source_md5="b8fcfe68dcca6de782eee7274f7a900f"
+source_md5="402c72db258126e442ff42ab9fe064d0"
 
 dest_files=[ "res://.import/health_bar_energy.png-1c833cd66e7cb556440617fd8297a961.stex" ]
-dest_md5="40a479021ce56b159970571931ec4fbd"
+dest_md5="b4f01d21e50745d79410e86a118d6de8"
 
 [params]
 

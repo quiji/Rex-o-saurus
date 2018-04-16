@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/crumble.wav-f2f99da5b2a43b9fc7269f4b5564f92d.sample"
+
+[deps]
+
+source_file="res://assets/crumble.wav"
+source_md5="f11b129da0f04748ada2d260ead24f96"
+
+dest_files=[ "res://.import/crumble.wav-f2f99da5b2a43b9fc7269f4b5564f92d.sample" ]
+dest_md5="f6af1e5dca33126f74bf77cf35222b0a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/416838__alineaudio__grunt2-death-pain.wav-11674660c7e9ed8c487071f5c1a445f3.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/grunt/416838__alineaudio__grunt2-death-pain.wav"
+source_md5="9fc704ea03e1bb9b2802f6270c4b2c4e"
+
+dest_files=[ "res://.import/416838__alineaudio__grunt2-death-pain.wav-11674660c7e9ed8c487071f5c1a445f3.sample" ]
+dest_md5="7f8880890596057b325a8b9fee1e7a80"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

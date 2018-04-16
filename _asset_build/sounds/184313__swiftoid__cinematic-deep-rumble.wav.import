@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/184313__swiftoid__cinematic-deep-rumble.wav-f3aee4221d13c328378ca8ec7b861a2b.sample"
+
+[deps]
+
+source_file="res://_asset_build/sounds/184313__swiftoid__cinematic-deep-rumble.wav"
+source_md5="6dd216200ab2b09c5a2f9a394cf0bb09"
+
+dest_files=[ "res://.import/184313__swiftoid__cinematic-deep-rumble.wav-f3aee4221d13c328378ca8ec7b861a2b.sample" ]
+dest_md5="f7cbc3732912ab7e525fb27b4bd61f5e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
-const TOP_HEALTH = 4000.0
+const TOP_HEALTH = 2000.0
 
+const GROUND_OFFSET = Vector2(0, -20)
 ######## Const Stats #########
 var max_run_velocity = 180.0
 var midair_move_velocity = 140#60.0
@@ -28,6 +29,7 @@ var on_ground = false
 var falling = false
 var running = false
 var jumping = false
+var start_jump = false
 
 var talking = false
 var bullet_dispel_on = false
@@ -45,6 +47,7 @@ var current_normal = null
 var stomp_area
 var whip_area_left
 var whip_area_right
+var dead = false
 
 var health = 0.0
 
@@ -66,6 +69,9 @@ func _ready():
 	whip_area_left = $tail_whip_area_left.shape_owner_get_shape(0, 0)
 
 	health = TOP_HEALTH
+	
+	$sprite.position += GROUND_OFFSET
+	$damage_area.position += GROUND_OFFSET
 
 func _physics_process(delta):
 	
@@ -85,7 +91,7 @@ func _physics_process(delta):
 	
 		if velocity.y >= 0 and prev_y_velocity <= 0:
 			$sprite.jump_peak()
-			falling = true
+			start_falling()
 			jumping = false
 			current_gravity = fall_gravity_scalar
 	
@@ -139,12 +145,12 @@ func _physics_process(delta):
 			jumping = false
 			velocity.y = 0
 			velocity.x = 0
-		on_ground = true
+			reached_ground()
 		falling = false
 		ground_loose_delta = 0
 	else:
 		if not jumping and not falling:
-			falling = true
+			start_falling()
 			current_gravity = fall_gravity_scalar
 			$sprite.fall()
 		on_ground = false
@@ -155,7 +161,16 @@ func _physics_process(delta):
 		ground_loose_delta -= delta
 	
 	if bullet_dispel_on:
-		get_tree().call_group("bullets", "dismiss")
+		get_tree().call_group("bullets", "dismiss_by_roar")
+
+func start_falling():
+	falling = true
+	$camera_crew.look_down()
+
+func reached_ground():
+	$camera_crew.look_up()
+	on_ground = true
+	$wave.emitting = true
 
 func is_valid_ground_cast():
 	var ray_a = $ground_ray_a.is_colliding() and $ground_ray_a.get_collision_normal().dot(Vector2(0, -1)) > 0.4
@@ -169,6 +184,7 @@ func is_valid_ground_cast():
 
 	if $ground_ray_b.is_colliding():
 		normal_b = $ground_ray_b.get_collision_normal()
+
 
 	if normal_a.dot(Vector2(0, -1)) < normal_b.dot(Vector2(0, -1)):
 		current_normal = normal_a
@@ -191,14 +207,14 @@ func check_stomp_collision(strength):
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
 		var is_dead
-		is_dead = result[0].collider.stomped(strength)
-		if result[0].collider.has_method("roar_scared"):
+		var points = space_state.collide_shape(query, 2)
+		is_dead = result[0].collider.stomped(strength, points)
+		if result[0].collider.has_method("roar_scared") and is_dead:
 			$"../gui".add_exp(2)
+		elif is_dead:
+			$"../gui".add_exp(10)
 		else:
-			if is_dead:
-				$"../gui".add_exp(10)
-			else:
-				$"../gui".add_exp(4)
+			$"../gui".add_exp(4)
 		result.pop_front()
 	
 func check_whip_collision():
@@ -217,7 +233,8 @@ func check_whip_collision():
 	var result = space_state.intersect_shape(query)
 	while result.size() > 0:
 		var is_dead
-		is_dead = result[0].collider.whipped(direction)
+		var points = space_state.collide_shape(query, 2)
+		is_dead = result[0].collider.whipped(direction, points)
 		if result[0].collider.has_method("roar_scared"):
 			$"../gui".add_exp(1)
 		else:
@@ -237,14 +254,11 @@ func roar():
 	get_tree().call_group("soldiers", "roar_scared")
 
 func talking(pos):
-	$camera_crew.talking(pos - global_position)
 	talking = true
 
 func no_talking():
-	$camera_crew.no_more_talking()
-
-func ended_talking_camera_movement():
 	talking = false
+
 
 func talk_direction():
 	return Vector2(1, 0) * direction
@@ -259,18 +273,48 @@ func jump():
 	midair_velocity = run_velocity
 	velocity.y = -jump_initial_velocity_scalar
 	jump_delta = time_to_peak_of_jump
+	start_jump = false
 
 func is_on_ground():
 	return on_ground and ground_loose_delta > 0
 
 func on_bullet_hit(bullet):
+	if dead:
+		return
 	
 	health -= bullet.get_damage()
 	bullet.dismiss()
 	
 	$"../gui".update_health(health / TOP_HEALTH)
+	
+	if health <= 0:
+		$death.emitting = true
+		$sprite.die()
+		dead = true
+		
+
+func carrot():
+	health = clamp(health + 100, 0, TOP_HEALTH)
+	$"../gui".update_health(health / TOP_HEALTH, false)
+
+
+func dead():
+	get_parent().spawn_in_checkpoint(position)
+	get_tree().call_group("soldiers", "rex_is_dead")
+
+func rebirth():
+	health = TOP_HEALTH
+	$"../gui".update_health(1)
+	dead = false
 
 func take_input(delta):
+
+	if dead:
+		return
+
+	if bullet_dispel_on:
+		return
+
 	var left_jp = Input.is_action_just_pressed("ui_left")
 	var left_p = Input.is_action_pressed("ui_left")
 	var left_jr = Input.is_action_just_released("ui_left")
@@ -282,10 +326,9 @@ func take_input(delta):
 	var whip_jp = Input.is_action_just_pressed("whip")
 	var roar_jp = Input.is_action_just_pressed("roar")
 	
-	if bullet_dispel_on:
-		return
 	
-	if whip_jp:
+	
+	if whip_jp and not start_jump:
 		$sprite.whip()
 		$whip_player.play(0)
 
@@ -297,10 +340,13 @@ func take_input(delta):
 
 	if jump_jp and is_on_ground() and not $sprite.is_whipping():
 		jumping = true
+		start_jump = true
 		running = false
 		velocity.x = 0
-		$sprite.start_jump()
 		current_gravity = lowest_gravity_scalar
+
+		$sprite.start_jump()
+
 	
 	if jump_jr and not falling:
 		current_gravity = highgest_gravity_scalar
@@ -311,6 +357,8 @@ func take_input(delta):
 		direction = -1
 		$damage_area/collision_left.disabled = false
 		$damage_area/collision_right.disabled = true
+		$collision_left.disabled = false
+		$collision_right.disabled = true
 
 	elif right_p:
 
@@ -318,6 +366,8 @@ func take_input(delta):
 		direction = 1
 		$damage_area/collision_left.disabled = true
 		$damage_area/collision_right.disabled = false
+		$collision_left.disabled = true
+		$collision_right.disabled = false
 	
 	if (left_p or right_p) and is_on_ground() and not running and not jumping and not $sprite.is_landing() and not $sprite.is_whipping():
 		$sprite.run()
@@ -331,6 +381,9 @@ func take_input(delta):
 		velocity.x = 0
 		if step_delta >= step_duration * 0.5:
 			step_delta = 0
+	
+	if (left_jr or right_jr) and not is_on_ground():
+		run_velocity = 0
 	
 	if (left_p or right_p) and not is_on_ground():
 		midair_velocity = midair_move_velocity

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rifle_shoot.wav-0c63844481f97885d6dcb9e3ecb1fbcb.sample"
+
+[deps]
+
+source_file="res://assets/rifle_shoot.wav"
+source_md5="6e8926232566da4a6ce1d033d29e8d27"
+
+dest_files=[ "res://.import/rifle_shoot.wav-0c63844481f97885d6dcb9e3ecb1fbcb.sample" ]
+dest_md5="234c74fbea18d4557f6457d0c52d45da"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=true
+edit/loop=false
+compress/mode=0

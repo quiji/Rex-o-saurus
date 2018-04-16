@@ -48,7 +48,6 @@ func _on_create_button_pressed():
 					name = $create_dialog/name_edit.text
 				}
 				list.last_id += 1
-				pass
 	
 		save_list_to_file()
 		update_list(id)
@@ -86,6 +85,7 @@ func add_item(item_id, item_name):
 
 	checkbox.connect("edit_item", self, "_on_edit_item")
 	checkbox.connect("remove_item", self, "_on_remove_item")
+	checkbox.connect("duplicate_item", self, "_on_duplicate_item")
 	
 	$generators/scroll_container/list_container.add_child(checkbox)
 
@@ -102,6 +102,22 @@ func _on_edit_item(obj, id):
 
 			editor.popup_centered()
 			editor.edit_generator(id)
+
+func _on_duplicate_item(obj, id):
+	var type = id.split(".")[0]
+	match type:
+		"SpriteAnim2D":
+			var new_id = list.last_id
+			new_id = "SpriteAnim2D." + str(new_id)
+			
+			list.generators[new_id] = list.generators[id].duplicate()
+			list.generators[new_id].name = " copy"
+			list.last_id += 1
+	
+			save_list_to_file()
+			update_list(new_id)
+
+
 
 var _removing_obj = null
 var _removing_id = null

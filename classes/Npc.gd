@@ -1,6 +1,6 @@
 extends Node2D
 
-export (int, "Rosita", "Jack", "Female_NPC", "Male_NPC", "RatKing") var text_id = 0
+export (int, "Rosita", "Jack", "Female_NPC", "Male_NPC", "RatKing", "Final_NPC") var text_id = 0
 
 var can_talk = false
 var talking = false

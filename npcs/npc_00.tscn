@@ -1,16 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://classes/Npc.gd" type="Script" id=1]
 [ext_resource path="res://npcs/gen_npc_00.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/buttons.png" type="Texture" id=3]
 [ext_resource path="res://gui/message_box.tscn" type="PackedScene" id=4]
-[ext_resource path="res://gui/NPC_names.tres" type="StyleBox" id=5]
-[ext_resource path="res://assets/Qpix.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 70, 25 )
+extents = Vector2( 35, 25 )
 
 [sub_resource type="Animation" id=2]
 
@@ -27,18 +25,6 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( -4, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Name:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -61,18 +47,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Name:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
 
 [sub_resource type="Animation" id=4]
 
@@ -91,15 +65,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, -82 ), Vector2( 0, -90 ), Vector2( 0, -82 ), Vector2( 0, -36 ) ]
 }
-
-[sub_resource type="DynamicFont" id=5]
-
-size = 16
-use_mipmaps = false
-use_filter = false
-extra_spacing_char = 2
-font_data = ExtResource( 6 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [node name="npc_00" type="Node2D" index="0"]
 
@@ -157,34 +122,5 @@ process_mode = 1
 wait_time = 0.5
 one_shot = true
 autostart = false
-
-[node name="Name" type="Label" parent="." index="6"]
-
-modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -92.0
-margin_top = 11.0
-margin_right = 91.0
-margin_bottom = 46.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_styles/normal = ExtResource( 5 )
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.819608, 0.819608, 0.780392, 1 )
-custom_colors/font_color_shadow = Color( 0.243137, 0.247059, 0.337255, 1 )
-text = "John \"The Blacksmith\" 
-Smith"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Visibility", "custom_colors", "custom_fonts", "custom_styles" ]
 
 

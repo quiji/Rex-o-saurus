@@ -3,6 +3,7 @@ extends VBoxContainer
 
 signal edit_item
 signal remove_item
+signal duplicate_item
 
 var _id = ""
 
@@ -49,3 +50,8 @@ func _on_edit_button_pressed():
 
 func _on_remove_button_pressed():
 	emit_signal("remove_item", self, _id)
+
+
+func _on_duplicate_button_pressed():
+	emit_signal("duplicate_item",self, _id)
+
