@@ -58,7 +58,7 @@ shader = SubResource( 1 )
 custom_solver_bias = 0.0
 extents = Vector2( 1760, 144 )
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 pause_mode = 2
 script = ExtResource( 1 )

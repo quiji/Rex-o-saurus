@@ -4,7 +4,7 @@ enum ACTION_TYPES {CONTINUE, EXIT}
 
 var options
 var current = 0
-
+var opened = false
 func _ready():
 	modulate.a = 0
 	options = $line.get_children()
@@ -12,12 +12,17 @@ func _ready():
 
 
 func show_menu():
+	opened = true
 	$anim_player.play("Open")
 
 func hide_menu():
+	opened = false
 	$anim_player.play("Close")
 	
 func _input(event):
+	if not opened:
+		return
+	
 	if Input.is_action_just_pressed("ui_up"):
 		var prev = current
 		if current > 0:
